@@ -1,4 +1,4 @@
 node_modules
 DS_Store
 /front/public
-/back/config/config.json
+config
