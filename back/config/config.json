@@ -7,14 +7,14 @@
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "tionna",
     "password": null,
     "database": "wanderly-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "tionna",
     "password": null,
     "database": "wanderly-db",
     "host": "127.0.0.1",
