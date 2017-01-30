@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/danbanwo/wanderly.git"
   },
-  "author": "Daniel, Lisa, Ambar, Tionna",
+  "author": "Ambar, Daniel, Lisa, Tionna",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.21.0",
