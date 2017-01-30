@@ -3,12 +3,12 @@ var app = express()
 var bodyparser = require('body-parser')
 var path = require('path')
 var db = require('./back/models')
-var router = require('./back/routes')
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json())
 app.use(express.static('front/public'))
 
+app.use("/api", require('./back/routes'))
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '/front/views/index.html'))
