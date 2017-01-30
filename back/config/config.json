@@ -1,20 +1,20 @@
 {
   "development": {
-    "username": "tionna",
+    "username": "lisa",
     "password": null,
     "database": "wanderly-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "tionna",
+    "username": "lisa",
     "password": null,
     "database": "wanderly-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "tionna",
+    "username": "lisa",
     "password": null,
     "database": "wanderly-db",
     "host": "127.0.0.1",
