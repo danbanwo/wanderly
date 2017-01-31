@@ -1,7 +1,6 @@
 const itineraryRouter = require('express').Router();
 const itinerary = require('../models').Itinerary();
 
-//create the functions for the API calls
 const getItinerary = (req, res) => {
 	itinerary.findById(req.params.id)
 	.then((data) => {
