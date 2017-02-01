@@ -12,7 +12,7 @@ Profile.sync({force:true})
   "age":18,
   "photo":"http://dummyimage.com/232x120.png/dddddd/000000",
   "country_origin":"China",
-  "phrase":"I love to try new foods!"
+  "catch_phrase":"I love to try new foods!"
 },
 {
   "first_name":"Ruby",
@@ -21,7 +21,7 @@ Profile.sync({force:true})
   "age":71,
   "photo":"http://dummyimage.com/184x159.png/cc0000/ffffff",
   "country_origin":"Indonesia",
-  "phrase":"I love to relax and rejuvenate!"
+  "catch_phrase":"I love to relax and rejuvenate!"
 },
 {
   "first_name":"Kevin",
@@ -30,7 +30,7 @@ Profile.sync({force:true})
   "age":71,
   "photo":"http://dummyimage.com/232x145.bmp/cc0000/ffffff",
   "country_origin":"Indonesia",
-  "phrase":"I love being in a different scenery"
+  "catch_phrase":"I love being in a different scenery"
   }])
 })
 .then(()=>{
