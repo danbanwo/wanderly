@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     description: DataTypes.STRING,
     place: DataTypes.STRING,
     long: DataTypes.FLOAT,
-    lang: DataTypes.FLOAT,
+    lati: DataTypes.FLOAT,
     total: DataTypes.INTEGER,
     category: DataTypes.STRING
     }, {
