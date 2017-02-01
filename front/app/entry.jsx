@@ -1,9 +1,9 @@
-var React = require('react')
-var ReactDOM = require("react-dom")
+import React from 'react'
+import ReactDOM from 'react-dom'
 import {browserHistory, IndexRoute, Router, Route} from 'react-router'
 
 
-let App = React.createClass({
+let App = () => (
   render() {
     return(
       <div>
@@ -11,7 +11,7 @@ let App = React.createClass({
       </div>
     )
   }
-})
+)
 
 ReactDOM.render(
   <Router history={browserHistory}>
