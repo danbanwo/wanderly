@@ -1,5 +1,5 @@
 const itineraryRouter = require('express').Router();
-const itinerary = require('../models').Itinerary();
+const itinerary = require('../models').Itinerary;
 
 const getItinerary = (req, res) => {
 	itinerary.findById(req.params.id)
