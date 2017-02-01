@@ -1,6 +1,5 @@
 const profileRouter = require('express').Router();
-
-const profile = require('../models').Profile();
+const profile = require('../models').Profile;
 
 //This will handle any routes going to localhost:3000/api/profile/*
 
