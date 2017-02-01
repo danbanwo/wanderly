@@ -1,13 +1,12 @@
 const profileRouter = require('express').Router();
 
-const profile = require('../models').Profile();
+const profile = require('../models').Profile;
 
 //This will handle any routes going to localhost:3000/api/profile/*
 
 const userProfile = (req,res)=>{
-	Profile.findAll()
+	profile.findAll()
 	.then((data)=>{
-		console.log('This is his/her profile!', data)
 		res.sendStatus(200);
 	})
 	.catch((error)=>{
@@ -16,9 +15,8 @@ const userProfile = (req,res)=>{
 }
 
 const singleProfile = (req,res)=>{
-	Profile.findById(req.params.id)
+	profile.findById(req.params.id)
 	.then((data)=>{
-		console.log('You got one profile!', data)
 		res.sendStatus(200);
 	})
 	.catch((error)=>{
@@ -27,7 +25,7 @@ const singleProfile = (req,res)=>{
 }
 
 const createProfile = (req,res)=>{
-	Profile.create({
+	profile.create({
 		first_name:req.params.firstName,
 		last_name:req.params.lastName,
 		gender:req.params.gender,
@@ -37,7 +35,7 @@ const createProfile = (req,res)=>{
 	})
 	.then((data)=>{
 		console.log('You have created a new profile!!!',data)
-		res.sendStatus(200);
+		res.send(data);
 	})
 	.catch((error)=>{
 		res.sendStatus(500);
