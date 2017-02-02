@@ -4,9 +4,10 @@ const profile = require('../models').Profile;
 
 //This will handle any routes going to localhost:3000/api/profile/*
 
-const userProfile = (req,res)=>{
+const userProfiles = (req,res)=>{
 	profile.findAll()
 	.then((data)=>{
+		res.send(data);
 		res.sendStatus(200);
 	})
 	.catch((error)=>{
@@ -34,8 +35,8 @@ const createProfile = (req,res)=>{
 		catch_phrase:req.params.phrase
 	})
 	.then((data)=>{
-		console.log('You have created a new profile!!!',data)
 		res.send(data);
+		res.sendStatus(200);
 	})
 	.catch((error)=>{
 		res.sendStatus(500);
@@ -43,7 +44,7 @@ const createProfile = (req,res)=>{
 }
 
 profileRouter.route('/')
-	.get(userProfile)
+	.get(userProfiles)
 	.post(createProfile)
 
 profileRouter.route('/:id')
