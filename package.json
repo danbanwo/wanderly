@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js && webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "react-router": "^3.0.0",
     "sequelize": "^3.28.0",
     "sequelize-cli": "^2.5.1",
+    "supertest": "^3.0.0",
     "webpack": "^1.14.0"
   },
   "devDependencies": {
