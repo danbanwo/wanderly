@@ -1,6 +1,6 @@
 const sampleRouter = require('express').Router();
 //require in the model and the associated models
-const model = require('../models').Model(); //whatever you defined your model as in the model.js
+const model = require('../models').Model; //whatever you defined your model as in the model.js
 
 
 //create the functions for the API calls
