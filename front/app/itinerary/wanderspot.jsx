@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/itinerary.css';
 
 const WanderSpot = React.createClass({
 	wanderRows() {
@@ -6,22 +7,25 @@ const WanderSpot = React.createClass({
 			{
 				return wanderData.map( (curr, idx) => {
 					return (
-						<div>
-							<div>
-							PICTURES: <li key={idx}>{curr.pictures} </li>
+						<div className='wanderRowContainer' key={`wanderRow-${idx}`}>
+
+							<div className='wanderPicContainer'>
+							<img className='wanderPic' src={curr.pictures} />
 							</div>
 
 							<div>
-							place: <li key={idx}>{curr.place} </li>
-							description: <li key={idx}>{curr.description} </li>
+							<h4>{curr.place} </h4>
+							<p>{curr.description} </p>
 							</div>
 
 							<div>
-							total: <li key={idx}>{curr.total} </li>
+							<h4>total spent: </h4>
+							<p>{curr.total} </p>
 							</div>
 
 							<div>
-							category: <li key={idx}>{curr.category} </li>
+							<h4>category:</h4> 
+							<p>{curr.category} </p>
 							</div>
 						</div>
 					)
