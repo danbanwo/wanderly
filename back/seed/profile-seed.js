@@ -2,10 +2,8 @@
 
 const Profile = require('../models').Profile;
 
-module.exports = () => {
-  Profile.sync({force:true})
-  //This is where I am creating all of the profiles
-  Profile.bulkCreate([{
+let profileArr = [ 
+  {
     "first_name":"Emily",
     "last_name":"Anderson",
     "gender":"Female",
@@ -31,14 +29,14 @@ module.exports = () => {
     "photo":"http://dummyimage.com/232x145.bmp/cc0000/ffffff",
     "country_origin":"Indonesia",
     "catch_phrase":"I love being in a different scenery"
-  }])
-  .then((data)=>{
-    //If I found all of the profile data, this console log message will show
-    console.log('Database seed successful!');
-  })
-  .catch((error)=>{
-    //If I did not find all of the profile data, this error message will show
-    console.error('Seed error!', error);
-  });
-}
+  }
+];
 
+const profileSeed = () =>{
+  Profile.sync({force:true})
+  .then(()=>{
+    Profile.bulkCreate(profileArr)
+  })
+};
+
+module.exports = profileSeed;

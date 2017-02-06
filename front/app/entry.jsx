@@ -5,6 +5,11 @@ import {browserHistory, IndexRoute, Router, Route} from 'react-router';
 import MarkerClustererExample from './map/sample-map'
 
 
+//import components
+import Map from './map/map';
+import ItineraryBox from './itinerary/itinerary-container';
+import SignUp from './signup/signup.jsx';
+
 
 let App = React.createClass({
   render() {
@@ -12,7 +17,6 @@ let App = React.createClass({
       lat: 21.32455847469097,
       lng: -157.92503356933594
     }
-
     return(
       <div>
         <h1>Welcome to Wanderly!</h1>
@@ -27,6 +31,8 @@ let App = React.createClass({
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App} />
+    <Route path='/signup' component={SignUp}/>
+    <Route path='/itinerarytest' component={ItineraryBox} />
   </Router>,
   document.getElementById('root')
 )

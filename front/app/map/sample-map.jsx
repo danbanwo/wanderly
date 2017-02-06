@@ -15,7 +15,7 @@ const MarkerClustererExampleGoogleMap = withGoogleMap(props => (
       gridSize={60}
     > */}
       {props.markers.map((marker, i) => {
-        if(i < 10) {
+        if(i < 10 ) {
           return <Marker
             position={{ lat: marker.latitude, lng: marker.longitude }}
             key={marker.photo_id}
