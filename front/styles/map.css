@@ -1,0 +1,37 @@
+.profileContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+/*---------Profile Left Container--------*/
+.profileLeft {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 15px;
+}
+
+.profilePhotoContainer {
+	height: 200px;
+	width: 200px;
+}
+
+.profilePhoto {
+	height: 100%;
+	justify-content: center;
+}
+/*---------/Profile Left Container--------*/
+
+
+
+
+
+/*---------Profile Right Container--------*/
+.profileRight {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin-right: 30px;
+}
+
+/*---------/Profile Right Container--------*/
