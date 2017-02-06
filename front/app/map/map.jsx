@@ -3,12 +3,10 @@ import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 const CreateMap = withGoogleMap(props => (
   <GoogleMap
-    defaultZoom={13}
-    defaultCenter={{
-      lat: 40.7575285,
-      lng: -73.9884469
-      }}
+    defaultZoom={11}
+    defaultCenter={props.center}
   />
+
 ));
 
 
@@ -16,6 +14,7 @@ export default class Map extends Component {
   render() {
     return (
       <CreateMap
+        center={this.props.center}
         containerElement={
           <div style={{ height:'100%', width: `100%` }} />
         }
