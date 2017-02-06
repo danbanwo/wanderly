@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import WanderSpot from './wanderspot';
-// import '../../styles/itinerary.css';
+import '../../styles/itinerary.css';
 
 
 const ItineraryBox = React.createClass({
