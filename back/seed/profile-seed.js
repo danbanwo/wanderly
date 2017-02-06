@@ -30,13 +30,13 @@ let profileArr = [
     "country_origin":"Indonesia",
     "catch_phrase":"I love being in a different scenery"
   }
-]
+];
 
 const profileSeed = () =>{
   Profile.sync({force:true})
   .then(()=>{
     Profile.bulkCreate(profileArr)
   })
-}
+};
 
 module.exports = profileSeed;
