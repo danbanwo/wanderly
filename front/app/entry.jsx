@@ -5,7 +5,7 @@ import {browserHistory, IndexRoute, Router, Route} from 'react-router';
 //import components
 import Map from './map/map';
 import ItineraryBox from './itinerary/itinerary-container';
-
+import SignUp from './signup/signup.jsx';
 
 
 let App = React.createClass({
@@ -14,7 +14,6 @@ let App = React.createClass({
       lat: 40.7575285,
       lng: -73.9884469
     }
-
     return(
       <div>
         <h1>Welcome to Wanderly!</h1>
@@ -29,6 +28,7 @@ let App = React.createClass({
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App} />
+    <Route path='/signup' component={SignUp}/>
     <Route path='/itinerarytest' component={ItineraryBox} />
   </Router>,
   document.getElementById('root')

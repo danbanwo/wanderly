@@ -21,7 +21,6 @@ it(`'userProfile()' should return all user profiles`, (done)=>{
 	.end((err,res)=>{
 		expect(res.body).to.be.a('array');
 		expect(200);
-		console.log(res.body, 'body');
 		expect(res.body.length).to.eql(3);
 		done();
 	})
