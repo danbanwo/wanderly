@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import WanderSpot from './wanderspot';
+import '../../styles/itinerary.css';
 
 
 const ItineraryBox = React.createClass({
@@ -22,10 +23,8 @@ const ItineraryBox = React.createClass({
 		console.log(this.state)
 		let spots = this.state.wanderSpots
 		return (
-			<div>
-				itin box START
+			<div className='itineraryContainer'>
 				<WanderSpot spots={spots}/>
-				itin box END
 			</div>
 		)
 	}
