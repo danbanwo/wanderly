@@ -31,14 +31,14 @@ createNewUser(e){
 		type:'POST',
 		data: this.state
 	})
-	alert('You have now created an account with Wanderly! You can go login now. ')
+	alert('Great! You joined Wanderly!')
 },
 	render(){
 		return(
 			<div>
 			<center>
 			<h1> Start You Adventure At Wanderly ! </h1> 
-			<form submit={this.createNewUser}> 
+			<form onSubmit={this.createNewUser}> 
 			FirstName:<input type="text" value={this.first_name} onChange={this.firstNameChange}></input><br/>
 			LastName:<input type="text" value={this.last_name} onChange={this.lastNameChange}></input><br/>
 			Age:<input type="text" value={this.age} onChange={this.ageChange}></input><br/>

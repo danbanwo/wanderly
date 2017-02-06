@@ -6,7 +6,6 @@ const profile = require('../models').Profile;
 const userProfiles = (req,res)=>{
 	profile.findAll()
 	.then((data)=>{
-		res.send(data);
 		res.sendStatus(200);
 	})
 	.catch((error)=>{
@@ -15,7 +14,7 @@ const userProfiles = (req,res)=>{
 }
 
 const singleProfile = (req,res)=>{
-	profile.findById(req.params.id)
+	profile.findById(req.body.id)
 	.then((data)=>{
 		res.sendStatus(200);
 	})
@@ -25,16 +24,16 @@ const singleProfile = (req,res)=>{
 }
 
 const createProfile = (req,res)=>{
+	console.log(req.body, 'what is this??')
 	profile.create({
-		first_name:req.params.firstName,
-		last_name:req.params.lastName,
-		gender:req.params.gender,
-		age:req.params.age,
-		country_origin:req.params.country,
-		catch_phrase:req.params.phrase
+		first_name:req.body.first_name,
+		last_name:req.body.last_name,
+		gender:req.body.gender,
+		age:req.body.age,
+		country_origin:req.body.country_origin,
+		catch_phrase:req.body.catch_phrase
 	})
 	.then((data)=>{
-		res.send(data);
 		res.sendStatus(200);
 	})
 	.catch((error)=>{
