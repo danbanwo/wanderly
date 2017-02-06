@@ -4,7 +4,7 @@
   "description": "A social media for travelers to share their pictures and budget",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js && webpack --watch",
+    "start": "nodemon server.js & webpack --watch",
     "test": "mocha --watch"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "pg-hstore": "^2.3.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-google-maps": "^6.0.1",
     "react-router": "^3.0.0",
     "sequelize": "^3.28.0",
     "sequelize-cli": "^2.5.1",
