@@ -1,5 +1,6 @@
 var itinerary = require('../models').Itinerary;
 
+
 let itineraryArr = [
   {
     pictures: 'http://traveldigg.com/wp-content/uploads/2016/05/Central-Park-New-York-720x404.jpg',
@@ -30,6 +31,21 @@ let itineraryArr = [
   }
 ];
 
-itineraryArr.forEach((place) => {
-  itinerary.create(place)
-})
+const itinerarySeed = () => {
+  var a = itinerary.sync({force:true})
+  .then(() => {
+    itinerary.bulkCreate(itineraryArr)
+  })
+}
+
+module.exports = itinerarySeed;
+
+
+
+// const itinerarySeed = () => {
+//   itineraryArr.forEach((place) => {
+//     itinerary.create(place)
+//   })
+// }
+
+

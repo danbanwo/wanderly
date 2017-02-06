@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import {browserHistory, IndexRoute, Router, Route} from 'react-router';
-import Map from './map/map'
+
+//import components
+import Map from './map/map';
+import ItineraryBox from './itinerary/itinerary-container';
 
 
 
@@ -26,6 +29,7 @@ let App = React.createClass({
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App} />
+    <Route path='/itinerarytest' component={ItineraryBox} />
   </Router>,
   document.getElementById('root')
 )
