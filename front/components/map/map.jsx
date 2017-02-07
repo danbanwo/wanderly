@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import fetch from "isomorphic-fetch";
 
+import { test } from '../../actions/map-actions'
+
+
 // import MarkerClusterer from "../../../lib/addons/MarkerClusterer";
 
 const WanderGoogleMap = withGoogleMap(props => (
