@@ -4,7 +4,7 @@ import ItineraryBox from '../itinerary/itinerary-container';
 
 import '../../styles/map.css'
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className='profileContainer'>
 
