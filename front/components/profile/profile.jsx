@@ -22,7 +22,7 @@ const Profile = (props) => {
 
     <div className='profileRight'>
       <div style={{width: 520, height: 300, background: 'blue'}}>
-        <WanderMap center={location}/>
+        <WanderMap />
       </div>
       <ItineraryBox />
     </div>

@@ -12,12 +12,12 @@ module.exports = function(sequelize, DataTypes) {
     }, {
     classMethods: {
       associate: function(models) {
-        // Itinerary.belongsTo(models.Destination, {
-        //   onDelete: "CASCADE",
-        //   foreignKey: {
-        //     allowNull: false
-        //   }
-        // });
+        Itinerary.belongsTo(models.Destination, {
+          onDelete: "CASCADE",
+          foreignKey: {
+            allowNull: false
+          }
+        });
       }
     }
   });

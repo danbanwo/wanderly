@@ -12,6 +12,4 @@ const store = createStore(allReducers, middleware);
 
 
 //export store for use in the entry file
-// store.dispatch({type: 'test', payload: 'test payload'})
-// store.dispatch({type: 'test-2', payload: {'test':'test-2 payload'}})
 export default store;
