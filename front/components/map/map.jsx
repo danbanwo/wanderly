@@ -30,8 +30,8 @@ const WanderGoogleMap = withGoogleMap(props => (
 ));
 
 export default class WanderMap extends Component {
-constructor(){
-  super()
+constructor(props){
+  super(props)
   this.state = {
     markers: []
   }
@@ -43,9 +43,11 @@ constructor(){
       .then(data => {
         this.setState({ markers: data.photos });
       });
+    // this.props.markers()
   }
 
   render() {
+    console.log("PROPS========>", this.props)
     return (
       <WanderGoogleMap
         containerElement={

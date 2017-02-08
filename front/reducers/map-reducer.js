@@ -1,4 +1,6 @@
-const defaultState = null;
+const defaultState = {
+  markers: []
+};
 
 const mapReducer = (state=defaultState, action) => {
   switch(action.type) {
@@ -9,8 +11,12 @@ const mapReducer = (state=defaultState, action) => {
       return {...state, test: action.payload}
       break;
     }
-    case 'test-2': {
-      return Object.assign({}, state, action.payload)
+    case 'ADD_MARKERS': {
+      return {...state}
+      break;
+    }
+    case 'ADD_MARKERS_FULFILLED': {
+      return {...state, markers: state.markers.concat(action.payload.data)}
       break;
     }
     default: return state;

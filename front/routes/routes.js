@@ -9,6 +9,7 @@ const Routes = (props) => (
       <Route path='signup' component={SignUp}/>
       <Route path='/' component={App}>
         <Route path='home' component={Profile} />
+        <Route path='map' component={mapContainer} />
       </Route>
     </Router>
   )
