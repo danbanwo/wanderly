@@ -46,9 +46,24 @@ const updateWanderspot = (req, res) => {
 	})
 };
 
+const getItinerary = (req, res) => {
+	wanderspot.findAll({
+		where: {
+			DestinationId: req.params.destId
+		}
+	})
+	.then((itinerary) => {
+		res.send(itinerary)
+	})
+	.catch((err) => {
+		console.log('ERROR GETTING ITINERARY ===>', err)
+		res.sendStatus(500)
+	})
+};
 
 
-//URL is at /api/wanderspot
+
+//URL is at /api/wanderspot/
 wanderspotRouter.route('/:id')
 	.get(getWanderSpot)
 	.put(updateWanderspot)
@@ -56,6 +71,11 @@ wanderspotRouter.route('/:id')
 wanderspotRouter.route('/')
 	.get(getAllWanderspots)
 	.post(addWanderspot)
+
+//Itinerary is ALL the wanderspots for that particular destination
+wanderspotRouter.route('/itinerary/:destId')
+	.get(getItinerary)
+
 
 
 
