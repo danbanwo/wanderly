@@ -1,10 +1,10 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Itinerary = sequelize.define("Itinerary", {
+  var WanderSpot = sequelize.define("Itinerary", {
     pictures: DataTypes.STRING,
     description: DataTypes.STRING,
-    place: DataTypes.STRING,
+    spot: DataTypes.STRING,
     long: DataTypes.FLOAT,
     lati: DataTypes.FLOAT,
     total: DataTypes.INTEGER,
@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     }, {
     classMethods: {
       associate: function(models) {
-        Itinerary.belongsTo(models.Destination, {
+        WanderSpot.belongsTo(models.Destination, {
           onDelete: "CASCADE",
           foreignKey: {
             allowNull: false
