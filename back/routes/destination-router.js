@@ -1,6 +1,7 @@
 const destinationRouter = require('express').Router();
 const Destination = require('../models').Destination;
 
+//Retrieves one destination
 const getOneDestination = (req, res) => {
   Destination.findById(req.params.id)
   .then((destination) => {
@@ -11,16 +12,33 @@ const getOneDestination = (req, res) => {
   })
 };
 
-
-const getDestinations = (req, res) => {
+//Retrieves all destinations in the database
+const getAllDestinations = (req, res) => {
   Destination.findAll()
-  .then((destination) => {
-    res.send(destination)
+  .then((destinations) => {
+    res.send(destinations)
   })
   .catch((err) => {
     res.sendStatus(500)
   })
 };
+
+//Retrieves all destinations associated with a single user's profile
+const getProfileDestinations = (req, res) => {
+  Destination.findAll({
+    where: { ProfileId: req.params.id },
+    // include: [{
+    //   model: Destination,
+    //   include: [{model: Wanderspot}]
+    // }]
+  })
+  .then((prof_destinations) => {
+    res.send(prof_destinations)
+  })
+  .catch((error) => {
+    res.sendStatus(500);
+  })
+}
 
 
 const addDestination = (req, res) => {
@@ -48,12 +66,21 @@ const updateDestination = (req, res) => {
 };
 
 //URL: /api/destination
+//________________________________________________//
+//gets all destinations visited by specified user
+destinationRouter.route('/profile/:id')
+.get(getProfileDestinations)
+
+//Route to get all destinations in database and add destination
+destinationRouter.route('/')
+.get(getAllDestinations)
+.post(addDestination)
+
+//Route to retrieve one destination 
 destinationRouter.route('/:id')
 .get(getOneDestination)
 .put(updateDestination)
 
-destinationRouter.route('/')
-.get(getDestinations)
-.post(addDestination)
+
 
 module.exports = destinationRouter;

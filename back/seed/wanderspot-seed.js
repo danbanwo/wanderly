@@ -1,4 +1,4 @@
-var wanderspot = require('../models').Wanderspot;
+var Wanderspot = require('../models').Wanderspot;
 
 
 let wanderspotArr = [
@@ -36,10 +36,7 @@ let wanderspotArr = [
 ];
 
 const wanderspotSeed = () => {
-  wanderspot.sync({force:true})
-  .then(() => {
-    wanderspot.bulkCreate(wanderspotArr)
-  })
+    Wanderspot.bulkCreate(wanderspotArr)
 }
 
 module.exports = wanderspotSeed;
