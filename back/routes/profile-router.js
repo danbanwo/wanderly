@@ -24,8 +24,8 @@ const singleProfile = (req,res)=>{
 }
 
 const createProfile = (req,res)=>{
-	console.log(req.body, 'what is this??')
 	profile.create({
+		photo:req.body.photo,
 		first_name:req.body.first_name,
 		last_name:req.body.last_name,
 		gender:req.body.gender,
@@ -41,12 +41,25 @@ const createProfile = (req,res)=>{
 	})
 }
 
+// const userPhoto = (req,res)=>{
+// 	profile.findById(req.params.id)
+// 	.then((data)=>{
+// 		res.send({photo: data.photo})
+// 	})
+// 	.catch((error)=>{
+// 		res.sendStatus(500);
+// 	})
+// }
+
 profileRouter.route('/')
 	.get(userProfiles)
 	.post(createProfile)
 
 profileRouter.route('/:id')
 	.get(singleProfile)
+
+// profileRouter.route('/profilepic/:id')
+// 	.get(userPhoto);
 
 
 module.exports = profileRouter;

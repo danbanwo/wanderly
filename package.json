@@ -33,6 +33,7 @@
     "react-router": "^3.0.0",
     "sequelize": "^3.28.0",
     "sequelize-cli": "^2.5.1",
+    "style": "0.0.3",
     "style-loader": "^0.13.1",
     "supertest": "^3.0.0",
     "webpack": "^1.14.0"
@@ -40,6 +41,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
+    "css-loader": "^0.26.1",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",

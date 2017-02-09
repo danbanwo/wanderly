@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 const SignUp = React.createClass({
 getInitialState(){
-	return({first_name: '', last_name:'', gender: '',age:'',country_origin:'', catch_phrase:''})
+	return({photo: '', first_name: '', last_name:'', gender: '',age:'',country_origin:'', catch_phrase:''})
 },
 firstNameChange(e){
 	this.setState({first_name: e.target.value})
@@ -24,6 +24,9 @@ originChange(e){
 catchPhraseChange(e){
 	this.setState({catch_phrase: e.target.value})
 },
+photoChange(e){
+	this.setState({photo:e.target.value})
+},
 createNewUser(e){
 	e.preventDefault();
 	$.ajax({
@@ -31,13 +34,14 @@ createNewUser(e){
 		type:'POST',
 		data: this.state
 	})
-	alert('Great! You joined Wanderly!')
+	alert('Awesome! You have now joined Wanderly!')
 },
 	render(){
 		return(
 			<div>
 			<center>
 			<h1> Start You Adventure At Wanderly ! </h1> 
+
 			<form onSubmit={this.createNewUser}> 
 			FirstName:<input type="text" value={this.first_name} onChange={this.firstNameChange}></input><br/>
 			LastName:<input type="text" value={this.last_name} onChange={this.lastNameChange}></input><br/>
@@ -45,8 +49,7 @@ createNewUser(e){
 			Gender:<input type="text" value={this.gender} onChange={this.genderChange}></input><br/>
 			Country origin: <input type="text" value={this.country_origin} onChange={this.originChange}></input><br/>
 			Tell us why you love traveling!<input type="text" value={this.catch_phrase} onChange={this.catchPhraseChange}></input><br/>
-			<input type="submit" value="submit"></input>
-			</form> 
+			</form>
 			</center>
 			</div>
 		)

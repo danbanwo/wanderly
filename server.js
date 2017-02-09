@@ -1,8 +1,10 @@
 var express = require('express')
 var app = express()
 var bodyparser = require('body-parser')
+var multer = require('multer')
 var path = require('path')
 var db = require('./back/models')
+
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json())
