@@ -4,7 +4,7 @@ const destinationSeed = require('./destination-seed');
 var db = require('../models')
 
 db.sequelize.sync().then(function(){
-	destinationSeed();
 	profileSeed();
+	destinationSeed();
  	wanderspotSeed();
 });

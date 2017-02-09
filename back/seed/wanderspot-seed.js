@@ -32,6 +32,17 @@ let wanderspotArr = [
     category: 'play',
     DestinationId: 1
 
+  },
+  {
+    pictures: 'http://www.clairemorrisphotography.com/wp-content/uploads/2015/02/Photographer-in-Paris_001.jpg',
+    description: 'I want to get proposed to here! Only a bus ride from our hostel.',
+    spot: 'Eiffel Tower',
+    lng: 2.294694,
+    lat: 48.858093,
+    total: 5,
+    category: 'play',
+    DestinationId: 3
+
   }
 ];
 
