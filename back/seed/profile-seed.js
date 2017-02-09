@@ -10,7 +10,7 @@ let profileArr = [
     age: 19,
     photo: 'https://s-media-cache-ak0.pinimg.com/originals/20/97/6c/20976c5b131a6c2d503aa4a7ec0fd3a0.jpg',
     country_origin: 'United States',
-    catch_phrase: 'I love trying foods from all over the world!'
+    catch_phrase: "I'm here for a good time, not a long time!"
   },
   {
     first_name: 'Chun',
@@ -19,25 +19,21 @@ let profileArr = [
     age: 25,
     photo: 'http://blogs.publico.es/strambotic/files/2014/10/hipster-tia.jpg',
     country_origin: 'China',
-    catch_phrase: 'I am interested in learning languages!'
+    catch_phrase: "I'm interested in learning languages and tryng new foods"
   },
   {
     first_name: 'Collin',
-    last_name: 'Plaid',
+    last_name: 'Smith',
     gender: 'male',
     age: 20,
     photo: 'http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2013/06/Hipster.jpg',
     country_origin: 'Ireland',
-    catch_phrase: 'I love to meet new people!'
+    catch_phrase: 'I love to meet people all over the world!'
   },
-
 ];
 
 const profileSeed = () =>{
-  Profile.sync({force:true})
-  .then(()=>{
-    Profile.bulkCreate(profileArr)
-  })
+  Profile.bulkCreate(profileArr)
 };
 
 module.exports = profileSeed;

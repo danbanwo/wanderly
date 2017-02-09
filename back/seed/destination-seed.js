@@ -31,7 +31,7 @@ let destinationArr = [
   },
   {
     place: 'Milan',
-    duration: '3 days',
+    duration: '1 day',
     total_spent: 200,
     country: 'Italy',
     lat: 45.464211,
@@ -92,15 +92,10 @@ let destinationArr = [
     lng: -74.78580369999997,
     ProfileId: 3
   },
-
-
 ];
 
 const destinationSeed = () => {
-  Destination.sync({force:true})
-  .then(() => {
-    Destination.bulkCreate(destinationArr)
-  })
+  Destination.bulkCreate(destinationArr)
 }
 
 module.exports = destinationSeed;
