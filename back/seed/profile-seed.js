@@ -2,34 +2,34 @@
 
 const Profile = require('../models').Profile;
 
-let profileArr = [
+let profileArr = [ 
   {
-    "first_name":"Emily",
-    "last_name":"Anderson",
-    "gender":"Female",
-    "age":18,
-    "photo":"http://dummyimage.com/232x120.png/dddddd/000000",
-    "country_origin":"China",
-    "catch_phrase":"I love to try new foods!"
+    first_name: 'Jane',
+    last_name: 'Doe',
+    gender: 'female',
+    age: 19,
+    photo: 'https://s-media-cache-ak0.pinimg.com/originals/20/97/6c/20976c5b131a6c2d503aa4a7ec0fd3a0.jpg',
+    country_origin: 'United States',
+    catch_phrase: "I'm here for a good time, not a long time!"
   },
   {
-    "first_name":"Ruby",
-    "last_name":"Mason",
-    "gender":"Female",
-    "age":71,
-    "photo":"http://dummyimage.com/184x159.png/cc0000/ffffff",
-    "country_origin":"Indonesia",
-    "catch_phrase":"I love to relax and rejuvenate!"
+    first_name: 'Chun',
+    last_name: 'Li',
+    gender: 'female',
+    age: 25,
+    photo: 'http://blogs.publico.es/strambotic/files/2014/10/hipster-tia.jpg',
+    country_origin: 'China',
+    catch_phrase: "I'm interested in learning languages and tryng new foods"
   },
   {
-    "first_name":"Kevin",
-    "last_name":"Day",
-    "gender":"Male",
-    "age":71,
-    "photo":"http://dummyimage.com/232x145.bmp/cc0000/ffffff",
-    "country_origin":"Indonesia",
-    "catch_phrase":"I love being in a different scenery"
-  }
+    first_name: 'Collin',
+    last_name: 'Smith',
+    gender: 'male',
+    age: 20,
+    photo: 'http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2013/06/Hipster.jpg',
+    country_origin: 'Ireland',
+    catch_phrase: 'I love to meet people all over the world!'
+  },
 ];
 
 const profileSeed = () =>{

@@ -10,7 +10,10 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+<<<<<<< HEAD
+=======
         // associations can be defined here
+>>>>>>> lisatest
         Profile.hasMany(models.Destination, {
           onDelete: "CASCADE",
           foreignKey:{
