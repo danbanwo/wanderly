@@ -3,3 +3,5 @@ node_modules
 /front/public
 config
 migrations
+npm-debug*
+.vscode
