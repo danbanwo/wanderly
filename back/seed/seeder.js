@@ -3,8 +3,13 @@ const profileSeed = require('./profile-seed');
 const destinationSeed = require('./destination-seed');
 var db = require('../models')
 
-db.sequelize.sync().then(function(){
-	destinationSeed();
+db.sequelize.sync({force: true})
+.then(() => {
 	profileSeed();
- 	wanderspotSeed();
+})
+.then(() => {
+	destinationSeed();
+})
+.then(() => {
+	wanderspotSeed();
 });

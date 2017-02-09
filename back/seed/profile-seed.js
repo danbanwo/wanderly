@@ -2,7 +2,7 @@
 
 const Profile = require('../models').Profile;
 
-let profileArr = [ 
+let profileArr = [
   {
     "first_name":"Emily",
     "last_name":"Anderson",
@@ -33,10 +33,7 @@ let profileArr = [
 ];
 
 const profileSeed = () =>{
-  Profile.sync({force:true})
-  .then(()=>{
-    Profile.bulkCreate(profileArr)
-  })
+  Profile.bulkCreate(profileArr)
 };
 
 module.exports = profileSeed;
