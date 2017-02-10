@@ -21,9 +21,9 @@ const Profile = (props) => {
 
 
     <div className='profileRight'>
-      <div style={{width: 520, height: 300, background: 'blue'}}>
+      {/* <div style={{width: 520, height: 300, background: 'blue'}}> */}
         <WanderMap />
-      </div>
+      {/* </div> */}
       <ItineraryBox />
     </div>
 

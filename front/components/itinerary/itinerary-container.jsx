@@ -11,7 +11,7 @@ const ItineraryBox = React.createClass({
 	},
 
 	componentDidMount() {
-		axios.get('/api/itinerary')
+		axios.get('/api/wanderspot')
 		.then((itineraryObj) => {
 			console.log(itineraryObj)
 			let data = itineraryObj.data

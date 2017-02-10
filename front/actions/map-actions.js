@@ -8,6 +8,6 @@ export const test = () => (
 
 export const addMarkers = () => (
   (dispatch) => {
-    dispatch({type: "ADD_MARKERS", payload: axios.get('/api/itinerary')})
+    dispatch({type: "ADD_MARKERS", payload: axios.get('/api/destination')})
   }
 );
