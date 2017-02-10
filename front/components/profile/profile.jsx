@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import WanderMap from '../map/map'
-import ItineraryBox from '../itinerary/itinerary-container';
+import ItineraryBox from '../itinerary/itineraryBox';
 
 import '../../styles/map.css'
 
@@ -22,7 +22,7 @@ const Profile = (props) => {
 
     <div className='profileRight'>
       {/* <div style={{width: 520, height: 300, background: 'blue'}}> */}
-        <WanderMap />
+        <WanderMap pathname={'/home'} />
       {/* </div> */}
       <ItineraryBox />
     </div>

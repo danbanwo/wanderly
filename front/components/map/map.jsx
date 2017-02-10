@@ -1,6 +1,5 @@
 import React, { Component, } from 'react';
 import { withGoogleMap, GoogleMap, Marker, } from 'react-google-maps';
-import fetch from 'isomorphic-fetch';
 
 // import MarkerClusterer from "../../../lib/addons/MarkerClusterer";
 
@@ -34,19 +33,36 @@ export default class WanderMap extends Component {
   }
 
   render() {
-    const { markers } = this.props.map;
-    return (
-      <div style={{width: 520, height: 300, background: 'blue'}}>
-        <WanderGoogleMap
-          containerElement={
-            <div style={{ height: '100%', }} />
-          }
-          mapElement={
-            <div style={{ height: '100%', }} />
-          }
-          markers={markers}
-        />
-      </div>
-    );
+    const { pathname } = this.props
+    if(pathname === '/home') {
+      return (
+        <div style={{width: 520, height: 300, background: 'blue'}}>
+          <WanderGoogleMap
+            containerElement={
+              <div style={{ height: '100%', }} />
+            }
+            mapElement={
+              <div style={{ height: '100%', }} />
+            }
+            // markers={markers}
+          />
+        </div>
+      );
+    } else {
+      const { markers } = this.props.map;
+      return (
+        <div style={{width: 520, height: 300, background: 'blue'}}>
+          <WanderGoogleMap
+            containerElement={
+              <div style={{ height: '100%', }} />
+            }
+            mapElement={
+              <div style={{ height: '100%', }} />
+            }
+            markers={markers}
+          />
+        </div>
+      );
+    }
   }
 }

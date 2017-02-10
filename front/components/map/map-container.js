@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import WanderMap from '../map/map';
 
 //import action(s) related to container from the action folder:
-import { test, addMarkers } from '../../actions/map-actions';
+import { addMarkers } from '../../actions/map-actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -15,7 +15,6 @@ const mapStateToProps = (state) => {
 }
 
 const matchDispatchToProps = (dispatch) => ({
-    test: bindActionCreators(test, dispatch),
     markers: bindActionCreators(addMarkers, dispatch)
 })
 

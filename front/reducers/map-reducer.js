@@ -8,7 +8,7 @@ const mapReducer = (state=defaultState, action) => {
       //We want to return a copy of the update state
       //Object.assign({}, state, action.payload) or
       //use the spread operator as indicated below
-      return {...state, test: action.payload}
+      return state
       break;
     }
     case 'ADD_MARKERS': {
