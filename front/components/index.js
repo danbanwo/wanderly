@@ -10,9 +10,10 @@ import Profile from './profile/profile';
 import mapContainer from './map/map-container';
 import destinationContainer from './destination/destination-container';
 import profileContainer from './profile/profile-container';
+import itineraryContainer from './itinerary/itinerary-container';
 
 
 //export all components and containers here:
 export {
-  App, Destination, destinationContainer, profileContainer, mapContainer, Profile, SignUp,
+  App, Destination, destinationContainer, profileContainer, mapContainer, Profile, SignUp, itineraryContainer
 }

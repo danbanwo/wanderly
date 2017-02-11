@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const getWanderspots = () => (
-	(dispatch) => {
-		dispatch({type: 'GET_WANDERSPOTS', data: axios.get('/api/getWanderspot')})
-		//this api call will have to change to populate specific destinations wanderspots
+export const getDestSpots = (id) => {
+	return (dispatch) => {
+		axios.get('/api/wanderspot/itinerary/'+id)
+		.then((spots) => {
+			dispatch({type: 'GET_DEST_SPOTS', data: spots.data})
+		})
 	}
-)
-
-
+};
