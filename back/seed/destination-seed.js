@@ -1,5 +1,6 @@
-var Destination = require('../models').Destination;
+'use strict'
 
+var Destination = require('../models').Destination;
 
 let destinationArr = [
   {

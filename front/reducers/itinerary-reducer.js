@@ -7,9 +7,7 @@ const itineraryReducer = (state=defaultState, action) => {
     case 'GET_WANDERSPOTS':
       return Object.assign({}, state, state.wanderspots.concat(action.data))
       break;
-
-    default:
-      return state;
+    default: return state;
   }
 }
 
