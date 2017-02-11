@@ -7,7 +7,6 @@ const getWanderSpot = (req, res) => {
 		res.send(data)
 	})
 	.catch((err) => {
-		console.log('ERROR GETTING WANDERSPOT BY ID ===>', err)
 		res.sendStatus(500)
 	})
 };
@@ -18,7 +17,6 @@ const getAllWanderspots = (req, res) => {
 		res.send(data)
 	})
 	.catch((err) => {
-		console.log('ERROR GETING ALL WANDERSPOT ===>', err)
 		res.sendStatus(500)
 	})
 };
@@ -29,7 +27,6 @@ const addWanderspot = (req, res) => {
 		res.send(data)
 	})
 	.catch((err) => {
-		console.log('ERROR ADDING NEW WANDERSPOT ===>', err)
 		res.sendStatus(500)
 	})
 };
@@ -41,7 +38,6 @@ const updateWanderspot = (req, res) => {
 	})
 	.then(() => {res.sendStatus(200)})
 	.catch((err) => {
-		console.log('ERROR UPDATING WANDERSPOT ===>', err)
 		res.sendStatus(500)
 	})
 };
@@ -56,7 +52,6 @@ const getItinerary = (req, res) => {
 		res.send(itinerary)
 	})
 	.catch((err) => {
-		console.log('ERROR GETTING ITINERARY ===>', err)
 		res.sendStatus(500)
 	})
 };

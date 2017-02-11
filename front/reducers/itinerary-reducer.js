@@ -1,11 +1,12 @@
 const defaultState = {
-  wanderspots: []
+  wanderspotsArr: []
 };
 
 const itineraryReducer = (state=defaultState, action) => {
   switch(action.type) {
-    case 'GET_WANDERSPOTS':
-      return Object.assign({}, state, state.wanderspots.concat(action.data))
+    case 'GET_DEST_SPOTS':
+    // return {...state, wanderspotsArr: action.data}
+      return Object.assign({}, state, {wanderspotsArr: action.data})
       break;
     default: return state;
   }
