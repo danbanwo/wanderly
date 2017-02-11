@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import WanderMap from '../map/map'
+import React from 'react';
+
+//Import containers here:
+import Destination from '../destination/destination'
 import ItineraryBox from '../itinerary/itineraryBox';
+import WanderMap from '../map/map'
 
 import '../../styles/map.css'
 
@@ -21,10 +24,9 @@ const Profile = (props) => {
 
 
     <div className='profileRight'>
-      {/* <div style={{width: 520, height: 300, background: 'blue'}}> */}
-        <WanderMap pathname={'/home'} />
-      {/* </div> */}
-      <ItineraryBox />
+        <WanderMap map={props.destinations.destinations} test={props.getProfile}/>
+        <Destination destinations={props.destinations.destinations} />
+      {/* <ItineraryBox /> */}
     </div>
 
 

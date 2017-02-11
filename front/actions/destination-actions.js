@@ -1,7 +1,14 @@
 import axios from 'axios';
 
+const getDestinations = (destinations) => (
+  {type: 'GET_DESTINATION', payload: destinations}
+)
+
 export const getProfileDestinations = (id) => (
   (dispatch) => {
-    dispatch({type: 'GET_DESTINATION', payload: axios.get('/api/destination/profile/'+id)})
+    axios.get('/api/destination/profile/'+id)
+    .then((destinations) => {
+      dispatch(getDestinations(destinations.data))
+    })
   }
 )

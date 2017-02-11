@@ -23,18 +23,19 @@ const WanderGoogleMap = withGoogleMap(props => (
   </GoogleMap>
 ));
 
+
+//Below is the Google Map that is rendered to the page
+//it is contained within
 export default class WanderMap extends Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.props.markers()
+    this.props.test(2)
   }
 
   render() {
-    const { pathname } = this.props
-    if(pathname === '/home') {
       return (
         <div style={{width: 520, height: 300, background: 'blue'}}>
           <WanderGoogleMap
@@ -44,25 +45,9 @@ export default class WanderMap extends Component {
             mapElement={
               <div style={{ height: '100%', }} />
             }
-            // markers={markers}
+            markers={this.props.map}
           />
         </div>
       );
-    } else {
-      const { markers } = this.props.map;
-      return (
-        <div style={{width: 520, height: 300, background: 'blue'}}>
-          <WanderGoogleMap
-            containerElement={
-              <div style={{ height: '100%', }} />
-            }
-            mapElement={
-              <div style={{ height: '100%', }} />
-            }
-            markers={markers}
-          />
-        </div>
-      );
-    }
   }
 }

@@ -1,12 +1,14 @@
 const profileRouter = require('express').Router();
 const profile = require('../models').Profile;
+const Destination = require('../models').Destination;
+const Wanderspot = require('../models').Wanderspot;
 
 //This will handle any routes going to localhost:3000/api/profile/*
 
 const userProfiles = (req,res)=>{
 	profile.findAll()
 	.then((data)=>{
-		res.sendStatus(200);
+		res.send(data);
 	})
 	.catch((error)=>{
 		res.sendStatus(500);
@@ -14,9 +16,15 @@ const userProfiles = (req,res)=>{
 }
 
 const singleProfile = (req,res)=>{
-	profile.findById(req.body.id)
+	profile.findById(req.params.id, {
+		include: [{
+			model: Destination,
+			include: [{
+				model: Wanderspot}]
+		}]
+	})
 	.then((data)=>{
-		res.sendStatus(200);
+		res.send(data);
 	})
 	.catch((error)=>{
 		res.sendStatus(500);
@@ -24,7 +32,6 @@ const singleProfile = (req,res)=>{
 }
 
 const createProfile = (req,res)=>{
-	console.log(req.body, 'what is this??')
 	profile.create({
 		first_name:req.body.first_name,
 		last_name:req.body.last_name,
