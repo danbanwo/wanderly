@@ -1,13 +1,14 @@
 import axios from 'axios';
 
-export const test = () => (
-  (dispatch) => {
-    dispatch({type: 'test', payload: 'test payload'})
-  }
-);
+const markerData = (markers) => ({
+    type: 'ADD_MARKERS', payload: markers
+  })
 
 export const addMarkers = () => (
   (dispatch) => {
-    dispatch({type: "ADD_MARKERS", payload: axios.get('/api/itinerary')})
+    axios.get('/api/destination')
+    .then((markers) => {
+      dispatch(markerData(markers))
+    })
   }
 );

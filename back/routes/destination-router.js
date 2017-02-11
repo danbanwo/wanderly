@@ -1,5 +1,6 @@
 const destinationRouter = require('express').Router();
 const Destination = require('../models').Destination;
+const Wanderspot = require('../models').Wanderspot;
 
 //Retrieves one destination
 const getOneDestination = (req, res) => {
@@ -28,8 +29,8 @@ const getProfileDestinations = (req, res) => {
   Destination.findAll({
     where: { ProfileId: req.params.id },
     // include: [{
-    //   model: Destination,
-    //   include: [{model: Wanderspot}]
+      // model: Destination,
+      include: [{model: Wanderspot}]
     // }]
   })
   .then((prof_destinations) => {
@@ -76,7 +77,7 @@ destinationRouter.route('/')
 .get(getAllDestinations)
 .post(addDestination)
 
-//Route to retrieve one destination 
+//Route to retrieve one destination
 destinationRouter.route('/:id')
 .get(getOneDestination)
 .put(updateDestination)
