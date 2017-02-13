@@ -37,7 +37,7 @@ export default class WanderMap extends Component {
 
   render() {
       return (
-        <div style={{width: 520, height: 300, background: 'blue'}}>
+        <div style={{width: 520, height: '100vh', background: 'blue'}}>
           <WanderGoogleMap
             containerElement={
               <div style={{ height: '100%', }} />
