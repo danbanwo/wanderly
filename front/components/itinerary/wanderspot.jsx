@@ -16,22 +16,42 @@ class Wanderspot extends Component {
 		return this.props.spots.wanderspotsArr.map((curr, idx) => {
 			return (
 				<div key={idx}>
-					<h1>{curr.spot}</h1>
+					<div className='wanderRowContainer'>
+
+						<div className='spotDesc'>
+							<h2>{curr.spot} </h2>
+							<h5>{curr.description} </h5>
+						</div>
+
+						<div className='total'>
+							<h4>total spent: </h4>
+							<h5>{curr.total} </h5>
+						</div>
+
+						<div className='category'>
+							<h4>category:</h4> 
+							<h5>{curr.category} </h5>
+						</div>
+
+						<div className='wanderPicContainer'>
+							<img className='wanderPic' src={curr.pictures} />
+						</div>
+
+					</div>
 				</div>
 			)
 		})
 	}
 
 	render() {
-		console.log('THIS.PROPS.SPOTS ===>', this.props.spots.wanderspotsArr)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
-				<div>loading...</div>
+				<div>Lioading...</div>
 			)
 		} 
 		else {
 			return (
-				<div>
+				<div className='returnSpot'>
 					{this.displaySpots()}
 				</div>
 			)

@@ -4,38 +4,53 @@ body, html {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 
-
 /*---------Itinerary Container--------*/
 
-.itineraryContainer {
+/*.itineraryContainer {
 	width: 500px;
 	float: right;
 	display: flex;
 	background-color: rgba(66, 244, 229, 0.5);
 	flex-direction: column;
 	padding: 10px;
-}
+}*/
 /*---------/Itinerary Container--------*/
 
 
 
 
-/*---------Itinerary--------*/
+/*---------Itinerary Row--------*/
 
 .wanderRowContainer {
 	display: flex;
 	background-color: rgba(255,255,255, 0.7);
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 5px;
+	align-items: center;
 }
 
 .wanderPicContainer {
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+  justify-content: center;
 }
 
 .wanderPic{
 	width: 100%;
 }
-/*---------/Itinerary--------*/
+
+.spotDesc {
+	width: 300px;
+	padding: 5px;
+}
+
+.total {
+	width: 300px;
+}
+
+.category {
+	width: 300px;
+}
+/*---------/Itinerary Row--------*/

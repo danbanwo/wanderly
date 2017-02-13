@@ -41,7 +41,7 @@ let wanderspotArr = [
     lat: 127.098311,
     total: 45,
     category: 'play',
-    DestinationId: 1
+    DestinationId: 2
   },
   {
     pictures: 'http://cdn.havehalalwilltravel.com/wp-content/uploads/2015/08/myeongdong-shopping.jpg?x87844',
@@ -51,7 +51,7 @@ let wanderspotArr = [
     lat: 37.562662,
     total: 300,
     category: 'play',
-    DestinationId: 1
+    DestinationId: 2
   },
   {
     pictures: 'https://s-media-cache-ak0.pinimg.com/originals/a6/38/06/a63806e9263ae04f95cb2d75dd05e159.jpg',
@@ -61,7 +61,7 @@ let wanderspotArr = [
     lat: 48.858093,
     total: 5,
     category: 'play',
-    DestinationId: 2
+    DestinationId: 3
   },
   {
     pictures: 'https://www.ephotozine.com/articles/town---city-night-photography-tips-17672/images/Paris.jpg',
@@ -71,7 +71,7 @@ let wanderspotArr = [
     lat: 48.859,
     total: 12,
     category: 'play',
-    DestinationId: 2
+    DestinationId: 3
   },
   {
     pictures: 'http://eat-trotter.com/wp-content/uploads/2014/01/laduree1.jpg',
@@ -81,7 +81,7 @@ let wanderspotArr = [
     lat: 48.868498,
     total: 25,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 3
   },
   {
     pictures: 'http://aff.bstatic.com/images/hotel/840x460/628/62886304.jpg',
@@ -91,7 +91,7 @@ let wanderspotArr = [
     lat: 45.469477,
     total: 1000,
     category: 'sleep',
-    DestinationId: 2
+    DestinationId: 4
   },
   {
     pictures: 'https://s-media-cache-ak0.pinimg.com/originals/b3/aa/4e/b3aa4e422bf95afb8335b5edffd0f6f7.jpg',
@@ -101,7 +101,7 @@ let wanderspotArr = [
     lat: 43.769643,
     total: 4,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 5
   },
   {
     pictures: 'http://cleocollective.com/wp-content/uploads/2015/03/Gelateria-dei-Neri-Best-Gelato-in-Florence-Tuscany-1024x768.jpg',
@@ -111,7 +111,7 @@ let wanderspotArr = [
     lat: 43.767764,
     total: 4,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 5
   },
   {
     pictures: 'http://cdn1.discovertuscany.com/img/florence/museums/botticelli-venus-uffizi.jpg?w=1140&q=60&auto=enhance',
@@ -121,7 +121,7 @@ let wanderspotArr = [
     lat: 43.767786,
     total: 30,
     category: 'play',
-    DestinationId: 2
+    DestinationId: 5
   },
   {
     pictures: 'https://wheninflorenceblog.files.wordpress.com/2013/07/all-antico-vinaio.jpg',
@@ -131,7 +131,7 @@ let wanderspotArr = [
     lat: 43.777164,
     total: 10,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 5
   },
   {
     pictures: 'https://a0.muscache.com/im/pictures/33679999/2bee78f0_original.jpg?aki_policy=xx_large',
@@ -141,7 +141,7 @@ let wanderspotArr = [
     lat: 43.768009,
     total: 120,
     category: 'sleep',
-    DestinationId: 2
+    DestinationId: 5
   },
   {
     pictures: 'https://a0.muscache.com/im/pictures/14936106/ab62bd73_original.jpg?aki_policy=xx_large',
@@ -151,17 +151,17 @@ let wanderspotArr = [
     lat: 45.444958,
     total: 73,
     category: 'sleep',
-    DestinationId: 2
+    DestinationId: 6
   },
   {
-    pictures: 'https://a0.muscache.com/im/pictures/14936106/ab62bd73_original.jpg?aki_policy=xx_large',
+    pictures: 'http://www.thelifeofluxury.com/images/venice_italy_gondola_canal_ride.jpg',
     description: "Gondola ride! A half hour ride was 80 euros.",
     spot: 'Grand Canal',
     lng: 12.328463,
     lat: 45.444958,
     total: 80,
     category: 'play',
-    DestinationId: 2
+    DestinationId: 6
   },
   {
     pictures: 'http://www.vancouversun.com/cms/binary/8865305.jpg',
@@ -171,7 +171,7 @@ let wanderspotArr = [
     lat: 45.433340,
     total: 80,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 6
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-35.jpg',
@@ -181,7 +181,7 @@ let wanderspotArr = [
     lat: 40.851251,
     total: 6,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-12.jpg',
@@ -191,7 +191,7 @@ let wanderspotArr = [
     lat: 40.855923,
     total: 6,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-24.jpg',
@@ -201,7 +201,7 @@ let wanderspotArr = [
     lat: 40.849753,
     total: 5.50,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-32.jpg',
@@ -211,7 +211,7 @@ let wanderspotArr = [
     lat: 40.851642,
     total: 8,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-04.jpg',
@@ -221,7 +221,7 @@ let wanderspotArr = [
     lat: 40.849372,
     total: 5,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-17.jpg',
@@ -231,7 +231,7 @@ let wanderspotArr = [
     lat: 40.850057,
     total: 6,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
     pictures: 'http://slice.seriouseats.com/images/2013/01/20121002-napoli-pizza-tour-56.jpg',
@@ -241,7 +241,7 @@ let wanderspotArr = [
     lat: 40.843349,
     total: 5,
     category: 'eat',
-    DestinationId: 2
+    DestinationId: 7
   },
   {
    pictures: 'http://www.emmajanenation.com/wp-content/uploads/2013/10/De-Kas-Amsterdam_0018.jpg',
@@ -251,7 +251,7 @@ let wanderspotArr = [
    lat: 52.352200,
    total: 50,
    category: 'eat',
-   DestinationId: 3
+   DestinationId: 8
   },
   {
    pictures: 'http://albertcuyp-markt.amsterdam/wp-content/uploads/2015/12/original-stroopwafels-header-2.jpg',
@@ -261,7 +261,7 @@ let wanderspotArr = [
    lat: 52.355957,
    total: 2,
    category: 'eat',
-   DestinationId: 3
+   DestinationId: 8
   },
   {
    pictures: 'http://www.facetourist.com/uploads/2/5/6/1/25616865/wallen-amsterdam-red-light-district-tour-trip-vacation-travel-traveling_orig.jpg',
@@ -271,7 +271,7 @@ let wanderspotArr = [
    lat: 52.371860,
    total: 0,
    category: 'play',
-   DestinationId: 3
+   DestinationId: 8
   },
   {
    pictures: 'https://cdn4.vtourist.com/4/7639989-Anne_Frank_House_Thought_Provoking_Museum.jpg?version=2',
@@ -281,7 +281,7 @@ let wanderspotArr = [
    lat: 52.375218,
    total: 20,
    category: 'play',
-   DestinationId: 3
+   DestinationId: 8
   },
   {
    pictures: 'http://trojantravel.usc.edu/wp-content/uploads/2015/07/Peru_Machu-Picchu-Llamas.jpg',
@@ -291,7 +291,7 @@ let wanderspotArr = [
    lat: -13.163141,
    total: 55,
    category: 'play',
-   DestinationId: 3
+   DestinationId: 9
   },
   {
    pictures: 'http://pix.avaxnews.com/avaxnews/c4/bb/0001bbc4_medium.jpeg',
@@ -301,7 +301,7 @@ let wanderspotArr = [
    lat: -21.160767,
    total: 20,
    category: 'play',
-   DestinationId: 3
+   DestinationId: 10
   },
 ];
 
