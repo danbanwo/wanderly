@@ -1,3 +1,8 @@
+.destList {
+	height: 70vh;
+	overflow-y: scroll;
+}
+
 #main_destination {
 	height: 100vh;
 	overflow-y: scroll;
@@ -6,6 +11,7 @@
 .profileContainer {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
 
 /*---------Profile Left Container--------*/
