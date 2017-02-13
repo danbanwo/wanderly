@@ -4,13 +4,18 @@ var bodyparser = require('body-parser')
 var multer = require('multer')
 var path = require('path')
 var db = require('./back/models')
+var fileUpload = require('express-fileupload')
 
 
-app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.urlencoded({ extended: true}));
 app.use(bodyparser.json())
-app.use(express.static('front/public'))
+
+app.use(fileUpload())
+
 
 app.use("/api", require('./back/routes'))
+
+app.use(express.static(path.join(__dirname, '../front/public')));
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '/front/views/index.html'))

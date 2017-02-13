@@ -1,60 +1,24 @@
-import React from 'react';
-import $ from 'jquery';
+import React, { Component } from 'react';
 
 
-const SignUp = React.createClass({
-getInitialState(){
-	return({photo: '', first_name: '', last_name:'', gender: '',age:'',country_origin:'', catch_phrase:''})
-},
-firstNameChange(e){
-	this.setState({first_name: e.target.value})
-},
-lastNameChange(e){
-	this.setState({last_name: e.target.value})
-},
-genderChange(e){
-	this.setState({gender: e.target.value})
-},
-ageChange(e){
-	this.setState({age: parseInt(e.target.value)})
-},
-originChange(e){
-	this.setState({country_origin: e.target.value})
-},
-catchPhraseChange(e){
-	this.setState({catch_phrase: e.target.value})
-},
-photoChange(e){
-	this.setState({photo:e.target.value})
-},
-createNewUser(e){
-	e.preventDefault();
-	$.ajax({
-		url: '/api/profile/',
-		type:'POST',
-		data: this.state
-	})
-	alert('Awesome! You have now joined Wanderly!')
-},
-	render(){
-		return(
-			<div>
-			<center>
-			<h1> Start You Adventure At Wanderly ! </h1> 
-
-			<form onSubmit={this.createNewUser}> 
-			FirstName:<input type="text" value={this.first_name} onChange={this.firstNameChange}></input><br/>
-			LastName:<input type="text" value={this.last_name} onChange={this.lastNameChange}></input><br/>
-			Age:<input type="text" value={this.age} onChange={this.ageChange}></input><br/>
-			Gender:<input type="text" value={this.gender} onChange={this.genderChange}></input><br/>
-			Country origin: <input type="text" value={this.country_origin} onChange={this.originChange}></input><br/>
-			Tell us why you love traveling!<input type="text" value={this.catch_phrase} onChange={this.catchPhraseChange}></input><br/>
-			</form>
-			</center>
-			</div>
-		)
-	}
-});
 
 
-export default SignUp;
+const SignUp = (props) =>{
+	return (
+		<div>
+		<center>
+			<h1>SIGNUP NOW!</h1>
+			<h3>to share your adventures & follow others</h3>
+			<form>
+				Email: <input type="text"></input><br/>
+				Password:<input type="password"></input><br/>
+				Confirm Password:<input type="password"></input><br/>
+				<input type="submit" value="Get Started"/>
+				</form>
+				Already Have an account?  <a href="http://localhost:3000/">Login</a>
+		</center>
+		</div>
+	)
+}
+
+export default SignUp; 

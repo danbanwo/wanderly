@@ -7,6 +7,7 @@ import {browserHistory, IndexRoute, Router, Route} from 'react-router';
 // import Map from './map/map';
 import Profile from './profile/profile';
 import SignUp from './signup/signup.jsx';
+import createProfile from './profile/createProfile.jsx';
 
 
 let App = React.createClass({
@@ -29,6 +30,7 @@ ReactDOM.render(
     <Route path='/' component={App} />
     <Route path='/signup' component={SignUp}/>
     <Route path='/home' component={Profile} />
+    <Route path="/profile" component={createProfile}/>
   </Router>,
   document.getElementById('root')
 )

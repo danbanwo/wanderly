@@ -1,12 +1,8 @@
  'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Profile = sequelize.define('Profile', {
-    image:{
-      type:DataTypes.STRING,
-      allowNull:true
-    },
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
+    image: DataTypes.STRING,
+    fullName: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: DataTypes.INTEGER,
     country_origin: DataTypes.STRING,
