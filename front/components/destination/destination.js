@@ -22,9 +22,8 @@ class Destination extends Component {
   }
 
   render() {
-    console.log('THIS IS GET PROFILE===>>>', getProfile)
     if(this.props.destinations) {
-      return (<div>{this.displayDestination()}</div>)
+      return (<div id='main_destination'>{this.displayDestination()}</div>)
     }
     else {
       return (<h2>Loading...</h2>)
