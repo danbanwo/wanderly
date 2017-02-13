@@ -9,26 +9,27 @@ import '../../styles/map.css'
 
 const Profile = (props) => {
   return (
-    <div className='profileContainer'>
-
-     <div className='profileLeft'>
-
-      <div className='profilePhotoContainer'>
-        <img className='profilePhoto' src='http://static.boredpanda.com/blog/wp-content/uploads/2016/01/traveling-dog-aspen-the-mountain-pup-instagram-2.jpg' />
+  <div className='profileContainer'>
+    <div className='profileLeft'>
+      <div className='profileInfo'>
+        <div className='profilePhotoContainer'>
+          <img className='profilePhoto' src={props.profile.photo} />
+        </div>
+        <div className='profileBio'>
+         <h2>{props.profile.first_name} {props.profile.last_name}</h2>
+          <h4>{props.profile.catch_phrase}</h4>
+          <h4>{props.profile.country_origin}</h4>
+        </div>
       </div>
-      Goldie Retrivey
-      "I Ruff traveling"
 
+      <div className='destList'>
+      <Destination destinations={props.destinations.destinations} />
+      </div>
     </div>
-
-
 
     <div className='profileRight'>
         <WanderMap map={props.destinations.destinations} test={props.getProfile}/>
-        <Destination destinations={props.destinations.destinations} />
-      {/* <ItineraryBox /> */}
     </div>
-
 
   </div>
   )
