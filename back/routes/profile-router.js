@@ -1,5 +1,7 @@
 const profileRouter = require('express').Router();
 const profile = require('../models').Profile;
+const formidable = require('formidable');
+const path = require('path');
 const Destination = require('../models').Destination;
 const Wanderspot = require('../models').Wanderspot;
 
@@ -50,14 +52,23 @@ const createProfile = (req,res)=>{
 
 
 const uploadPhoto = (req,res)=>{
-	res.sendFile(__dirname + './front/views/index.html');
+	var form = new formidable.IncomingForm();
+
+	form.parse(req);
+
+	form.on('fileBegin', (name,file)=>{
+		file.path = path.join(__dirname, '../../front/public/userphotos', file.name);
+	});
+
+	form.on('file', (name,file)=>{
+		console.log('Uploaded' + file.name)
+		console.log('THIS IS THE PHOTO', file)
+	});
+
+	res.send('File uploaded');
+
 
 }
-
-
-
-	
-
 
 
 
@@ -69,7 +80,7 @@ profileRouter.route('/:id')
 	.get(singleProfile)
 
 profileRouter.route('/upload')
-	.get(uploadPhoto)
+	.post(uploadPhoto)
 
-	
+
 module.exports = profileRouter;
