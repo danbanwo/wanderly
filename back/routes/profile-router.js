@@ -35,6 +35,7 @@ const singleProfile = (req,res)=>{
 
 const createProfile = (req,res)=>{
 	profile.create({
+		image:req.body.image,
 		first_name:req.body.first_name,
 		last_name:req.body.last_name,
 		gender:req.body.gender,
