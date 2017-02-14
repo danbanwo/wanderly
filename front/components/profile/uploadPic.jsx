@@ -17,7 +17,7 @@ const UploadPic = React.createClass({
 			<input id="file" type="file" name="upload" multiple/>
 			<input id="uploadbtn" type="submit" value="Upload photo"/>
 		</form>
-		<a href="http://localhost:3000/home" id="skip">Skip this step</a>
+		<a href="http://localhost:3000/createbio" id="skip">Skip this step</a>
 
 		</center>
 

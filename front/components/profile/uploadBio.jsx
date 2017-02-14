@@ -7,8 +7,26 @@ const UploadBio = React.createClass({
 	render(){
 		return(
 		<div>
+		<center>
 		<h1> Welcome, traveler!</h1>
 		<h3> Tell us a little more about yourself. </h3>
+
+		<p> What types of travel do you like? </p>
+			<button type="button">category</button>
+			<button type="button">category</button>
+			<button type="button">category</button>
+			<button type="button">category</button>
+			<button type="button">category</button>
+			<button type="button">category</button>
+
+		<p> Introduce yourself </p>
+
+		<input type="text" placeholder="Write a brief intro..."></input>
+
+		<button type="button">All done!</button>
+
+		<a href="http://localhost:3000/home" id="skip">Skip this step</a>
+		</center>
 
 		</div>
 		)
