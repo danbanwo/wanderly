@@ -1,8 +1,3 @@
-.destList {
-	height: 70vh;
-	overflow-y: scroll;
-}
-
 #main_destination {
 	height: 100vh;
 	overflow-y: scroll;
@@ -11,7 +6,7 @@
 .profileContainer {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 /*---------Profile Left Container--------*/
@@ -30,7 +25,7 @@
 	/*height: 100%;*/
 	justify-content: center;
 	width: 200px;
-	border-radius: 50px;
+	border-radius: 80px;
 }
 
 .profileInfo {
@@ -41,6 +36,11 @@
 .profileBio {
 	width: 70%;
 }
+
+.destList {
+		height: 60vh;
+		overflow-y: scroll;
+}
 /*---------/Profile Left Container--------*/
 
 
@@ -49,6 +49,11 @@
 /*---------Profile Right Container--------*/
 .profileRight {
 	width: 67%;
+	align-items: right;
+}
+
+.profileMap {
+	justify-content: right;
 }
 
 /*---------/Profile Right Container--------*/
