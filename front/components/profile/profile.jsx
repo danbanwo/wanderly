@@ -28,7 +28,7 @@ const Profile = (props) => {
     </div>
 
     <div className='profileRight'>
-        <WanderMap map={props.destinations.destinations} test={props.getProfile}/>
+        <WanderMap className='profileMap' map={props.destinations.destinations} test={props.getProfile}/>
     </div>
 
   </div>

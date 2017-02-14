@@ -19,7 +19,7 @@ const SignUp = React.createClass({
 		return(
 			<div>
 				<center>
-					<h1> Start You Adventure At Wanderly ! </h1>
+					<h1> Start Your Adventure At Wanderly ! </h1>
 					<form onSubmit={this.createNewUser}>
 					FirstName:<input name='first_name' type="text" onChange={this.handleInputChange}></input><br/>
 					LastName:<input name='last_name' type="text" onChange={this.handleInputChange}></input><br/>
