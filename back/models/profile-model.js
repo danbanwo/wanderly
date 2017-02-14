@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: DataTypes.INTEGER,
-    photo: DataTypes.STRING, 
+    image: DataTypes.STRING, 
     country_origin: DataTypes.STRING,
     catch_phrase: DataTypes.STRING
   }, {
