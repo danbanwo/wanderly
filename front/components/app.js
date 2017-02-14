@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 const App = (props) => {
   return(
     <div>
-      {props.children}
+    	<h1> Welcome to Wanderly! </h1>
+      	{props.children}
     </div>
   )
 }
