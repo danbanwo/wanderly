@@ -61,12 +61,18 @@ const uploadPhoto = (req,res)=>{
 	});
 
 	form.on('file', (name,file)=>{
-		console.log('Uploaded' + file.name)
-		console.log('THIS IS THE PHOTO', file)
+	//checking to see if an image exist, if not a default photo will be set
+		let imageExist = file.path
+
+		if(imageExist){
+			console.log('Image Exist ' + file.name);
+		}
+		else{
+			console.log('Image Does Not Exist');
+		}
 	});
 
 	res.send('File uploaded');
-
 
 }
 
