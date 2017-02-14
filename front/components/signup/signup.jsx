@@ -19,7 +19,7 @@ const SignUp = React.createClass({
 		return(
 			<div>
 				<center>
-					<h1> Start You Adventure At Wanderly ! </h1>
+					<h1> Start Your Adventure At Wanderly ! </h1>
 					<form onSubmit={this.createNewUser}>
 					FirstName:<input name='first_name' type="text" onChange={this.handleInputChange}></input><br/>
 					LastName:<input name='last_name' type="text" onChange={this.handleInputChange}></input><br/>
@@ -29,6 +29,13 @@ const SignUp = React.createClass({
 					Tell us why you love traveling!<input name='catch_phrase' type="text" onChange={this.handleInputChange}></input><br/>
 					<input type="submit" value="submit"></input>
 					</form>
+
+
+					<form action="/api/profile/upload" encType="multipart/form-data" method="post">
+						<input type="file" name="upload" multiple/>
+						<input type="submit" value="Upload"/>
+					</form>
+
 				</center>
 			</div>
 		)

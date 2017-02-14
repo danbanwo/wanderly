@@ -48,6 +48,19 @@ const createProfile = (req,res)=>{
 	})
 }
 
+
+const uploadPhoto = (req,res)=>{
+	res.sendFile(__dirname + './front/views/index.html');
+
+}
+
+
+
+	
+
+
+
+
 profileRouter.route('/')
 	.get(userProfiles)
 	.post(createProfile)
@@ -55,5 +68,8 @@ profileRouter.route('/')
 profileRouter.route('/:id')
 	.get(singleProfile)
 
+profileRouter.route('/upload')
+	.get(uploadPhoto)
 
+	
 module.exports = profileRouter;
