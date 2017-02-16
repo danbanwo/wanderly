@@ -46,7 +46,7 @@ class Profile extends Component {
           />
         </div>
         <div id='renderModal'>
-
+          <DestinationModal />
         </div>
       </div>
     )

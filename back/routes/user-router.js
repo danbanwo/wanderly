@@ -18,24 +18,23 @@ module.exports = function (app, passport){
 				}).then(function(user) {
 					user = user.dataValues;
         	passport.authenticate('local', function(err) {
-        		if (err) { 
-        			return next(err) 
+        		if (err) {
+        			return next(err)
         		} else {
         			user = Object.assign({}, user);
 	      			delete user.password
 	      			res.end(JSON.stringify(user));
 	      			return true;
-	      		}	
+	      		}
         	})(req, res, next)
       	})
 			} else {
 	      res.send("user exists")
 	    };
 		});
-	}); 
+	});
 
 	app.post("/login", function(req, res, next) {
-
 		passport.authenticate('local', function(err) {
 			if (err) { return next(err); }
 
@@ -59,7 +58,10 @@ module.exports = function (app, passport){
 			      delete user.password
 			      res.end(JSON.stringify(user));
 			      return true;
-	    		});
+	    		})
+					// .then(() => {
+					// 	return res.redirect('/')
+					// })
       	};
       })
       .catch(function(err){
@@ -82,7 +84,7 @@ module.exports = function (app, passport){
 
   //========loged in?=======//
   app.get('/', isLoggedIn, function(req, res) {
-    res.redirect('/home', {
+    res.redirect('/', {
       user : req.user
     });
   });

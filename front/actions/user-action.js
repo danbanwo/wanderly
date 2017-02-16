@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const user_login = (data) => ({
 	type: "USER_LOGIN",
-	data: {...data, route:'/home'}
+	data: {...data}
 })
 
 const user_signup = (data) => ({
