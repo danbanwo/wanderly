@@ -28,19 +28,16 @@ module.exports = function (passport) {
     if (email) {
       email = email.toLowerCase(); 
     }
-    console.log('email', email)
     // asynchronous
     process.nextTick(function() {
       // if the user is NOT there:
       if (!req.User) {
-    
         User.findOne({'email': req.body.email})
           .then(function(user){
             if (user) {
-              console.log(user)
-                return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
+              return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
             } else {
-             // create the user
+             // creates user
              User.create({
                'email': email,
                'password': User.generateHash(password)
@@ -59,55 +56,16 @@ module.exports = function (passport) {
       }
     })
   }));
-
-
-
-
-//===========loging-in======
-	// passport.use('local-login', new LocalStrategy({
- //    usernameField : 'email',
- //    passwordField : 'password',
- //    passReqToCallback : true 
- //  },
- //  function(req, email, password, done) {
- //    if (email) {
- //      email = email.toLowerCase();
- //    };
- //    // asynchronous
- //    process.nextTick(function() {
- //      User.findOne({'email': email })
- //        .then(function(user) {
- //          // if no user is found, return the message
- //          user = user.dataValues
- //          if (!user) {
- //            return done(null, false, req.flash('loginMessage', 'email not found.'));
- //          }
- //          if (!bcrypt.compareSync(password, user.password)) {
- //            return done(null, false, req.flash('loginMessage', 'Wrong password.'));
- //          }
- //          else {
- //            return done(null, user);
- //          }
- //        })
- //        .catch(function(err){
- //          return done(err);
- //        });
- //    });
- //  }));
-
-
-
-//===========loging-in======
+  
+  //===========loging-in======
   passport.use('local', new LocalStrategy({
     passReqToCallback : true // allows us to pass in the req from our route (lets us check if a user is logged in or not)
   }, 
-    function(req, email, password, done) {
-      console.log('local req', req )
-      process.nextTick(function() {
-        return done(null, req.user);
-      });
-    }
+  function(req, email, password, done) {
+    process.nextTick(function() {
+      return done(null, req.user);
+    });
+  }
   ));
-
 };
 

@@ -97,19 +97,22 @@ app.post("/login", function(req, res, next) {
 
 
 
-  //========user is logedin  =====//
+  //========user is loged-in
+    =====//
   app.get('/', isLoggedIn, function(req, res) {
     res.redirect('/home', {
       user : req.user
     });
   });
 
-	//============ Log-out ===========//
+	//============ user logs-out ===========//
   app.get('/logout', function(req, res) {
     req.logout();
     res.send('logout')
     // res.redirect('/home');
   });
+
+  //====== 
 
 // route middleware to ensure user is logged in //
 	function isLoggedIn(req, res, next) {
