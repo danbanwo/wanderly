@@ -1,12 +1,14 @@
-const _defaultState = [{userData: false}]
+const _defaultState = {};
 
-const logInReducer = (state = _defaultState, action) => {
+const userReducer = (state = _defaultState, action) => {
 	switch(action.type){
-		case "LOGIN_USER" :
+		case "USER_LOGIN" :
 			// getting the 
-
-			return [action.data]
-
+			return Object.assign({}, state, action.data)
+			break;
+		case "USER_SIGNUP":
+			return action.data
+			break;
 		default:
 			return state;
 	}

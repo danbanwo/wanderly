@@ -1,3 +1,7 @@
+/*
+included a function for sign up, 'local' instead of local-login
+*/
+
 const LocalStrategy   = require('passport-local').Strategy;
 const User = require('./back/models').User;
 const bcrypt = require('bcrypt-nodejs');
@@ -60,46 +64,50 @@ module.exports = function (passport) {
 
 
 //===========loging-in======
-	passport.use('local-login', new LocalStrategy({
-    usernameField : 'email',
-    passwordField : 'password',
-    passReqToCallback : true 
-  },
-  function(req, email, password, done) {
-    if (email) {
-      email = email.toLowerCase();
-    };
-    // asynchronous
-    process.nextTick(function() {
-      User.findOne({'email': email })
-        .then(function(user) {
-          // if no user is found, return the message
-          user = user.dataValues
-          if (!user) {
-            return done(null, false, req.flash('loginMessage', 'email not found.'));
-          }
-          if (!bcrypt.compareSync(password, user.password)) {
-            return done(null, false, req.flash('loginMessage', 'Wrong password.'));
-          }
-          else {
-            return done(null, user);
-          }
-        })
-        .catch(function(err){
-          return done(err);
-        });
-    });
-  }));
+	// passport.use('local-login', new LocalStrategy({
+ //    usernameField : 'email',
+ //    passwordField : 'password',
+ //    passReqToCallback : true 
+ //  },
+ //  function(req, email, password, done) {
+ //    if (email) {
+ //      email = email.toLowerCase();
+ //    };
+ //    // asynchronous
+ //    process.nextTick(function() {
+ //      User.findOne({'email': email })
+ //        .then(function(user) {
+ //          // if no user is found, return the message
+ //          user = user.dataValues
+ //          if (!user) {
+ //            return done(null, false, req.flash('loginMessage', 'email not found.'));
+ //          }
+ //          if (!bcrypt.compareSync(password, user.password)) {
+ //            return done(null, false, req.flash('loginMessage', 'Wrong password.'));
+ //          }
+ //          else {
+ //            return done(null, user);
+ //          }
+ //        })
+ //        .catch(function(err){
+ //          return done(err);
+ //        });
+ //    });
+ //  }));
 
 
+
+//===========loging-in======
+  passport.use('local', new LocalStrategy({
+    passReqToCallback : true // allows us to pass in the req from our route (lets us check if a user is logged in or not)
+  }, 
+    function(req, email, password, done) {
+      console.log('local req', req )
+      process.nextTick(function() {
+        return done(null, req.user);
+      });
+    }
+  ));
 
 };
-
-
-
-
-
-
-
-
 

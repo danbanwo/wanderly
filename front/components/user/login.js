@@ -1,20 +1,22 @@
-import React from 'react'
+import React, {Component} from 'react'
+import {browserHistory as history} from 'react-router';
 // import {addSession} from '../action/login-action.js'
 // import store from '../store/store.js'
 
-	const Login = React.createClass({
-	getInitialState(){
-		return {email: "", password:"" }
-	},
-	handleSubmit(e){
-		e.preventDefault()
-		this.props.login(this.state)
-		this.props.router.push('/profile')//links to profile00
-	},
+class Login extends Component {
+	constructor(props){
+		super(props)
+		this.state = {email: "a@a.com", password:"123" }
+	}
+	handleSubmit = (e) => {
+		e.preventDefault();
+		this.props.action(this.state)
+	}
 	handleChange(key, e){
 	this.setState({[key] : e.target.value})
-	},
+	}
 	render(){
+		console.log(this.props)
 		 const {email, password} = this.state;
 		return(
 			<div className='container'>	
@@ -45,7 +47,7 @@ import React from 'react'
 			</div>
 		)
 	}
-})
+}
 
 
 export default Login
