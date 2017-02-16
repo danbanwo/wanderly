@@ -8,6 +8,8 @@ import mapReducer from './map-reducer';
 import itineraryReducer from './itinerary-reducer';
 import destinationReducer from './destination-reducer';
 import profileReducer from './profile-reducer';
+import userReducer from './user-reducer';
+
 
 const allReducers = combineReducers({
 //Upon import, reducers should go below:
@@ -15,7 +17,8 @@ const allReducers = combineReducers({
   mapReducer,
   itineraryReducer,
   profileReducer,
-  routing: routerReducer
+  routing: routerReducer,
+  userReducer
 });
 
 export default allReducers;
