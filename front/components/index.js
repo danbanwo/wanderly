@@ -4,6 +4,8 @@ import React from 'react';
 import App from './app';
 import Destination from './destination/destination';
 import Profile from './profile/profile';
+import Login from './user/login';
+import Signup from './user/signup';
 import UploadPic from './profile/uploadPic';
 
 //import containers here:
@@ -11,9 +13,19 @@ import mapContainer from './map/map-container';
 import destinationContainer from './destination/destination-container';
 import profileContainer from './profile/profile-container';
 import itineraryContainer from './itinerary/itinerary-container';
-
+import userContainer from './user/user-container'
 
 //export all components and containers here:
 export {
-  App, Destination, destinationContainer, profileContainer, mapContainer, Profile, UploadPic, itineraryContainer
+  App, 
+  Destination, 
+  destinationContainer, 
+  itineraryContainer, 
+  Login, 
+  mapContainer, 
+  Profile, 
+  profileContainer, 
+  UploadPic, 
+  userContainer,
+  Signup, 
 }
