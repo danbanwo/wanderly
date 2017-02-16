@@ -12,16 +12,16 @@ const UploadBio = React.createClass({
 		<h3> Tell us a little more about yourself. </h3>
 
 		<p> What types of travel do you like? </p>
-			<button type="button">category</button>
-			<button type="button">category</button>
-			<button type="button">category</button>
-			<button type="button">category</button>
-			<button type="button">category</button>
-			<button type="button">category</button>
+			<button type="button">Category</button>
+			<button type="button">Category</button>
+			<button type="button">Category</button>
+			<button type="button">Category</button>
+			<button type="button">Category</button>
+			<button type="button">Category</button>
 
 		<p> Introduce yourself </p>
 
-		<input type="text" placeholder="Write a brief intro..."></input>
+		<input type="text" placeholder="Write a brief intro..." className="bio"></input>
 
 		<button type="button">All done!</button>
 
