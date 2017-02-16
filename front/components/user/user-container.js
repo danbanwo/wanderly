@@ -25,7 +25,7 @@ class userContainer extends Component {
   render(){
   	return(
   		//ternary operator
-  		this.getLogIn()
+  		this.getSignUp()
   		)
   }
 

@@ -1,22 +1,24 @@
-import React from 'react'
+import React, {Component} from 'react';
 
-const Signup = React.createClass({
-	getInitialState(){
-		return {
-			email: '',
-			password: ''
-		}
-	},
-	handleSubmit(e){
+
+class Signup extends Component {
+	constructor(props){
+		super(props)
+		this.state =  {email: 'vanessa@mother.com', password: '1234'}
+	}
+
+	handleSubmit = (e) => {
 		e.preventDefault()
-		this.props.signup(this.state)
-		this.props.router.push('/')//routes
-	},
-	handleChange(key, e){
+		this.props.action(this.state)
+		// this.props.router.push('/')//routes
+	}
+
+	handleChange = (key, e) => {
 		this.setState({[key]: e.target.value})
-	},
+	}
+
 	render(){
-		const {firstname, lastname, email, password} = this.state
+		const {email, password} = this.state
 		return(
 			<div>
 				<div className='container container1'>	
@@ -46,7 +48,7 @@ const Signup = React.createClass({
 		</div>
 		)
 	}
-})
+}
 
 
 export default Signup

@@ -16,36 +16,31 @@ module.exports = function (app, passport){
 					email: req.body.email,
     				password: bcrypt.hashSync(req.body.password)
 				}).then(function(user) {
-		        	passport.authenticate('local',
-		        		{
-			        		failureRedirect: "/signup",
-			        		successRedirect: "/profile"
-		        		}
-		        	)(req, res, next)
+					user = user.dataValues;
+		        	passport.authenticate('local', function(err) {
+		        		if (err) { 
+		        			return next(err) 
+		        		} else {
+		        			user = Object.assign({}, user);
+			      			delete user.password
+			      			res.end(JSON.stringify(user));
+			      			return true;
+			      		}	
+		        	})(req, res, next)
       		})
 		} else {
 	      	res.send("user exists")
 	    	};
 		});
 	});
- //==========sign-up=============//
- //is not working-- on terminal is a gives: 
-//  POST /signup 302 51ms - 29b
-// GET /signup 200 30ms - 339b
 
- // app.post("/signup", passport.authenticate('local-signup', {
- //      successRedirect : '/home',//needs to dererect to registration page 
- //      failureRedirect : '/signup', 
- //      failureFlash : true 
- //  }));
 
- // //==========log-in==============//
- /*using a custum bild up for passport*/
-
-	// app.post("/login", passport.authenticate('local-login', {
-	//   failureRedirect: '/login',
-	//   successRedirect: '/home',
-	// }));
+// 	 app.post("/signup", function(req, res, next){
+// 	 	passport.authenticate('local-signup', {
+//    			 res.send(user)
+//   }));
+// }
+ 
 
 app.post("/login", function(req, res, next) {
 
@@ -59,7 +54,6 @@ app.post("/login", function(req, res, next) {
 	        .then(function(user) {
 	          // if no user is found, return the message
 	          user = user.dataValues
-	          //console.log('user',user)
 	          if (!user) {
 	            res.status(401);
 	          }
@@ -69,8 +63,6 @@ app.post("/login", function(req, res, next) {
 	          else {
 	          	req.logIn(user, function(err) {
 			      if (err) { return next(err); }
-			      console.log('login req ===>>>', user);
-			      //console.log('res', res);
 			      user = Object.assign({}, user);
 			      delete user.password
 			      res.end(JSON.stringify(user));
@@ -98,7 +90,7 @@ app.post("/login", function(req, res, next) {
 
 
   //========user is loged-in
-    =====//
+
   app.get('/', isLoggedIn, function(req, res) {
     res.redirect('/home', {
       user : req.user

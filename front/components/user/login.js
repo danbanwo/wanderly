@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {browserHistory as history} from 'react-router';
-// import {addSession} from '../action/login-action.js'
-// import store from '../store/store.js'
+
 
 class Login extends Component {
 	constructor(props){

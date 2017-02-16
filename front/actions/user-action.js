@@ -21,11 +21,11 @@ export const userLogin = (info) => (
 );
 
 //create a axios call for user-signup
-export const userSignUp = () => (
+export const userSignUp = (info) => (
   (dispatch) => {
-    axios.post('/signup')
+    axios.post('/signup', info)
     .then((user) => {
-      dispatch(user_signup(user))
+      dispatch(user_signup(user.data))
     })
   }
 );
