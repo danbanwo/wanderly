@@ -1,5 +1,7 @@
 import React from 'react';
 import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
+
 
 //import reducers here:
 import mapReducer from './map-reducer';
@@ -12,7 +14,8 @@ const allReducers = combineReducers({
   destinationReducer,
   mapReducer,
   itineraryReducer,
-  profileReducer
+  profileReducer,
+  routing: routerReducer
 });
 
 export default allReducers;

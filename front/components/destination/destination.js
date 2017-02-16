@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { getProfile } from '../../actions/profile-actions';
 import { Link } from 'react-router';
+import { render } from 'react-dom';
+import DestinationModal from '../modal/destination-modal';
 
 
 class Destination extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.getProfile(2)
   }
 
   displayDestination() {
-    const { destinations } = this.props;
+    const { destinations } = this.props.destinations;
     return destinations.map((destination, i) => (
       <div key={'destination-'+i}>
         <Link to={'itinerary/'+destination.id}><h2 key={'place-'+i}>{destination.place}</h2></Link>
@@ -22,8 +28,13 @@ class Destination extends Component {
   }
 
   render() {
+
     if(this.props.destinations) {
-      return (<div id='main_destination'>{this.displayDestination()}</div>)
+      return (
+        <div id='master_itinerary'>
+          {this.displayDestination()}
+        </div>
+      )
     }
     else {
       return (<h2>Loading...</h2>)

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../../styles/itinerary.css';
+import { browserHistory as history } from 'react-router';
 
 class Wanderspot extends Component {
 	//gives access to keyword THIS
@@ -8,7 +9,12 @@ class Wanderspot extends Component {
 	}
 
 	componentDidMount() {
+		// this.props.getProfile(2)
 		this.props.getSpots(this.props.params.destId)
+	}
+
+	backToDestinations = () => {
+		history.goBack()
 	}
 
 	displaySpots = () => {
@@ -29,7 +35,7 @@ class Wanderspot extends Component {
 						</div>
 
 						<div className='category'>
-							<h4>category:</h4> 
+							<h4>category:</h4>
 							<h5>{curr.category} </h5>
 						</div>
 
@@ -46,12 +52,16 @@ class Wanderspot extends Component {
 	render() {
 		if(!this.props.spots.wanderspotsArr) {
 			return (
-				<div>Lioading...</div>
+				<div>
+					<button onClick={this.backToDestinations}>Back</button>
+					<span>Loading...</span>
+				</div>
 			)
-		} 
+		}
 		else {
 			return (
 				<div className='returnSpot'>
+					<button onClick={this.backToDestinations}>Back</button>
 					{this.displaySpots()}
 				</div>
 			)
@@ -83,7 +93,7 @@ class Wanderspot extends Component {
 // 							</div>
 
 // 							<div>
-// 							<h4>category:</h4> 
+// 							<h4>category:</h4>
 // 							<p>{curr.category} </p>
 // 							</div>
 // 						</div>
@@ -103,7 +113,7 @@ class Wanderspot extends Component {
 // 					{this.wanderRows()}
 // 				</div>
 // 			)
-// 		} 
+// 		}
 // 		else {
 // 			return (
 // 				<div>
@@ -115,4 +125,4 @@ class Wanderspot extends Component {
 // })
 
 
-export default Wanderspot; 
+export default Wanderspot;

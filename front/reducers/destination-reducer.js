@@ -8,13 +8,6 @@ const destinationReducer = (state = defaultState, action) => {
       return {...state, destinations: action.destData}
       break;
     }
-    case 'GET_DESTINATION_FULFILLED': {
-      return {
-        ...state,
-        destinations: action.payload.data
-       }
-      break;
-    }
     default: return state
   }
 }

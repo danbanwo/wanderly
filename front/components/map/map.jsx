@@ -13,9 +13,9 @@ const WanderGoogleMap = withGoogleMap(props => (
       enableRetinaIcons
       gridSize={60}
     > */}
-    {props.markers.map((destination, i) => {
+    {props.markers.map((position, i) => {
         return (<Marker
-          position={{ lat: destination.lat, lng: destination.lng, }}
+          position={{ lat: position.lat, lng: position.lng, }}
           key={i}
         />);
     })}
@@ -36,8 +36,10 @@ export default class WanderMap extends Component {
   }
 
   render() {
+    const { pathname } = this.props.routing;
+    if(pathname === '/') {
       return (
-        <div style={{width: 520, height: '100vh', background: 'blue'}}>
+        <div style={{width: 750, height: '100vh', background: 'blue'}}>
           <WanderGoogleMap
             containerElement={
               <div style={{ height: '100%', }} />
@@ -49,5 +51,20 @@ export default class WanderMap extends Component {
           />
         </div>
       );
+    } else {
+      return (
+        <div style={{width: 750, height: '100vh', background: 'blue'}}>
+          <WanderGoogleMap
+            containerElement={
+              <div style={{ height: '100%', }} />
+            }
+            mapElement={
+              <div style={{ height: '100%', }} />
+            }
+            markers={this.props.mapSpot}
+          />
+        </div>
+      );
+    }
   }
 }

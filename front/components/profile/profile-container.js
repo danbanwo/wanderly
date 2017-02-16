@@ -9,7 +9,9 @@ import Profile from './profile';
 const mapStateToProps = (state) => ({
     profile: state.profileReducer,
     map: state.mapReducer,
-    destinations: state.destinationReducer
+    destinations: state.destinationReducer,
+    routing: state.routing,
+    spots: state.itineraryReducer,
   })
 
   const matchDispatchToProps = (dispatch) => ({
