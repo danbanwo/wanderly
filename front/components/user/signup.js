@@ -4,20 +4,18 @@ import React, {Component} from 'react';
 class Signup extends Component {
 	constructor(props){
 		super(props)
-		this.state =  {email: 'vanessa@mother.com', password: '1234'}
+		this.state =  {email: '', password: ''}
 	}
 
 	handleSubmit = (e) => {
-		e.preventDefault()
 		this.props.action(this.state)
-		// this.props.router.push('/')//routes
 	}
 
 	handleChange = (key, e) => {
 		this.setState({[key]: e.target.value})
 	}
 
-	render(){
+	render = () => {
 		const {email, password} = this.state
 		return(
 			<div>

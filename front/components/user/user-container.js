@@ -24,7 +24,7 @@ class userContainer extends Component {
 
   render(){
   	return(
-  		//ternary operator
+  		//ternary OPERATOR STILL NEEDS IT TO REROUTE TO EITHER LOGIN OR SIGNUP
   		this.getSignUp()
   		)
   }

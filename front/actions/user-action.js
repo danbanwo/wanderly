@@ -14,13 +14,11 @@ export const userLogin = (info) => (
   (dispatch) => {
     axios.post('/login', info)
     .then((user) => {
-      console.log('I AM THE USER!!! ===>>>', user.data)
       dispatch(user_login(user.data))
     })
   }
 );
 
-//create a axios call for user-signup
 export const userSignUp = (info) => (
   (dispatch) => {
     axios.post('/signup', info)

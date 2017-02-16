@@ -1,5 +1,4 @@
 'use strict';
-var bcrypt = require('bcrypt-nodejs')
 
 module.exports = function(sequelize, DataTypes){
   const User = sequelize.define('User', {
@@ -11,13 +10,6 @@ module.exports = function(sequelize, DataTypes){
           User.hasOne(models.Profile)
         }
       }
-    }, {
-       classMethods: {
-      generateHash: function(password) {
-        return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
-      }
-    }
-
     }
   );
   return User;

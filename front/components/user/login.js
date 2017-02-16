@@ -5,18 +5,18 @@ import {browserHistory as history} from 'react-router';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {email: "a@a.com", password:"123" }
+		this.state = {email: "", password: "" }
 	}
+
 	handleSubmit = (e) => {
-		e.preventDefault();
 		this.props.action(this.state)
 	}
-	handleChange(key, e){
-	this.setState({[key] : e.target.value})
+
+	handleChange = (key, e) => {
+		this.setState({ [key] : e.target.value })
 	}
 	render(){
-		console.log(this.props)
-		 const {email, password} = this.state;
+		 const { email, password } = this.state;
 		return(
 			<div className='container'>	
 			    <div className="row">
