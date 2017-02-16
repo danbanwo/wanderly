@@ -58,6 +58,7 @@ module.exports = function (app, passport){
 			      user = Object.assign({}, user);
 			      delete user.password
 			      res.end(JSON.stringify(user));
+			      res.redirect('/home')
 			      return true;
 	    		});
       	};
@@ -90,7 +91,8 @@ module.exports = function (app, passport){
 	//============ user logs-out ===========//
   app.get('/logout', function(req, res) {
     req.logout();
-    res.send('logout')
+    req.session.destroy();
+    res.redirect('/login');
     // res.redirect('/home');
   });
 
@@ -99,7 +101,7 @@ module.exports = function (app, passport){
 		if (req.isAuthenticated()) {
 		  return next();
     }
-    res.redirect('/');
+    res.redirect('/login');
 	};
 
 };
