@@ -30,3 +30,4 @@ const UploadPic = React.createClass({
 });
 
 export default UploadPic;
+//
