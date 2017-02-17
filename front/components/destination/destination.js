@@ -11,7 +11,7 @@ class Destination extends Component {
   }
 
   componentDidMount() {
-    this.props.getProfile(2)
+    this.props.getProfile(1)
   }
 
   displayDestination() {
