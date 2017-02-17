@@ -5,7 +5,7 @@ import {browserHistory as history} from 'react-router';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {email: '', password: '' }
+		this.state = {email: 'danbanwo@gmail.com', password: '1234' }
 	}
 
 	handleSubmit = (e) => {
