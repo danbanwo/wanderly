@@ -3,7 +3,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 //import components/containers below:
 
-import { App, Destination, destinationContainer, profileContainer, mapContainer, Profile, itineraryContainer, UploadPic, userContainer} from '../components';
+import { App, Destination, destinationContainer, profileContainer, mapContainer, Profile, itineraryContainer, UploadPic, userContainer, Spot, spotContainer} from '../components';
 
 const Routes = (props) => (
     <Router history={browserHistory}>
@@ -15,6 +15,7 @@ const Routes = (props) => (
         <Route path='destination' component={destinationContainer} />
         <Route path='itinerary/:destId' component={itineraryContainer} />
         <Route path='createprofile' component={UploadPic}/>
+        <Route path='spot/add/:destId' component={spotContainer} />
       </Route>
     </Router>
   )
