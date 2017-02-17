@@ -8,7 +8,7 @@ import {userLogin, userSignUp} from '../../actions/user-action.js'
 class userContainer extends Component {
 	constructor(props){
 		super(props)
-	}	
+	}
 
   getLogIn = () => {
   	return <Login user={this.props.user} action={this.props.login} home={this.props.navHomepage} />
@@ -23,17 +23,19 @@ class userContainer extends Component {
   )
 
   render(){
-  	return(
-  		//ternary OPERATOR STILL NEEDS IT TO REROUTE TO EITHER LOGIN OR SIGNUP
-  		this.getSignUp()
-  		)
+		const { pathname } = this.props.routing.locationBeforeTransitions
+		if(pathname === '/signup') {
+			return this.getSignUp()
+		} else {
+			return this.getLogIn()
+		}
   }
-
 }
 
-const mapStateToProps = state => {
-	return {user: state.userReducer}
-}
+const mapStateToProps = state => ({
+	user: state.userReducer,
+	routing: state.routing
+})
 
 const mapDispatchToProps= (dispatch)=>{
 	return{

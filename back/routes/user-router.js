@@ -1,6 +1,7 @@
 const User = require('../models').User;
 const bcrypt = require('bcrypt-nodejs');
 const Profile = require('../models').Profile;
+const Destination = require('../models').Destination;
 
 
 module.exports = function (app, passport){
@@ -18,30 +19,34 @@ module.exports = function (app, passport){
 				}).then(function(user) {
 					user = user.dataValues;
         	passport.authenticate('local', function(err) {
-        		if (err) { 
-        			return next(err) 
+        		if (err) {
+        			return next(err)
         		} else {
         			user = Object.assign({}, user);
 	      			delete user.password
 	      			res.end(JSON.stringify(user));
 	      			return true;
-	      		}	
+	      		}
         	})(req, res, next)
       	})
 			} else {
 	      res.send("user exists")
 	    };
 		});
-	}); 
+	});
 
 	app.post("/login", function(req, res, next) {
-
 		passport.authenticate('local', function(err) {
 			if (err) { return next(err); }
 
 		User.findOne({
 			where: {'email': req.body.email },
-			include: [{model: Profile}]
+			include: [{
+				model: Profile,
+				include: [{
+					model: Destination
+				}]
+			}]
 		})
       .then(function(user) {
         // if no user is found, return the message
@@ -59,7 +64,10 @@ module.exports = function (app, passport){
 			      delete user.password
 			      res.end(JSON.stringify(user));
 			      return true;
-	    		});
+	    		})
+					// .then(() => {
+					// 	return res.redirect('/')
+					// })
       	};
       })
       .catch(function(err){
@@ -82,7 +90,7 @@ module.exports = function (app, passport){
 
   //========loged in?=======//
   app.get('/', isLoggedIn, function(req, res) {
-    res.redirect('/home', {
+    res.redirect('/', {
       user : req.user
     });
   });

@@ -25,7 +25,7 @@ app.use(flash());
 app.use(session({
 	secret: 'wanderly wander',
 	resave: true,
-	saveUninitialized: true,
+	saveUninitialized: false,
 }));
 
 //route for users is not api

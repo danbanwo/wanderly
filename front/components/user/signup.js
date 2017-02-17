@@ -8,6 +8,7 @@ class Signup extends Component {
 	}
 
 	handleSubmit = (e) => {
+		e.preventDefault()
 		this.props.action(this.state)
 	}
 
@@ -19,7 +20,7 @@ class Signup extends Component {
 		const {email, password} = this.state
 		return(
 			<div>
-				<div className='container container1'>	
+				<div className='container container1'>
 			    <div className="row">
 					<div className="col-md-4 col-md-offset-4">
 			    		<div className="panel panel-default">
@@ -35,7 +36,7 @@ class Signup extends Component {
 											<div className="form-group">
 										Password:
 										<input className="form-control" type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
-										</div><br /> 
+										</div><br />
 										<input className="btn btn-lg  btn-block button1" type='submit' value='Signup!'/>
 									</form>
 						    </div>

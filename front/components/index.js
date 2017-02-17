@@ -4,6 +4,8 @@ import React from 'react';
 import App from './app';
 import Destination from './destination/destination';
 import Profile from './profile/profile';
+import Wandermap from './map/map';
+import DestinationModal from './modal/destination-modal';
 import Login from './user/login';
 import Signup from './user/signup';
 import UploadPic from './profile/uploadPic';
@@ -19,15 +21,17 @@ import spotContainer from './itinerary/spot-container';
 
 //export all components and containers here:
 export {
-  App, 
-  Destination, 
-  destinationContainer, 
-  itineraryContainer, 
-  Login, 
-  mapContainer, 
-  Profile, 
-  profileContainer, 
-  UploadPic, 
+  App,
+  Destination,
+  destinationContainer,
+  DestinationModal,
+  itineraryContainer,
+  Login,
+  mapContainer,
+  Profile,
+  profileContainer,
+  UploadPic,
   userContainer,
-  Signup, 
+  Signup,
+  Wandermap
 }
