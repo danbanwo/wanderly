@@ -13,7 +13,7 @@ const Profile = (props) => {
     <div className='profileLeft'>
       <div className='profileInfo'>
         <div className='profilePhotoContainer'>
-          <img className='profilePhoto' src={props.profile.photo} />
+          <img className='profilePhoto' src={props.profile.image} />
         </div>
         <div className='profileBio'>
          <h2>{props.profile.first_name} {props.profile.last_name}</h2>
