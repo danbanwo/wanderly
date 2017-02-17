@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
+
 import '../../styles/itinerary.css';
 
 class Wanderspot extends Component {
@@ -32,9 +34,11 @@ class Wanderspot extends Component {
 							<h4>category:</h4> 
 							<h5>{curr.category} </h5>
 						</div>
+						<h1>CURRENT ID: {curr.id}</h1>
 
 						<div className='wanderPicContainer'>
 							<img className='wanderPic' src={curr.pictures} />
+
 						</div>
 
 					</div>
@@ -44,75 +48,25 @@ class Wanderspot extends Component {
 	}
 
 	render() {
+		console.log('THIS THIS THIS ===>', this)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
-				<div>Lioading...</div>
+				<div>Loading...</div>
 			)
 		} 
 		else {
 			return (
 				<div className='returnSpot'>
+					<Link to={'/spot/add/'+this.props.params.destId}>
+					<button className='addButton' type="button">add spot</button>
+					</Link>
 					{this.displaySpots()}
 				</div>
 			)
 		}
 	}
-
 }
 
-// const Wanderspot = React.createClass({
-// 	wanderRows() {
-// 		let wanderData = this.props.spots
-// 			{
-// 				return wanderData.map( (curr, idx) => {
-// 					return (
-// 						<div className='wanderRowContainer' key={`wanderRow-${idx}`}>
-
-// 							<div className='wanderPicContainer'>
-// 							<img className='wanderPic' src={curr.pictures} />
-// 							</div>
-
-// 							<div>
-// 							<h4>{curr.place} </h4>
-// 							<p>{curr.description} </p>
-// 							</div>
-
-// 							<div>
-// 							<h4>total spent: </h4>
-// 							<p>{curr.total} </p>
-// 							</div>
-
-// 							<div>
-// 							<h4>category:</h4> 
-// 							<p>{curr.category} </p>
-// 							</div>
-// 						</div>
-// 					)
-// 			})
-// 		}
-// 	},
-
-// 	render() {
-// 		// let display = this.props.spots ? this.wanderRows() : <div>Loading...</div>
-// 		// console.log('THIS PROPS SPOTS:',  this.props.spots.pictures)
-// 		if(this.props.spots) {
-// 			console.log("THIS PROPS SPOTS", this.props.spots)
-// 			console.log(this.props.spots[0].pictures)
-// 			return (
-// 				<div>
-// 					{this.wanderRows()}
-// 				</div>
-// 			)
-// 		} 
-// 		else {
-// 			return (
-// 				<div>
-// 					Loading...
-// 				</div>
-// 			)
-// 		}
-// 	}
-// })
 
 
 export default Wanderspot; 

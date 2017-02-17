@@ -15,7 +15,7 @@ describe('Profile tests', ()=>{
 	})
 }); 
 
-it(`'userProfile()' should return all user profiles`, (done)=>{
+xit(`'userProfile()' should return all user profiles`, (done)=>{
 	supertest(server)
 	.get('/api/profile')
 	.end((err,res)=>{
@@ -26,7 +26,7 @@ it(`'userProfile()' should return all user profiles`, (done)=>{
 	})
 });
 
-it(`'createProfile()' should create a new profile `, (done)=>{
+xit(`'createProfile()' should create a new profile `, (done)=>{
 	var newProfile = {
 		first_name: 'Kelly',
 		last_name: 'Rowland',
@@ -48,7 +48,7 @@ it(`'createProfile()' should create a new profile `, (done)=>{
 	})
 });
 
-it(`'singleProfile()' should return one profile`, (done)=>{
+xit(`'singleProfile()' should return one profile`, (done)=>{
 	supertest(server)
 	.get('/api/profile/1')
 	.end((err,res)=>{
