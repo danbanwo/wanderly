@@ -30,10 +30,10 @@ export default class WanderMap extends Component {
   constructor(props) {
     super(props);
   }
-
-  componentDidMount() {
-    this.props.test(2)
-  }
+  //
+  // componentDidMount() {
+  //   this.props.test(this.props.profileId)
+  // }
 
   render() {
     const { pathname } = this.props.routing;
