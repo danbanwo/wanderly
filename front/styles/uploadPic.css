@@ -9,6 +9,7 @@ div.uploadContainer{
   margin-left: -15px;
 }
 
+
 h1.title{
   font-family: 'Chivo', sans-serif bold;
   color:#484848;
@@ -48,20 +49,19 @@ input.btn.btn-default{
   height:41px;
   background-color: #00A799;
   border-radius: 4px;
-  text-align: center;
   padding-left: 28%;
 
 }
 
 
-a#skip{
+a{
   display: flex;
   text-decoration: none;
   font-family: 'Chivo', sans-serif bold;
   color:#00A799;
   font-size: 14px;
   line-height: 17px;
-  margin-left: 129px;
+  margin-left: 123px;
   align-content: space-between;
   margin-top: 20px;
 }

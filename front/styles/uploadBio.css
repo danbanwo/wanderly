@@ -9,15 +9,39 @@ div.bioContainer{
 	margin-left: -15px;
 }
 
+div.welcome{
+	margin-top: -20px;
+}
+
+div.bioQuestions{
+  margin-top: 45px;
+}
+
+div.bioButtons{
+	width: 480px;
+	display: flex;
+	flex-wrap: wrap ;
+	margin-left:65px;
+}
+
+
 h1.bioTitle{
 	font-family:'Chivo', sans-serif bold;
 	color:#484848;
 	size:32px;
 }
+
+p#aboutMe{
+	color:#58585B;
+	line-height: 22px;
+	font-size:18px;
+}
+
 p#questions{
 	font-family: 'Chivo', sans-serif bold;
 	color: #58585B;
 	size:14px;
+	margin-left: -213px;
 }
 
 button.btn.btn-default.one{
@@ -75,6 +99,7 @@ button.btn.btn-default.five{
 	font-size: 14px;
 	line-height: 17px;
 	color:#00A799;
+	margin-top: 8px;
 }
 
 button.btn.btn-default.six{
@@ -87,6 +112,7 @@ button.btn.btn-default.six{
 	font-size: 14px;
 	line-height: 17px;
 	color:#00A799;
+	margin-top: 8px;
 
 }
 
@@ -95,13 +121,16 @@ p.questions{
 	font-family: 'Chivo', sans-serif bold;
 	color:#58585B;
 	size:14px;
+	margin-left:-300px;
+	margin-top:45px;
 }
 
 input.intro{
 	width:432px;
-	height:84px;
+	height:88px;
 	border: 1px solid #D0D2D3;
 	border-radius: 4px;
+	padding: 0 0 45px 10px;
 }
 
 button.btn.btn-default.done{
@@ -109,6 +138,10 @@ button.btn.btn-default.done{
 	height: 41px;
 	background-color: #00A799;
 	border-radius: 4px;
+	text-align: center;
+	color:white;
+	margin-top:45px;
+	margin-left: 20px;
 }
 
 a#skip{
@@ -116,5 +149,6 @@ a#skip{
 	color: #00A799;
 	size: 14px;
 	line-height: 17px;
+	margin-left: 243px;
 }
 
