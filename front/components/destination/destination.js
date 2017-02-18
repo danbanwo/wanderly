@@ -28,7 +28,7 @@ class Destination extends Component {
   }
 
   render() {
-
+    console.log(this.props)
     if(this.props.destinations) {
       return (
         <div id='master_itinerary'>

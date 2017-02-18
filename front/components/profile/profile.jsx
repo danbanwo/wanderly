@@ -6,7 +6,7 @@ import Destination from '../destination/destination';
 import ItineraryBox from '../itinerary/itineraryBox';
 import WanderMap from '../map/map';
 import DestinationModal from '../modal/destination-modal';
-
+import Logout from '../user/Logout'
 import '../../styles/map.css'
 
 class Profile extends Component {
@@ -21,6 +21,7 @@ class Profile extends Component {
   render() {
     return (
       <div className='profileContainer'>
+        <Logout actions={this.props.userLogout} />
         <div className='profileLeft'>
           <div className='profileInfo'>
             <div className='profilePhotoContainer'>

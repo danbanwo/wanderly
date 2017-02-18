@@ -92,9 +92,10 @@ module.exports = function (app, passport){
 	//============ user logs-out ===========//
   app.get('/logout', function(req, res) {
     req.logout();
-    res.send('logout')
-    // res.redirect('/home');
+    // res.send('logout')
+    res.redirect('/login');
   });
+  // app.post('/logout', function(req, res){ req.logOut(); res.send(200); }); - See more at: https://vickev.com/#!/article/authentication-in-single-page-applications-node-js-passportjs-angularjs
 
 	// route middleware to ensure user is logged in //
 	function isLoggedIn(req, res, next) {
