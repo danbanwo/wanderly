@@ -8,3 +8,14 @@ export const getDestSpots = (id) => {
 		})
 	}
 };
+
+export const createSpot = (formData) => {
+	return (dispatch) => {
+		axios.post('/api/wanderspot/', formData)
+		.then((response)=> {
+			console.log('response:', response)
+			dispatch({type: 'ADD_SPOT', spot: formData})
+		})
+
+  }
+}
