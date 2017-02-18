@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 
 //Import containers here:
 import Destination from '../destination/destination';
@@ -14,9 +14,13 @@ class Profile extends Component {
     super(props)
   }
 
+  closeButton = () => {
+    unmountComponentAtNode(document.getElementById('renderModal'))
+  }
+
 
   displayModal = () => {
-    render(<DestinationModal />, document.getElementById('renderModal'))
+    render(<DestinationModal closeButton={this.closeButton} />, document.getElementById('renderModal'))
   }
 
   render() {
