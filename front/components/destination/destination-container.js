@@ -13,6 +13,7 @@ import Destination from './destination';
 const mapStateToProps = (state) => ({
   destinations: state.destinationReducer,
   spots: state.itineraryReducer,
+  profile: state.profileReducer,
   user: state.userReducer,
   routing: state.routing
 })

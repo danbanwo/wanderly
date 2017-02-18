@@ -1,6 +1,7 @@
 const User = require('../models').User;
 const bcrypt = require('bcrypt-nodejs');
 const Profile = require('../models').Profile;
+const Destination = require('../models').Destination;
 
 
 module.exports = function (app, passport){
@@ -40,7 +41,12 @@ module.exports = function (app, passport){
 
 		User.findOne({
 			where: {'email': req.body.email },
-			include: [{model: Profile}]
+			include: [{
+				model: Profile,
+				include: [{
+					model: Destination
+				}]
+			}]
 		})
       .then(function(user) {
         // if no user is found, return the message

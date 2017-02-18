@@ -1,8 +1,12 @@
 import axios from 'axios';
+import {browserHistory as history} from 'react-router';
+
 
 const user_login = (data) => ({
 	type: "USER_LOGIN",
-	data: {...data}
+	data: data,
+	profileData: data.Profile,
+	destData: data.Profile.Destinations
 })
 
 const user_signup = (data) => ({
@@ -21,6 +25,9 @@ export const userLogin = (info) => (
     .then((user) => {
       dispatch(user_login(user.data))
     })
+		.then(() => {
+			history.push('/')
+		})
   }
 );
 

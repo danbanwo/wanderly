@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { getProfile } from '../../actions/profile-actions';
 import { Link } from 'react-router';
 import { render } from 'react-dom';
 import DestinationModal from '../modal/destination-modal';
@@ -8,10 +7,6 @@ import DestinationModal from '../modal/destination-modal';
 class Destination extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    this.props.getProfile(2)
   }
 
   displayDestination() {
@@ -28,8 +23,7 @@ class Destination extends Component {
   }
 
   render() {
-    console.log(this.props)
-    if(this.props.destinations) {
+    if(this.props.profile.id) {
       return (
         <div id='master_itinerary'>
           {this.displayDestination()}

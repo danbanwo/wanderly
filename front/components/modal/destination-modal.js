@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
+import '../../styles/modal.css'
 
-const DestinationModal = () => {
-  return (
-    <div style={{height: '100vh', width: '100vw', position: 'absolute', display: 'flex', 'justify-content': 'center',
-    'align-items': 'center'}}>
-      <div style={{ height: '100vh', width: '100%',
-      background: 'white', opacity: 0.7
-      }}></div>
-      <div style={{position: 'absolute', background: 'white',height: '500px', width: '300px'}}>
-        Hello from the modal component!
+class DestinationModal extends Component {
+
+
+  render() {
+    return (
+      <div id='modal-outer'>
+        <div id='modal-middle'>
+          <div id='modal-inner'>
+            <button id='close'>x</button>
+            <span>Hello from the modal component!</span>
+          </div>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default DestinationModal;

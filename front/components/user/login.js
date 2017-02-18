@@ -4,13 +4,16 @@ import {browserHistory as history} from 'react-router';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {email: "a@a.com", password: "123" }
+		this.state = {email: '', password: '' }
 	}
 
 	handleSubmit = (e) => {
-		// e.preventDefault()
+		e.preventDefault()
+		if(!this.state.email || !this.state.password) {
+			alert('Please enter a valid email or password')
+		} else {
 		this.props.action(this.state)
-		history.push('/')
+		}
 	}
 
 	handleChange = (key, e) => {

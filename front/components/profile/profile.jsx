@@ -14,18 +14,23 @@ class Profile extends Component {
     super(props)
   }
 
+
   displayModal = () => {
     render(<DestinationModal />, document.getElementById('renderModal'))
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className='profileContainer'>
         <Logout actions={this.props.userLogout} />
+        <div id='renderModal'>
+          {/* <DestinationModal /> */}
+        </div>
         <div className='profileLeft'>
           <div className='profileInfo'>
             <div className='profilePhotoContainer'>
-              <img className='profilePhoto' src={this.props.profile.photo} />
+              <img className='profilePhoto' src={this.props.profile.image} />
             </div>
             <div className='profileBio'>
               <h2>{this.props.profile.first_name} {this.props.profile.last_name}</h2>
@@ -43,11 +48,8 @@ class Profile extends Component {
 
         <div className='profileRight'>
           <WanderMap map={this.props.destinations.destinations} mapSpot={this.props.spots.wanderspotsArr} test={this.props.getProfile}
-            routing={this.props.routing.locationBeforeTransitions}
+            routing={this.props.routing.locationBeforeTransitions} profileId={this.props.profile.id}
           />
-        </div>
-        <div id='renderModal'>
-          <DestinationModal />
         </div>
       </div>
     )
