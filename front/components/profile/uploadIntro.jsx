@@ -1,9 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import {browserHistory} from 'react-router';
 
 import '../../styles/uploadIntro.css';
 
 const UploadIntro = React.createClass({
+
+onClick(e){
+	browserHistory.push('/createprofile');
+},
 	render(){
 		return(
 		<div>
@@ -33,7 +38,7 @@ const UploadIntro = React.createClass({
 			</ul>
 		</div>
 
-		<button type="button" className="btn btn-default continue">Continue</button>
+		<button type="button" className="btn btn-default continue" onClick={this.onClick}>Continue</button>
 
 		</center>
 		</div>
