@@ -20,18 +20,18 @@ class SpotForm extends React.Component {
 			description: this.state.description,
 			DestinationId: this.props.params.destId
 		})
-		//console.log(this.props)
 		this.props.router.push(`/itinerary/${this.props.params.destId}`)
 		e.preventDefault()
 	}
 
 	render() {
-		//console.log(this.state)
 		return (
 		<div>
 			<form onSubmit={this.handleSubmit} >
-				<label><input onChange={this.handleChange} name="spot" type="text" placeholder="spot">
-				</input></label>
+				<label>
+					<input onChange={this.handleChange} name="spot" type="text" placeholder="spot">
+					</input>
+				</label>
 
 				<label><input onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="total">
 				</input></label>

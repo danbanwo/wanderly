@@ -51,19 +51,8 @@ class Profile extends Component {
           />
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-
-    <div className='profileRight'>
-        <WanderMap className='profileMap' map={props.destinations.destinations} test={props.getProfile}/>
-    </div>
-
-  </div>
-  )
-=======
     )
   }
->>>>>>> 28a2811c1b58e76518146c8ead98947ab887df33
 }
 
 export default Profile;

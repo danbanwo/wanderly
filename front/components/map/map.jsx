@@ -30,20 +30,14 @@ export default class WanderMap extends Component {
   constructor(props) {
     super(props);
   }
-  //
-  // componentDidMount() {
-  //   this.props.test(this.props.profileId)
-  // }
+
 
   render() {
     const { pathname } = this.props.routing;
     if(pathname === '/') {
       return (
-<<<<<<< HEAD
-        <div style={{width: 620, height: '90vh', background: 'blue'}}>
-=======
+
         <div style={{width: 750, height: '100vh', background: 'blue'}}>
->>>>>>> 28a2811c1b58e76518146c8ead98947ab887df33
           <WanderGoogleMap
             containerElement={
               <div style={{ height: '100%', }} />

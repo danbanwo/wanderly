@@ -33,5 +33,6 @@ export {
   UploadPic,
   userContainer,
   Signup,
-  Wandermap
+  Wandermap,
+  spotContainer
 }
