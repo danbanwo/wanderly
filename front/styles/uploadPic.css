@@ -11,13 +11,12 @@ div.uploadContainer{
 
 
 h1.title{
-  font-family: 'Chivo', sans-serif bold;
+  font-weight: bold;
   color:#484848;
   font-size: 32px;
 }
 
 p#subtitle{
-  font-family: 'Chivo', sans-serif;
   font-size: 18px;
   color:#58585B;
   margin-top: 40px;
@@ -57,7 +56,7 @@ input.btn.btn-default{
 a{
   display: flex;
   text-decoration: none;
-  font-family: 'Chivo', sans-serif bold;
+  font-weight:bold;
   color:#00A799;
   font-size: 14px;
   line-height: 17px;
@@ -66,5 +65,4 @@ a{
   margin-top: 20px;
 }
 
-/
 

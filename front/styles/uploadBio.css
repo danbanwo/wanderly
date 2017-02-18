@@ -26,7 +26,7 @@ div.bioButtons{
 
 
 h1.bioTitle{
-	font-family:'Chivo', sans-serif bold;
+	font-weight:bold;
 	color:#484848;
 	size:32px;
 }
@@ -38,7 +38,7 @@ p#aboutMe{
 }
 
 p#questions{
-	font-family: 'Chivo', sans-serif bold;
+	font-weight:bold;
 	color: #58585B;
 	size:14px;
 	margin-left: -213px;
@@ -118,7 +118,7 @@ button.btn.btn-default.six{
 
 
 p.questions{
-	font-family: 'Chivo', sans-serif bold;
+	font-weight: bold;
 	color:#58585B;
 	size:14px;
 	margin-left:-300px;
@@ -145,11 +145,11 @@ button.btn.btn-default.done{
 }
 
 a#skip{
-	font-family:'Chivo', sans-serif bold;
+	font-weight: bold;
 	color: #00A799;
 	size: 14px;
 	line-height: 17px;
 	margin-left: 243px;
 }
 
-/
+
