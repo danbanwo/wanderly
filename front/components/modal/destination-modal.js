@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SpotForm from '../itinerary/spot'
 import '../../styles/modal.css'
 
 class DestinationModal extends Component {
@@ -10,7 +11,7 @@ class DestinationModal extends Component {
         <div id='modal-middle'>
           <div id='modal-inner'>
             <button id='close'>x</button>
-            <span>Hello from the modal component!</span>
+            <SpotForm />
           </div>
         </div>
       </div>

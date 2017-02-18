@@ -3,7 +3,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 //import components/containers below:
 import { App, Destination, DestinationModal, destinationContainer, profileContainer,
-  UploadPic, userContainer, mapContainer, Profile, SignUp, itineraryContainer} from '../components';
+  UploadPic, userContainer, mapContainer, Profile, SignUp, spotContainer, itineraryContainer} from '../components';
 import store from '../store/store';
 import { syncHistoryWithStore } from 'react-router-redux';
 
@@ -20,7 +20,8 @@ const Routes = (props) => (
         <Route path='/' component={destinationContainer}/>
         <Route path='itinerary/:destId' component={itineraryContainer} />
       </Route>
-      <Route path='createprofile' component={UploadPic}/>
+        <Route path='createprofile' component={UploadPic}/>
+        <Route path='spot/add/:destId' component={spotContainer} />
     </Router>
   )
 

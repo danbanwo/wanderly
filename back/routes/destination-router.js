@@ -17,6 +17,7 @@ const getOneDestination = (req, res) => {
 const getAllDestinations = (req, res) => {
   Destination.findAll()
   .then((destinations) => {
+    console.log("destinations:", destinations)
     res.send(destinations)
   })
   .catch((err) => {
