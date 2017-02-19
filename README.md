@@ -1,5 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/danbanwo/wanderly.png?label=ready&title=Ready)](https://waffle.io/danbanwo/wanderly)
-# wanderly
+# Wanderly
 
 ## Installation
 
@@ -11,39 +11,40 @@ In order to setup the database, you'll need to create a sequelize config file. T
   * Create a **config** folder within the back directory of the project
   * Within the config file, create a **config.json** file and paste the following:
   ```javascript
-  {
-    "development": {
-      "username": *your computers username*,
-      "password": null,
-      "database": *name of database*, (example: wanderly-test)
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "test": {
-      "username": *your computers username*,,
-      "password": null,
-      "database": *name of database*, (example: wanderly-test),
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "production": {
-      "username": *your computers username*,,
-      "password": null,
-      "database": *name of database*, (example: wanderly-test),
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    }
-  }
+  {  
+    "development": {  
+      "username": *your computers username*,  
+      "password": null,  
+      "database": *name of database*, (example: wanderly-test)  
+      "host": "127.0.0.1",  
+      "dialect": "postgres"  
+    },  
+    "test": {  
+      "username": *your computers username*,  
+      "password": null,  
+      "database": *name of database*, (example: wanderly-test),  
+      "host": "127.0.0.1",  
+      "dialect": "postgres"  
+    },  
+    "production": {  
+      "username": *your computers username*,  
+      "password": null,  
+      "database": *name of database*, (example: wanderly-test),  
+      "host": "127.0.0.1",  
+      "dialect": "postgres"  
+    }  
+  }  
   ```
+
 Proceed to seed file as follows:
 ```
-node back/seed/seeder.js
+$ node back/seed/seeder.js
 ```
 This should populate the database with dummy data to interact with.
 
 Once the above step have been completed, go ahead and run the project by typing the following in the terminal:
 ```
-npm start
+$ npm start
 ```
 
 ##Introduction
