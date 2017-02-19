@@ -50,6 +50,9 @@ const getItinerary = (req, res) => {
 		}
 	})
 	.then((itinerary) => {
+		if(!itinerary) {
+			res.send('Add a Spot')
+		}
 		res.send(itinerary)
 	})
 	.catch((err) => {

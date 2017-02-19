@@ -17,7 +17,6 @@ const getOneDestination = (req, res) => {
 const getAllDestinations = (req, res) => {
   Destination.findAll()
   .then((destinations) => {
-    console.log("destinations:", destinations)
     res.send(destinations)
   })
   .catch((err) => {
@@ -29,10 +28,7 @@ const getAllDestinations = (req, res) => {
 const getProfileDestinations = (req, res) => {
   Destination.findAll({
     where: { ProfileId: req.params.id },
-    // include: [{
-      // model: Destination,
-      include: [{model: Wanderspot}]
-    // }]
+    include: [{model: Wanderspot}]
   })
   .then((prof_destinations) => {
     res.send(prof_destinations)

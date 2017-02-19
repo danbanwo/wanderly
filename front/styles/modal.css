@@ -29,12 +29,22 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: column;
 }
 
 #close {
-  align-self: flex-start;
-  margin-left: 140px;
+  align-self: flex-end;
+  /*margin-left: 140px;*/
   position: absolute;
+}
+
+#modal-text {
+  height: 150px;
+  width: 250px;
+  margin-top: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

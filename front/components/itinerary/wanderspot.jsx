@@ -21,7 +21,8 @@ class Wanderspot extends Component {
 
 	displaySpots = () => {
 		//get value of wanderspots
-		return this.props.spots.wanderspotsArr.map((curr, idx) => {
+		let spots = this.props.spots.wanderspotsArr.reverse()
+		return spots.map((curr, idx) => {
 			return (
 				<div key={idx}>
 					<div className='wanderRowContainer'>
@@ -58,18 +59,17 @@ class Wanderspot extends Component {
 		if(!this.props.spots.wanderspotsArr) {
 			return (
 				<div>
-					<div>Loading...</div>
 					<button onClick={this.backToDestinations}>Back</button>
-					<span>Loading...</span>
+					<div>Loading...</div>
 				</div>
 			)
 		}
 		else {
 			return (
 				<div className='returnSpot'>
-					<Link to={'/spot/add/'+this.props.params.destId}>
-					<button className='addButton' type="button">add spot</button>
-					</Link>
+					{/* <Link to={'/spot/add/'+this.props.params.destId}> */}
+					{/* <button className='addButton' type="button">add spot</button> */}
+					{/* </Link> */}
 					<button onClick={this.backToDestinations}>Back</button>
 					{this.displaySpots()}
 				</div>
