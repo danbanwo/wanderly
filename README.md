@@ -60,3 +60,13 @@ Start your journey around Wanderly by creating a profile that'll help you track 
 All the adventures you've ever been on presented to you on a beautiful interface.
  * Browse a list of destinations you've been on.
  * Better yet, use our interactive map to navigate every adventure you've been on til date.
+
+####New Destination
+Currently on another one of your adventures? No worries! With Wanderly, you can add destinations on the fly, and begin to collect memories as you go.
+
+####Overview of All Wanderspots
+In Wanderly, a Wanderspot is a term given to an establishment, point of interest, or anything in between a user visits while on an adventure. All Wanderspots are contained within an itinerary, and are represented as Markers on the map.
+Clicking on a destination will instantly populate a list of Wanderspots visited during the clicked adventure.
+
+####New Wanderspots
+Similar to the ease of creating a new destination, creating a new Wanderspot is a breeze! Just Click on the add button while on a trip, and your new Wanderspot pops up on your list of Wanderspots instantly.
