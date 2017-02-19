@@ -35,6 +35,7 @@ onClick(e){
 				<li><a href="#">UK</a></li>
 				<li><a href="#">CN</a></li>
 				<li><a href="#">AF</a></li>
+				<li><a href="#">FR</a></li>
 			</ul>
 		</div>
 
