@@ -1,5 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/danbanwo/wanderly.png?label=ready&title=Ready)](https://waffle.io/danbanwo/wanderly)
-# wanderly
+# Wanderly
 
 ## Installation
 
@@ -38,13 +38,13 @@ In order to setup the database, you'll need to create a sequelize config file. T
 
 Proceed to seed file as follows:
 ```
-node back/seed/seeder.js
+$ node back/seed/seeder.js
 ```
 This should populate the database with dummy data to interact with.
 
 Once the above step have been completed, go ahead and run the project by typing the following in the terminal:
 ```
-npm start
+$ npm start
 ```
 
 ##Introduction
