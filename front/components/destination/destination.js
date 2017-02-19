@@ -11,7 +11,8 @@ class Destination extends Component {
 
   displayDestination() {
     const { destinations } = this.props.destinations;
-    return destinations.map((destination, i) => (
+    let dests = destinations.reverse()
+    return dests.map((destination, i) => (
       <div key={'destination-'+i}>
         <Link to={'itinerary/'+destination.id}><h2 key={'place-'+i}>{destination.place}</h2></Link>
         <p key={'duration-'+i}>DURATION: {destination.duration} </p>

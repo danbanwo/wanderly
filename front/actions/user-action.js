@@ -18,7 +18,7 @@ export const userLogin = (info) => (
   (dispatch) => {
     axios.post('/login', info)
     .then((user) => {
-      dispatch(user_login(user.data))
+  		dispatch(user_login(user.data))
     })
 		.then(() => {
 			history.push('/')

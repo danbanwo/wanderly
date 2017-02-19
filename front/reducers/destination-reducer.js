@@ -12,6 +12,9 @@ const destinationReducer = (state = defaultState, action) => {
       return {...state, destinations: action.destData}
       break;
     }
+    case 'ADD_DESTINATION': {
+      return {...state, destinations: state.destinations.concat([action.payload])}
+    }
     case 'USER_LOGIN':
       return {...state, destinations: action.destData}
     default: return state

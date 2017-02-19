@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 
 //Import containers here:
 import Destination from '../destination/destination';
@@ -14,13 +14,17 @@ class Profile extends Component {
     super(props)
   }
 
+  closeButton = () => {
+    unmountComponentAtNode(document.getElementById('renderModal'))
+  }
+
 
   displayModal = () => {
-    render(<DestinationModal />, document.getElementById('renderModal'))
+    const { pathname } = this.props.routing.locationBeforeTransitions
+    render(<DestinationModal profile={this.props.profile} pathname={pathname} addSpot={this.props.addSpot} addDestination={this.props.addDestination} closeButton={this.closeButton} />, document.getElementById('renderModal'))
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className='profileContainer'>
         <div id='renderModal'>

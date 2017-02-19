@@ -23,7 +23,6 @@ const Routes = (props) => (
         <Route path='createprofile' component={UploadPic}/>
         <Route path='createbio' component={UploadBio}/>
         <Route path='createintro' component={UploadIntro}/>
-        <Route path='createprofile' component={UploadPic}/>
         <Route path='spot/add/:destId' component={spotContainer} />
     </Router>
   )

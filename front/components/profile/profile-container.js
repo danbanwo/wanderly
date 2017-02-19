@@ -3,8 +3,11 @@ import { bindActionCreators } from 'redux';
 
 //import actions and component
 import { getProfileDestinations } from '../../actions/destination-actions';
-import { getProfile } from '../../actions/profile-actions'
-import { addMarkers } from '../../actions/map-actions'
+import { addDestination } from '../../actions/destination-actions';
+import { createSpot } from '../../actions/itinerary-actions.js';
+import { getProfile } from '../../actions/profile-actions';
+import { addMarkers } from '../../actions/map-actions';
+
 import Profile from './profile';
 
 const mapStateToProps = (state) => ({
@@ -18,6 +21,8 @@ const mapStateToProps = (state) => ({
   const matchDispatchToProps = (dispatch) => ({
     getProfile: bindActionCreators(getProfile, dispatch),
     userDestinations: bindActionCreators(getProfileDestinations, dispatch),
+    addDestination: bindActionCreators(addDestination, dispatch),
+    addSpot: bindActionCreators(createSpot, dispatch),
     markers: bindActionCreators(addMarkers, dispatch)
   })
 

@@ -32,11 +32,10 @@ export {
   mapContainer,
   Profile,
   profileContainer,
-  UploadPic,
   userContainer,
   Signup,
   UploadPic,
-  UploadBio, 
+  UploadBio,
   UploadIntro,
   Wandermap,
   spotContainer
