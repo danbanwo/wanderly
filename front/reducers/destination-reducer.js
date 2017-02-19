@@ -8,13 +8,12 @@ const destinationReducer = (state = defaultState, action) => {
       return {...state, destinations: action.destData}
       break;
     }
-    case 'GET_DESTINATION_FULFILLED': {
-      return {
-        ...state,
-        destinations: action.payload.data
-       }
+    case 'GET_DESTINATION': {
+      return {...state, destinations: action.destData}
       break;
     }
+    case 'USER_LOGIN':
+      return {...state, destinations: action.destData}
     default: return state
   }
 }

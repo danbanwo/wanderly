@@ -11,6 +11,7 @@ const ItineraryBox = React.createClass({
 	},
 
 	componentDidMount() {
+		this.props.getSpots(this.props.params.destId)
 		axios.get('/api/wanderspot')
 		.then((itineraryObj) => {
 			console.log(itineraryObj)

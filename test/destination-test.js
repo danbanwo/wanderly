@@ -14,6 +14,8 @@ it(`'All Destinations' should return all destinations`, (done) => {
   supertest(server)
   .get('api/destination')
   .end((err, res) => {
+    // assert (typeof(res.body) === "array")
+    console.log("res:", res)
     expect(res.body).to.be.a('array');
     expect(200);
     expect(res.body.length).to.eql(3);
