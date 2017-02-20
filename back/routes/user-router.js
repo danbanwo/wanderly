@@ -15,7 +15,7 @@ module.exports = function (app, passport){
 			if(!user) {
 				User.create({
 					email: req.body.email,
-    			password: bcrypt.hashSync(req.body.password)
+    				password: bcrypt.hashSync(req.body.password)
 				}).then(function(user) {
 					user = user.dataValues;
         	passport.authenticate('local', function(err) {
