@@ -3,6 +3,9 @@ import { Link } from 'react-router';
 import { render } from 'react-dom';
 import DestinationModal from '../modal/destination-modal';
 
+import '../../styles/map.css'
+
+
 
 class Destination extends Component {
   constructor(props) {
