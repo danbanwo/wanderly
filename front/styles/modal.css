@@ -1,0 +1,50 @@
+#modal-outer {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modal-middle {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(192,192,192,0.7);
+  /*background: grey;*/
+  /*opacity: 0.8;*/
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-inner {
+  position: absolute;
+  background: white;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: column;
+}
+
+#close {
+  align-self: flex-end;
+  /*margin-left: 140px;*/
+  position: absolute;
+}
+
+#modal-text {
+  height: 150px;
+  width: 250px;
+  margin-top: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

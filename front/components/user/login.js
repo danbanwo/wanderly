@@ -5,11 +5,16 @@ import {browserHistory as history} from 'react-router';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {email: "", password: "" }
+		this.state = {email: 'danbanwo@gmail.com', password: '1234' }
 	}
 
 	handleSubmit = (e) => {
+		e.preventDefault()
+		if(!this.state.email || !this.state.password) {
+			alert('Please enter a valid email/password')
+		} else {
 		this.props.action(this.state)
+		}
 	}
 
 	handleChange = (key, e) => {
@@ -18,7 +23,7 @@ class Login extends Component {
 	render(){
 		 const { email, password } = this.state;
 		return(
-			<div className='container'>	
+			<div className='container'>
 			    <div className="row">
 					<div className="col-md-4 col-md-offset-4">
 			    		<div className="panel panel-default">

@@ -1,0 +1,60 @@
+body,html{
+  font-family: 'Chivo', sans-serif;
+}
+
+div.introContainer{
+	display: flex;
+	justify-content: center;
+	margin-top: 150px;
+	margin-left: -15px;
+}
+
+h1.bioTitle{
+	font-weight: bold;
+	color:#484848;
+	font-size: 32px;
+	line-height: 38px;
+}
+p.aboutYou{
+	color: #58585B;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+input.name{
+	width:256px;
+	height:36px;
+	background-color: #FFFF;
+	border: 1px solid #D0D2D3;
+	border-radius: 2px;
+	margin-top: 25px;
+	margin-left: 11px;
+	padding-left: 5%;
+}
+
+button.btn.btn-default.dropdown-toggle{
+	width:256px;
+	height:36px;
+	background-color: #FFFF;
+	border:1px solid #D0D2D3;
+	border-radius:2px;
+	margin-left:11px;
+	padding-right: 47%;
+	color: #9e9e9e;
+	margin-top:15px;
+
+}
+/*span.caret{
+	margin-top:2px;
+	color:#00A799;
+}
+*/button.btn.btn-default.continue{
+	width: 256px;
+	height: 41px;
+	background-color: #00A799;
+	border-radius: 4px;
+	text-align: center;
+	color:white;
+	margin-left:11px;
+	margin-top:25px;
+}

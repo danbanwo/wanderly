@@ -1,0 +1,153 @@
+body,html{
+  font-family: 'Chivo', sans-serif;
+}
+
+div.bioContainer{
+	display: flex;
+	justify-content: center;
+	margin-top: 150px;
+	margin-left: -15px;
+}
+
+div.welcome{
+	margin-top: -20px;
+}
+
+div.bioQuestions{
+  margin-top: 45px;
+}
+
+div.bioButtons{
+	width: 480px;
+	display: flex;
+	flex-wrap: wrap ;
+	margin-left:65px;
+}
+
+
+h1.bioTitle{
+	font-weight:bold;
+	color:#484848;
+	size:32px;
+}
+
+p#aboutMe{
+	color:#58585B;
+	line-height: 22px;
+	font-size:18px;
+}
+
+p#questions{
+	font-weight:bold;
+	color: #58585B;
+	size:14px;
+	margin-left: -213px;
+}
+
+button.btn.btn-default.one{
+	background-color: #FFFF;
+	border-radius: 100px;
+	border : 1px solid #00A799;
+	width: 93px;
+	height: 35px;
+    font-size: 14px;
+    line-height: 17px;
+    color:#00A799;
+
+}
+
+button.btn.btn-default.two{
+	background-color: #FFFF;
+	border-radius: 100px;
+	border : 1px solid #00A799;
+	width: 110px;
+	height: 35px;
+	font-size: 14px;
+	line-height: 17px;
+	color:#00A799;
+}
+
+button.btn.btn-default.three{
+	background-color: #FFFF;
+	border-radius: 100px;
+	border : 1px solid #00A799;
+	width: 93px;
+	height: 35px;
+	font-size: 14px;
+	line-height: 17px;
+	color:#00A799;
+}
+
+button.btn.btn-default.four{
+	background-color: #FFFF;
+	border-radius: 100px;
+	border : 1px solid #00A799;
+	width: 108px;
+	height: 35px;
+	font-size: 14px;
+	line-height: 17px;
+	color:#00A799;
+
+}
+
+button.btn.btn-default.five{
+	background-color: #FFFF;
+	border-radius: 100px;
+	border : 1px solid #00A799;
+	width: 93px;
+	height: 35px;
+	font-size: 14px;
+	line-height: 17px;
+	color:#00A799;
+	margin-top: 8px;
+}
+
+button.btn.btn-default.six{
+	background-color: #FFFF;
+	border-radius: 100px;
+	border : 1px solid #00A799;
+	width: 120px;
+	height: 35px;
+	font-family: 'Chivo', sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+	color:#00A799;
+	margin-top: 8px;
+
+}
+
+
+p.questions{
+	font-weight: bold;
+	color:#58585B;
+	size:14px;
+	margin-left:-300px;
+	margin-top:45px;
+}
+
+input.intro{
+	width:432px;
+	height:88px;
+	border: 1px solid #D0D2D3;
+	border-radius: 4px;
+	padding: 0 0 45px 10px;
+}
+
+button.btn.btn-default.done{
+	width: 256px;
+	height: 41px;
+	background-color: #00A799;
+	border-radius: 4px;
+	text-align: center;
+	color:white;
+	margin-top:45px;
+	margin-left: 20px;
+}
+
+a#skip{
+	font-weight: bold;
+	color: #00A799;
+	size: 14px;
+	line-height: 17px;
+	margin-left: 243px;
+}

@@ -1,0 +1,28 @@
+import React, { Component } from 'react';
+import SpotForm from '../itinerary/spot'
+import '../../styles/modal.css'
+
+class DestinationModal extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div id='modal-outer'>
+        <div id='modal-middle'>
+          <div id='modal-inner'>
+            <div id='close'>
+              <button onClick={this.props.closeButton}>x</button>
+            </div>
+            <div id='modal-text'>
+              <SpotForm closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default DestinationModal;

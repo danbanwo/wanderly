@@ -14,7 +14,7 @@ const getWanderSpot = (req, res) => {
 const getAllWanderspots = (req, res) => {
 	wanderspot.findAll()
 	.then((data) => {
-		res.send(data)
+		res.sendStatus(200)
 	})
 	.catch((err) => {
 		res.sendStatus(500)
@@ -22,6 +22,7 @@ const getAllWanderspots = (req, res) => {
 };
 
 const addWanderspot = (req, res) => {
+	console.log("req.body:", req.body)
 	wanderspot.create(req.body)
 	.then((data) => {
 		res.send(data)
@@ -49,6 +50,9 @@ const getItinerary = (req, res) => {
 		}
 	})
 	.then((itinerary) => {
+		if(!itinerary) {
+			res.send('Add a Spot')
+		}
 		res.send(itinerary)
 	})
 	.catch((err) => {
