@@ -18,8 +18,12 @@ module.exports = {
         }
       }, {
         test: /(\.css)$/,
-        loaders: ['style', 'css']
-      },
+        loaders: ['style', 'css-loader']
+      }, {
+        test: /\.svg(\?.*)?$/,
+        loader: 'url-loader',
+        //exclude: path.join(__dirname, 'ui') // To avoid clash of svgs
+      }
     ]
   },
   devtool: 'source-maps',

@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import '../../styles/itinerary.css';
 import { browserHistory as history } from 'react-router';
 
+//import eatIcon from '../../ui/Icon_Food.svg';
+
 class Wanderspot extends Component {
 	//gives access to keyword THIS
 	constructor(props) {
@@ -28,29 +30,34 @@ class Wanderspot extends Component {
 		//get value of wanderspots
 		let spots = this.props.spots.wanderspotsArr.reverse()
 		return spots.map((curr, idx) => {
+			var categoryIcon;
+			if(curr.category == 'eat') {
+				categoryIcon = <eatIcon />
+			}
 			return (
 				<div key={idx}>
 					<div className='wanderRowContainer'>
 
-						<div className='spotDesc'>
-							<h2>{curr.spot} </h2>
-							<h5>{curr.description} </h5>
-						</div>
+						<div className='rowInfo'>
+							<div className='spotName'>
+								<div>{curr.spot} </div>
+							</div>
 
-						<div className='total'>
-							<h4>total spent: </h4>
-							<h5>{curr.total} </h5>
-						</div>
+							<div className='categoryTotal'>
+								<div>category:</div>
+								<div>{curr.category}</div>
+								<div>{curr.total} </div>
+							</div>
 
-						<div className='category'>
-							<h4>category:</h4>
-							<h5>{curr.category} </h5>
+							<div className='spotDesc'>
+								<div>{curr.description} </div>
+								<div className='sample'></div>
+							</div>
+
 						</div>
-						<h1>CURRENT ID: {curr.id}</h1>
 
 						<div className='wanderPicContainer'>
 							<img className='wanderPic' src={curr.pictures} />
-
 						</div>
 
 					</div>

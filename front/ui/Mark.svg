@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="61px" viewBox="0 0 80 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Mark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Create-Account" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-528.000000, -168.000000)" id="Group-2" fill-rule="nonzero">
+            <g transform="translate(528.000000, 168.000000)">
+                <g id="Mark" transform="translate(0.000000, 0.772727)">
+                    <g id="Filled_Icons_1_">
+                        <g id="Group" transform="translate(0.000000, -0.000000)">
+                            <g id="Group-3" transform="translate(0.000000, -0.000000)">
+                                <path d="M0.712429907,0.146391771 C0.277056075,0.377302839 0,0.831162522 0,1.32748861 L0,43.7938918 C0,44.2238641 0.205813084,44.6246408 0.55147352,44.8741309 L18.470405,57.7494135 L18.470405,12.0210598 L2.08451713,0.247249479 C1.68344548,-0.0393987423 1.15571963,-0.0818651455 0.712429907,0.146391771 Z" id="Shape" fill="#3FE4C4"></path>
+                                <path d="M61.8806542,0.146391771 C61.4452804,0.377302839 61.1682243,0.831162522 61.1682243,1.32748861 L61.1682243,43.7938918 C61.1682243,44.2238641 61.3740374,44.6246408 61.7196978,44.8741309 L79.6386293,57.7494135 L79.6386293,12.0210598 L63.2527414,0.247249479 C62.8516698,-0.0393987423 62.3239439,-0.0818651455 61.8806542,0.146391771 Z" id="Shape-Copy-2" fill="#1ABC9C" transform="translate(70.403427, 28.874707) scale(-1, 1) translate(-70.403427, -28.874707) "></path>
+                                <path d="M39.5794393,0.663537549 L39.5794393,46.3918913 L58.0498442,60.0485283 L58.0498442,14.613751 C58.0498442,14.1864328 39.5794393,0.663537549 39.5794393,0.663537549 Z" id="Shape" fill="#3FE4C4"></path>
+                                <polygon id="Shape" fill="#1ABC9C" points="21.1090343 57.7649249 36.94081 46.3918913 36.94081 0.663537549 21.1090343 12.0365711"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
