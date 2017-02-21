@@ -18,6 +18,7 @@ import mapContainer from './map/map-container';
 import destinationContainer from './destination/destination-container';
 import profileContainer from './profile/profile-container';
 import itineraryContainer from './itinerary/itinerary-container';
+import landingPageContainer from './landingpage/landingpagecontainer';
 import userContainer from './user/user-container';
 import spotContainer from './itinerary/spot-container';
 
@@ -28,6 +29,7 @@ export {
   destinationContainer,
   DestinationModal,
   itineraryContainer,
+  landingPageContainer,
   Login,
   mapContainer,
   Profile,

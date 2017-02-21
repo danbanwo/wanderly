@@ -6,6 +6,7 @@ import { getProfileDestinations } from '../../actions/destination-actions';
 import { addDestination } from '../../actions/destination-actions';
 import { createSpot } from '../../actions/itinerary-actions.js';
 import { getProfile } from '../../actions/profile-actions';
+import { userAuth } from '../../actions/profile-actions';
 import { addMarkers } from '../../actions/map-actions';
 
 import Profile from './profile';
@@ -23,6 +24,7 @@ const mapStateToProps = (state) => ({
     userDestinations: bindActionCreators(getProfileDestinations, dispatch),
     addDestination: bindActionCreators(addDestination, dispatch),
     addSpot: bindActionCreators(createSpot, dispatch),
+    userAuth: bindActionCreators(userAuth, dispatch),
     markers: bindActionCreators(addMarkers, dispatch)
   })
 

@@ -8,19 +8,37 @@ module.exports = function (passport) {
 	});
 
 	passport.deserializeUser(function(id, done) {
-	  User.findById(id).then(function (user) {
+	  User.findById(id)
+		.then(function (user) {
 	    done(null, user);
-	  });
+	  })
+		.catch(function(err) {
+			throw(err)
+		})
 	});
+
+
   //=====sign-up & log-in======
-  passport.use('local', new LocalStrategy({
-    // allows us to pass in the req from our route (lets us check if a user is logged in or not)
-    passReqToCallback : true
-  },
-  function(req, email, password, done) {
-    process.nextTick(function() {
-      return done(null, req.user);
-    });
-  }
+  passport.use(new LocalStrategy({
+		usernameField: 'email',
+		passwordField: 'password',
+		passReqToCallback: true,
+		session: true
+	},
+  	function(req, username, password, done) {
+			User.findOne({ email: username })
+			.then(function(user) {
+				if(!user) {
+					return done(null, false, { message: 'Incorrect email.'});
+				}
+				// if(!user.validPassword(password)) {
+				// 	return done(null, false, {message: 'Incorrect password'});
+				// }
+				return done(null, user);
+			})
+			.catch(function(err) {
+					return done(err);
+			})
+  	}
   ));
-};
+}

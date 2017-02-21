@@ -13,9 +13,14 @@ class Wanderspot extends Component {
 	}
 
 	componentDidMount() {
-		// this.props.getProfile(2)
 		this.props.getSpots(this.props.params.destId)
 	}
+
+	// componentDidUpdate(prevProps, prevState) {
+	// 	if(!this.props.profile.id) {
+	// 		this.props.getProfile(prevProps.profile.id)
+	// 	}
+	// }
 
 	backToDestinations = () => {
 		history.goBack()
@@ -62,7 +67,6 @@ class Wanderspot extends Component {
 	}
 
 	render() {
-		console.log('THIS THIS THIS ===>', this)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
 				<div>
@@ -73,12 +77,11 @@ class Wanderspot extends Component {
 		}
 		else {
 			return (
-				<div className='returnSpot'>
-					{/* <Link to={'/spot/add/'+this.props.params.destId}> */}
-					{/* <button className='addButton' type="button">add spot</button> */}
-					{/* </Link> */}
+				<div>
 					<button onClick={this.backToDestinations}>Back</button>
-					{this.displaySpots()}
+					<div className='returnSpot'>
+						{this.displaySpots()}
+					</div>
 				</div>
 			)
 		}
