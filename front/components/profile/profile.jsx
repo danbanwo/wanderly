@@ -7,7 +7,7 @@ import ItineraryBox from '../itinerary/itineraryBox';
 import WanderMap from '../map/map';
 import Navbar from '../navbar/navbar';
 import DestinationModal from '../modal/destination-modal';
-
+import Logout from '../user/Logout'
 import '../../styles/map.css'
 
 class Profile extends Component {
@@ -25,7 +25,9 @@ class Profile extends Component {
   }
 
   render() {
+    /*<Logout actions={this.props.userLogout} />*/
     return (
+
       <div id='master-container' style={{display: 'flex', flexDirection: 'column', alignItems: 'spaceBetween'}}>
         <Navbar routing={this.props.routing.locationBeforeTransitions} profile={this.props.profile}/>
         <div className='profileContainer' style={{margin: 0}}>
