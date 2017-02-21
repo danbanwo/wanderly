@@ -16,12 +16,6 @@ class Wanderspot extends Component {
 		this.props.getSpots(this.props.params.destId)
 	}
 
-	// componentDidUpdate(prevProps, prevState) {
-	// 	if(!this.props.profile.id) {
-	// 		this.props.getProfile(prevProps.profile.id)
-	// 	}
-	// }
-
 	backToDestinations = () => {
 		history.goBack()
 	}
@@ -67,6 +61,7 @@ class Wanderspot extends Component {
 	}
 
 	render() {
+		console.log(this.props)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
 				<div>

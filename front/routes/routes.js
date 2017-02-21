@@ -17,7 +17,7 @@ const Routes = (props) => (
       <Route path='signup' component={userContainer} />
             {/* <Route path='/' component={App}> */}
       <Route component={profileContainer}>
-        <Route path='profile' component={destinationContainer}/>
+        <Route path='/profile' component={destinationContainer}/>
         <Route path='itinerary/:destId' component={itineraryContainer} />
       </Route>
         <Route path='createprofile' component={UploadPic}/>
