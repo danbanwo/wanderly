@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {browserHistory as history} from 'react-router';
+import '../../styles/user.css';
 
 
 class Login extends Component {
@@ -11,7 +12,7 @@ class Login extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault()
 		if(!this.state.email || !this.state.password) {
-			alert('Please enter a valid email/password')
+			alert('Please enter a valid email or password')
 		} else {
 		this.props.action(this.state)
 		}
@@ -21,32 +22,27 @@ class Login extends Component {
 		this.setState({ [key] : e.target.value })
 	}
 	render(){
-		 const { email, password } = this.state;
+		const { email, password } = this.state;
 		return(
-			<div className='container'>
-			    <div className="row">
-					<div className="col-md-4 col-md-offset-4">
-			    		<div className="panel panel-default">
-						  	<div className="panel-heading">
-						    	<h3 className="panel-title">Please sign in</h3>
-						 	</div>
-						  	<div className="panel-body">
-							<form className='form login form-control maindiv' onSubmit={this.handleSubmit} >
-							 <fieldset>
-							 	<div className="form-group">
-								Email:
-								<input className="form-control" type='email' value={email} onChange={this.handleChange.bind(this,"email")} />
-								</div><br />
-								<div className="form-group">
-								Password:
-								<input className="form-control"  type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
-								</div><br />
-								<input className="btn btn-lg  btn-block button1" type='submit' value='Login'/>
-							  </fieldset>
-							</form>
-						    </div>
-						</div>
+			<div className="main-container login">
+				<div>
+					<img src="../../views/images/Wanderly-Logo.svg" alt="Wanderly Logo" />
+				</div>
+				<div className=" box">
+					<div className="heading" >
+						 <h3 className="title">Sign In</h3>
 					</div>
+					<form className=' maindiv' onSubmit={this.handleSubmit} >
+		 			 <fieldset>
+							<div className="form-group ">
+							<input className="form-control txt" type='email' value={email} onChange={this.handleChange.bind(this,"email")} placeholder="  Your email"/>
+							</div><br />
+							<div className="form-group input">
+							<input className="form-control txt"  type='Password' value={password} onChange={this.handleChange.bind(this, "password")} placeholder="  Password" />
+							</div><br />
+							<input className=" sub" type='submit' value='Log In'/>
+						 </fieldset>
+					</form>
 				</div>
 			</div>
 		)
