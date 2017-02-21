@@ -86,4 +86,9 @@ hr.lineBreak {
 }
 
 
+.return_spot {
+	height: 48vh;
+	overflow-y: scroll;
+}
+
 /*---------/Itinerary Row--------*/
