@@ -19,14 +19,14 @@ app.use(express.static('front/public'));
 //passport midleware
 app.use(morgan('dev'));
 app.use(cookieParser());
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(flash());
 app.use(session({
 	secret: 'wanderly wander',
 	resave: true,
-	saveUninitialized: false,
+	saveUninitialized: true,
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //route for users is not api
 require('./back/routes/user-router.js')(app, passport);

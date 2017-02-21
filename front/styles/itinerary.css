@@ -54,4 +54,9 @@ body, html {
 	width: 200px;
 }
 
+.return_spot {
+	height: 48vh;
+	overflow-y: scroll;
+}
+
 /*---------/Itinerary Row--------*/
