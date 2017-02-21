@@ -26,7 +26,7 @@ export const userLogin = (info) => (
   		dispatch(user_login(user.data))
     })
 		.then(() => {
-			history.push('/')
+			history.push('profile')
 		})
   }
 );
@@ -37,6 +37,9 @@ export const userSignUp = (info) => (
     .then((user) => {
       dispatch(user_signup(user.data))
     })
+		.then(() => {
+			history.push('createintro')
+		})
   }
 );
 

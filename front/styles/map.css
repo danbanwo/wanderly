@@ -1,5 +1,10 @@
 #master_itinerary {
-	height: 70vh;
+	height: 48vh;
+	overflow-y: scroll;
+}
+
+.returnSpot {
+	height: 44vh;
 	overflow-y: scroll;
 }
 
@@ -38,8 +43,8 @@
 }
 
 .destList {
-		height: 60vh;
-		overflow-y: scroll;
+		/*height: 60vh;*/
+		/*overflow-y: scroll;*/
 }
 /*---------/Profile Left Container--------*/
 

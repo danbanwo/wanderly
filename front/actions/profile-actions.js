@@ -19,3 +19,24 @@ export const getProfile = (id) => {
     })
   }
 }
+
+
+//------------------------------------------------//
+const user_auth = (data) => ({
+	type: "USER_LOGIN",
+	data: data,
+	profileData: data.Profile,
+	destData: data.Profile.Destinations
+})
+
+export const userAuth = () => (
+  (dispatch) => {
+    axios.get('/')
+    .then((user) => {
+  		dispatch(user_auth(user.data))
+    })
+		// .then(() => {
+		// 	history.push('/')
+		// })
+  }
+);
