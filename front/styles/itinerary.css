@@ -1,7 +1,15 @@
 body, html {
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Chivo', sans-serif;
+}
+
+.sample {
+	background-image: url('../ui/Icon_Food.svg');
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	background-repeat: none;
 }
 
 /*---------Itinerary Container--------*/
@@ -29,9 +37,13 @@ body, html {
 	align-items: center;
 }
 
+.rowInfo {
+	width: 50%;
+}
+
 .wanderPicContainer {
-	width: 300px;
-	height: 300px;
+	width: 144px;
+	height: 144px;
 	display: flex;
 	align-items: center;
   justify-content: center;
@@ -44,10 +56,18 @@ body, html {
 .spotDesc {
 	width: 200px;
 	padding: 5px;
+	font-size: 14px;
+}
+
+.spotName {
+	width: 200px;
+	padding: 5px;
+	font-size: 18px;
 }
 
 .total {
 	width: 200px;
+	font-size: 18px;
 }
 
 .category {
