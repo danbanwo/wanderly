@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="70px" height="36px" viewBox="0 0 70 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Button/Pill Selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1084.000000, -442.000000)" id="Button/Pill-Selected">
+            <g transform="translate(1084.000000, 442.000000)">
+                <g id="Group">
+                    <rect id="Rectangle-2" fill="#00A799" x="0" y="0" width="70" height="36" rx="8"></rect>
+                    <text id="Fun" font-family="Chivo-Regular, Chivo" font-size="14" font-weight="normal" line-spacing="20" fill="#FFFFFF">
+                        <tspan x="16" y="21">Fun</tspan>
+                    </text>
+                </g>
+                <g id="close.3.3.1" transform="translate(49.000000, 12.000000)">
+                    <g id="Group">
+                        <g id="Filled_Icons_1_" fill-rule="nonzero" fill="#FFFFFF">
+                            <g id="Filled_Icons">
+                                <path d="M11.85936,11.18064 L6.91872,6.24 L11.85888,1.29936 C12.04656,1.11216 12.04656,0.80832 11.85888,0.62064 C11.6712,0.43296 11.36784,0.43296 11.18016,0.62064 L6.24,5.56128 L1.29888,0.62016 C1.1112,0.43296 0.80784,0.43296 0.62016,0.62016 C0.43248,0.80784 0.43248,1.1112 0.62016,1.29888 L5.56128,6.24 L0.62016,11.18112 C0.43296,11.36832 0.43248,11.67264 0.62016,11.85984 C0.80784,12.04752 1.11168,12.04704 1.29888,11.85984 L6.24,6.91872 L11.18064,11.85888 C11.36784,12.04656 11.67168,12.04656 11.85936,11.85888 C12.04704,11.67168 12.04656,11.36784 11.85936,11.18064 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                        <g id="Invisible_Shape" transform="translate(0.480000, 0.480000)">
+                            <rect id="Rectangle-path" x="0" y="0" width="11.52" height="11.52"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

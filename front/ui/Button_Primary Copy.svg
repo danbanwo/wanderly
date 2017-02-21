@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="93px" height="45px" viewBox="0 0 93 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Button/Primary Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="89" height="41" rx="4"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="93" height="45">
+            <rect x="-2" y="-2" width="93" height="45" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-534.000000, -188.000000)" id="Button/Secondary">
+            <g transform="translate(536.000000, 190.000000)">
+                <g id="Group">
+                    <use id="Rectangle-3" stroke="#00A799" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                    <text id="Share" font-family="Chivo-Bold, Chivo" font-size="14" font-weight="bold" fill="#00A799">
+                        <tspan x="24.172" y="25">Share</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
