@@ -34,7 +34,7 @@ export default class WanderMap extends Component {
 
   render() {
     const { pathname } = this.props.routing;
-    if(pathname === 'profile') {
+    if(pathname === '/profile' || pathname === 'profile') {
       return (
         <div style={{width: 868, height: '92vh', background: 'blue'}}>
           <WanderGoogleMap
