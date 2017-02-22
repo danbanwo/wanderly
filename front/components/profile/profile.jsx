@@ -8,6 +8,7 @@ import WanderMap from '../map/map';
 import DestinationModal from '../modal/destination-modal';
 
 import '../../styles/map.css'
+import '../../styles/userProfile.css'
 
 class Profile extends Component {
   constructor(props){
@@ -32,18 +33,23 @@ class Profile extends Component {
         </div>
         <div className='profileLeft'>
           <div className='profileInfo'>
-            <div className='profilePhotoContainer'>
-              <img className='profilePhoto' src={this.props.profile.image} />
-            </div>
-            <div className='profileBio'>
-              <h2>{this.props.profile.first_name} {this.props.profile.last_name}</h2>
-              <h4>{this.props.profile.catch_phrase}</h4>
-              <h4>{this.props.profile.country_origin}</h4>
-            </div>
-          </div>
 
+            <div className='profilePhotoContainer'>
+              <img className='profilePhoto' src={this.props.profile.photo} />
+            </div>
+
+            <div className='profileBio'>
+              <hr/>
+              <h2 className="userName"> Jane Doe {/*this.props.profile.fullName*/} </h2>
+              <p className="userGender"> Female{/*this.props.profile.gender*/}</p>
+              <p className="userCountry"> United States{/*this.props.profile.country_origin*/}</p>
+              <p className="userInfo"> I'm here for a good time, not a long time!{/*this.props.profile.catch_phrase*/}</p>
+               <a id="editProfile">Edit Profile</a>
+            </div>
+
+          </div>
           <div className='destList'>
-            <button onClick={this.displayModal}>ADD</button>
+            <button onClick={this.displayModal} className="addButton">ADD</button>
             {this.props.children}
             {/* <Destination destinations={this.props.destinations.destinations} /> */}
           </div>
@@ -54,6 +60,7 @@ class Profile extends Component {
             routing={this.props.routing.locationBeforeTransitions} profileId={this.props.profile.id}
           />
         </div>
+
       </div>
     )
   }

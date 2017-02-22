@@ -18,21 +18,26 @@ class UploadIntro extends Component {
 						<h1 className="bioTitle"> Welcome, traveler!</h1>
 						<p className="aboutYou"> Tell us a little more about yourself. </p>
 						<input type="text" className="name"placeholder="Name"></input>
-						<div className="dropdwn">
+						
+
+
+						<div className="dropdown">
 							<button className="btn btn-default dropdown-toggle"
 								type="button"
 								data-toggle="dropdwn">Home Country
 								<span className="caret"></span>
 							</button>
-							<ul className="dropdown-menu">
-								<li><a href="#">USA</a></li>
-								<li><a href="#">CA</a></li>
-								<li><a href="#">UK</a></li>
-								<li><a href="#">CN</a></li>
-								<li><a href="#">AF</a></li>
-								<li><a href="#">FR</a></li>
-							</ul>
-						</div>
+			
+								<div className="dropdown-content">
+									<a href="#">USA</a>
+									<a href="#">CA</a>
+									<a href="#">UK</a>
+									<a href="#">CN</a>
+									<a href="#">AF</a>
+									<a href="#">FR</a>
+								</div>
+							</div>
+
 						<button type="button" className="btn btn-default continue" onClick={this.onClick}>Continue</button>
 					</center>
 				</div>

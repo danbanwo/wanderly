@@ -5,6 +5,22 @@ import axios from 'axios';
 import '../../styles/uploadBio.css';
 
 class UploadBio extends Component {
+
+constructor(props){
+	super(props)
+	this.state = {catch_phrase: '', category:[]}
+}
+
+changePhrase = (e) =>{
+	this.setState({[e.target.name]: e.target.value})
+	console.log(e.target.value,'catch_phrase')
+}
+
+selectCategory = (e, key)=>{
+	this.setState({'category' : this.state.category.concat([e.target.name])})
+	console.log(e.target.name, ': Category')
+}
+
 	render() {
 		return (
 			<div>
@@ -22,19 +38,26 @@ class UploadBio extends Component {
 					<p id="questions"> What types of travel do you like? </p>
 
 					<div className="bioButtons">
-						<button type="button" className="btn btn-default one">Food</button>
-						<button type="button" className="btn btn-default two">Culture & Art</button>
-						<button type="button" className="btn btn-default three">Relaxation</button>
-						<button type="button" className="btn btn-default four">Backpacking</button>
-						<button type="button" className="btn btn-default five">Activities</button>
-						<button type="button" className="btn btn-default six">Independence</button>
+						<button name="Food" type="button" className="btn btn-default one" onClick={this.selectCategory}>Food</button>
+						<button name="Culture & Art" type="button" className="btn btn-default two" onClick={this.selectCategory}>Culture & Art</button>
+						<button name="Relaxation" type="button" className="btn btn-default three" onClick={this.selectCategory}>Relaxation</button>
+						<button name="Backpacking" type="button" className="btn btn-default four" onClick={this.selectCategory}>Backpacking</button>
+						<button name="Activities" type="button" className="btn btn-default five" onClick={this.selectCategory}>Activities</button>
+						<button name="Independence" type="button" className="btn btn-default six" onClick={this.selectCategory}>Independence</button>
 					</div>
 				</div>
 
 
 				<div className="bioIntro">
 					<p className="questions"> Introduce yourself </p>
-					<input type="text" placeholder="Write a brief intro..." className="intro"></input>
+					<input 
+						type="text" 
+						placeholder="Write a brief intro..." 
+						className="intro"
+						name="catch_phrase" 
+						onChange={this.changePhrase}>
+					</input>
+
 				</div>
 
 

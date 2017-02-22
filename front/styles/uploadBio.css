@@ -44,6 +44,12 @@ p#questions{
 	margin-left: -213px;
 }
 
+button.btn.btn-default:active:focus{
+	background-color: #00A799;
+	color:white;
+	
+}
+
 button.btn.btn-default.one{
 	background-color: #FFFF;
 	border-radius: 100px;
