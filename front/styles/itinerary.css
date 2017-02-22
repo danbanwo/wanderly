@@ -1,57 +1,94 @@
 body, html {
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Chivo', sans-serif;
+	font-size: 16px;
+	color: #58585B;
 }
 
-/*---------Itinerary Container--------*/
+hr.lineBreak {
+	border-top: 1px solid #58585B;
+}
 
-/*.itineraryContainer {
-	width: 500px;
-	float: right;
-	display: flex;
-	background-color: rgba(66, 244, 229, 0.5);
-	flex-direction: column;
-	padding: 10px;
-}*/
-/*---------/Itinerary Container--------*/
+/*---------Category Icons--------*/
+.iconFood {
+	background-image: url('../ui/Icon_Food.svg');
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	background-repeat: none;
+}
+
+.iconFun {
+	background-image: url('../ui/Icon_Fun.svg');
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	background-repeat: none;
+}
+
+.iconLodging {
+	background-image: url('../ui/Icon_Lodging.svg');
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	background-repeat: none;
+}
+/*---------/Category Icons--------*/
 
 
 
 
 /*---------Itinerary Row--------*/
 
-.wanderRowContainer {
+.wanderSpotContainer {
 	display: flex;
-	background-color: rgba(255,255,255, 0.7);
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 }
 
-.wanderPicContainer {
-	width: 300px;
-	height: 300px;
+.wanderLeft {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	align-items: left;
+}
+
+.spotCategoryTotal {
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+}
+
+.spotIcon {
+	padding-right: 5px;
+}
+
+.spotTotal {
+	padding-left: 5px
+}
+
+.spotPicContainer {
+	width: 144px;
+	height: 144px;
 	display: flex;
 	align-items: center;
   justify-content: center;
 }
 
-.wanderPic{
+.spotPic{
 	width: 100%;
 }
 
 .spotDesc {
-	width: 200px;
-	padding: 5px;
+	font-size: 0.75em;
 }
 
-.total {
-	width: 200px;
-}
 
-.category {
-	width: 200px;
+.return_spot {
+	height: 48vh;
+	overflow-y: scroll;
 }
 
 /*---------/Itinerary Row--------*/

@@ -44,11 +44,13 @@ p#questions{
 	margin-left: -213px;
 }
 
-button.btn.btn-default:active:focus{
-	background-color: #00A799;
-	color:white;
-	
-}
+
+#btnone:focus {background-color:#00A799; color:white; outline: none;}
+#btntwo:focus {background-color:#00A799; color:white; outline: none;}
+#btnthree:focus {background-color:#00A799; color:white; outline: none;}
+#btnfour:focus {background-color:#00A799; color:white; outline: none;}
+#btnfive:focus {background-color:#00A799; color:white; outline: none;}
+#btnsix:focus {background-color:#00A799; color:white; outline: none;}
 
 button.btn.btn-default.one{
 	background-color: #FFFF;
@@ -71,6 +73,7 @@ button.btn.btn-default.two{
 	font-size: 14px;
 	line-height: 17px;
 	color:#00A799;
+	margin-left: 10px;
 }
 
 button.btn.btn-default.three{
@@ -82,6 +85,7 @@ button.btn.btn-default.three{
 	font-size: 14px;
 	line-height: 17px;
 	color:#00A799;
+	margin-left: 10px;
 }
 
 button.btn.btn-default.four{
@@ -93,6 +97,7 @@ button.btn.btn-default.four{
 	font-size: 14px;
 	line-height: 17px;
 	color:#00A799;
+	margin-left: 10px;
 
 }
 
@@ -119,6 +124,7 @@ button.btn.btn-default.six{
 	line-height: 17px;
 	color:#00A799;
 	margin-top: 8px;
+	margin-left: 10px;
 
 }
 

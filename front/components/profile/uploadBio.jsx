@@ -38,12 +38,12 @@ selectCategory = (e, key)=>{
 					<p id="questions"> What types of travel do you like? </p>
 
 					<div className="bioButtons">
-						<button name="Food" type="button" className="btn btn-default one" onClick={this.selectCategory}>Food</button>
-						<button name="Culture & Art" type="button" className="btn btn-default two" onClick={this.selectCategory}>Culture & Art</button>
-						<button name="Relaxation" type="button" className="btn btn-default three" onClick={this.selectCategory}>Relaxation</button>
-						<button name="Backpacking" type="button" className="btn btn-default four" onClick={this.selectCategory}>Backpacking</button>
-						<button name="Activities" type="button" className="btn btn-default five" onClick={this.selectCategory}>Activities</button>
-						<button name="Independence" type="button" className="btn btn-default six" onClick={this.selectCategory}>Independence</button>
+						<button name="Food" type="button" className="btn btn-default one" id="btnone" onClick={this.selectCategory}>Food</button>
+						<button name="Culture & Art" type="button" className="btn btn-default two" id="btntwo" onClick={this.selectCategory}>Culture & Art</button>
+						<button name="Relaxation" type="button" className="btn btn-default three"  id="btnthree"onClick={this.selectCategory}>Relaxation</button>
+						<button name="Backpacking" type="button" className="btn btn-default four" id="btnfour" onClick={this.selectCategory}>Backpacking</button>
+						<button name="Activities" type="button" className="btn btn-default five"  id="btnfive"onClick={this.selectCategory}>Activities</button>
+						<button name="Independence" type="button" className="btn btn-default six"  id="btnsix"onClick={this.selectCategory}>Independence</button>
 					</div>
 				</div>
 
@@ -62,7 +62,7 @@ selectCategory = (e, key)=>{
 
 
 				<button className="btn btn-default done" type="button">All done!</button>
-					<Link to='/' id="skip">Skip this step</Link>
+					<Link to='/profile' id="skip">Skip this step</Link>
 					</center>
 				</div>
 

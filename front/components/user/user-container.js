@@ -34,6 +34,7 @@ class userContainer extends Component {
 
 const mapStateToProps = state => ({
 	user: state.userReducer,
+	destinations: state.destinationReducer,
 	routing: state.routing
 })
 

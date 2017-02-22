@@ -31,6 +31,7 @@
     "express-session": "^1.0.4",
     "flag-icon-css": "^2.8.0",
     "formidable": "^1.1.1",
+    "icon-maker-loader": "^0.1.11",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1",
     "jshint": "^2.9.4",
@@ -47,11 +48,13 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-google-maps": "^6.0.1",
+    "react-inlinesvg": "^0.5.5",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.8",
+    "react-svg": "^2.1.19",
+    "react-svg-loader": "^1.1.1",
     "redux": "^3.6.0",
-    "redux-form": "^6.5.0",
     "redux-logger": "^2.8.1",
     "redux-promise-middleware": "^4.2.0",
     "redux-thunk": "^2.2.0",
@@ -59,6 +62,7 @@
     "sequelize-cli": "^2.5.1",
     "style-loader": "^0.13.1",
     "supertest": "^3.0.0",
+    "svg-react": "^1.0.9",
     "webpack": "^1.14.0"
   },
   "devDependencies": {
@@ -70,7 +74,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "url-loader": "^0.5.7"
   },
   "bugs": {
     "url": "https://github.com/danbanwo/wanderly/issues"
