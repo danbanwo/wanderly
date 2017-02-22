@@ -14,9 +14,14 @@ const user_signup = (data) => ({
 	data
 })
 
+const user_logout = (user) =>({
+  type: "USER_LOGOUT",
+  user
+})
+
 export const userLogin = (info) => (
   (dispatch) => {
-    axios.post('/login', info)
+    return  axios.post('/login', info)
     .then((user) => {
   		dispatch(user_login(user.data))
     })
@@ -37,3 +42,15 @@ export const userSignUp = (info) => (
 		})
   }
 );
+
+export const userLogout = () =>(
+  (dispatch) => {
+   return axios.get('/logout')
+    .then((user) => {
+      dispatch(user_logout(user))
+      })
+			.then(() => {
+				history.push('/')
+			})
+    }
+  )

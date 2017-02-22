@@ -49,7 +49,7 @@ class SpotForm extends React.Component {
 
 	render() {
     const { pathname } = this.props
-    if(pathname === '/profile') {
+    if(pathname === '/profile' || pathname === 'profile') {
   		return (
   		<div>
         <div className='addNew'>Add a Destination</div>

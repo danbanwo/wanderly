@@ -99,6 +99,7 @@ module.exports = function (app, passport){
       	user = Object.assign({}, user.dataValues);
 	    	delete user.password;
       	res.json(user);
+
       })
 	});
 
