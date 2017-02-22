@@ -41,7 +41,13 @@ class Wanderspot extends Component {
 					<div className='wanderSpotContainer'>
 
 						<div className='wanderLeft'>
-							<div>
+							<div className='spotPicContainer'>
+								<img className='spotPic' src={curr.pictures} />
+							</div>
+						</div>
+
+						<div className='wanderRight'>
+							<div className='spotName'>
 								<span>{curr.spot} </span>
 							</div>
 					
@@ -56,11 +62,6 @@ class Wanderspot extends Component {
 						</div>
 
 
-						<div className='wanderRight'>
-							<div className='spotPicContainer'>
-								<img className='spotPic' src={curr.pictures} />
-							</div>
-						</div>
 
 					</div>
 					<hr className="lineBreak"></hr>
@@ -74,7 +75,7 @@ class Wanderspot extends Component {
 		if(!this.props.spots.wanderspotsArr) {
 			return (
 				<div>
-					<button onClick={this.backToDestinations}>Back</button>
+					<div className='backButton' onClick={this.backToDestinations}></div>
 					<div>Loading...</div>
 				</div>
 			)
@@ -82,7 +83,7 @@ class Wanderspot extends Component {
 		else {
 			return (
 				<div>
-					<button onClick={this.backToDestinations}>Back</button>
+					<div className='backButton' onClick={this.backToDestinations}></div>
 					<div className='returnSpot'>
 						{this.displaySpots()}
 					</div>

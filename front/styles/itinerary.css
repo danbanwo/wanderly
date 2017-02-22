@@ -2,13 +2,19 @@ body, html {
 	margin: 0;
 	padding: 0;
 	font-family: 'Chivo', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: #58585B;
 }
 
-hr.lineBreak {
-	border-top: 1px solid #58585B;
+.backButton {
+	background-image: url('../ui/UI_Arrow-left.svg');
+	background-repeat: none;
+	display: inline-block;
+  height: 12px;
+  width: 8px;
+  margin: 10px;
 }
+
 
 /*---------Category Icons--------*/
 .iconFood {
@@ -41,14 +47,24 @@ hr.lineBreak {
 
 /*---------Itinerary Row--------*/
 
+hr.lineBreak {
+	border-top: 1px solid #58585B;
+}
+
+.spotName {
+	font-weight: bold;
+}
+
 .wanderSpotContainer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
-.wanderLeft {
+.wanderRight {
 	display: flex;
 	flex-direction: column;
 	width: 60%;
@@ -75,6 +91,7 @@ hr.lineBreak {
 	display: flex;
 	align-items: center;
   justify-content: center;
+  padding-right: 5px;
 }
 
 .spotPic{
@@ -82,7 +99,7 @@ hr.lineBreak {
 }
 
 .spotDesc {
-	font-size: 0.75em;
+	font-size: .7em;
 }
 
 

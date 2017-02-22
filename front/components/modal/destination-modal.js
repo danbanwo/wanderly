@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SpotForm from '../itinerary/spot'
-import '../../styles/modal.css'
+import SpotForm from '../itinerary/spot';
+import '../../styles/modal.css';
 
 class DestinationModal extends Component {
   constructor(props) {
@@ -12,8 +12,8 @@ class DestinationModal extends Component {
       <div id='modal-outer'>
         <div id='modal-middle'>
           <div id='modal-inner'>
-            <div id='close'>
-              <button onClick={this.props.closeButton}>x</button>
+            <div className='closeModal'>
+              <div id='close' onClick={this.props.closeButton}></div>
             </div>
             <div id='modal-text'>
               <SpotForm closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />

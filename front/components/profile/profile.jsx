@@ -3,7 +3,7 @@ import { render, unmountComponentAtNode } from 'react-dom';
 
 //Import containers here:
 import Destination from '../destination/destination';
-import ItineraryBox from '../itinerary/itineraryBox';
+import Itinerary from '../itinerary/itinerary-container';
 import WanderMap from '../map/map';
 import Navbar from '../navbar/navbar';
 import DestinationModal from '../modal/destination-modal';
