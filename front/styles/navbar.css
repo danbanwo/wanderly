@@ -1,0 +1,49 @@
+
+.navbar {
+	height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    box-sizing: border-box;
+	height: 51px;
+	background-color: pink;
+	border: 1px solid #E5E6E7;
+	flex-direction: row;
+}
+
+.parent-logo{
+	margin-left: 10px;
+	height: auto;
+	width: 60px;
+    flex: 1 1 auto;
+    align-self: flex-start;
+    background-color: red;
+}
+
+.logo-nav {
+	background-image: url('../ui/Wanderly-Logo.svg');
+	height: 20px;
+	width: 120px;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+
+.buttons {
+	margin-right: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+.button-log {
+	width: 48px;
+	height: 17px;
+	font-family: Chivo;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 17px;
+	color: #00A799;
+}
+
+.dropbtn {
+
+}
