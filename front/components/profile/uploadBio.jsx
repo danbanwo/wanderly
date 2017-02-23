@@ -68,7 +68,7 @@ class UploadBio extends Component {
 				<div className="bioIntro">
 					<p className="questions"> Introduce yourself </p>
 					<input onChange={this.handleChange} type="text" placeholder="Write a brief intro..." className="intro"></input>
-				<button onClick={this.submitProfile} className="btn btn-default done" type="button">All done!</button>
+					<button onClick={this.submitProfile} className="btn btn-default done" type="button">All done!</button>
 					<Link to='/' id="skip">Skip this step</Link>
 				</div>
 			</center>

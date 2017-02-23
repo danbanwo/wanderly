@@ -91,8 +91,11 @@ module.exports = function (app, passport){
 			include: [{
 				model: Profile,
 				include: [{
-					model: Destination
-							}]
+					model: Destination,
+			    order: [
+			      [Profile, Destination, 'createdAt', 'DESC']
+			    ]
+				}]
 			}]
 		})
       .then(function(user) {

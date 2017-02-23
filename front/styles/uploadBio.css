@@ -151,3 +151,9 @@ a#skip{
 	line-height: 17px;
 	margin-left: 243px;
 }
+
+.bioIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
