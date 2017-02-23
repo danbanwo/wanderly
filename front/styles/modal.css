@@ -1,3 +1,7 @@
+body,html{
+  font-family: 'Chivo', sans-serif;
+}
+
 #modal-outer {
   height: 100vh;
   width: 100vw;
@@ -24,7 +28,7 @@
   position: absolute;
   background: white;
   height: 500px;
-  width: 300px;
+  width: 415px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +44,7 @@
   position: absolute;
 }
 
-#modal-text {
+div.modal-text {
   height: 150px;
   width: 250px;
   margin-top: 125px;
@@ -48,3 +52,65 @@
   flex-direction: column;
   align-items: center;
 }
+
+/*div.addDestinationContainer{
+  display: flex;
+  justify-content: center;
+}
+*/
+
+h1.addDestination{
+  color:#484848;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top:-45px;
+  margin-left: -30px;
+
+}
+
+form.destinationForm{
+  margin-top:25px;
+}
+
+input[type="text"]{
+  color:#A5A5A5;
+  font-size: 14px;
+}
+
+input.location{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+input.duration{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+input.country{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+input.total{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+
+button.btn.btn-default.destination{
+  background-color: #00A799;
+  border-radius: 4px;
+  width: 89px;
+  height:41px;
+  color:white;
+}
+

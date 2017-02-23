@@ -15,7 +15,7 @@ module.exports = function (app, passport){
 			if(!user) {
 				User.create({
 					email: req.body.email,
-    				password: bcrypt.hashSync(req.body.password)
+    			password: bcrypt.hashSync(req.body.password)
 				}).then(function(user) {
 					user = user.dataValues;
         	passport.authenticate('local', function(err) {
@@ -99,6 +99,7 @@ module.exports = function (app, passport){
       	user = Object.assign({}, user.dataValues);
 	    	delete user.password;
       	res.json(user);
+
       })
 	});
 
@@ -110,12 +111,9 @@ module.exports = function (app, passport){
 	//============ user logs-out ===========//
   app.get('/logout', function(req, res) {
     req.logout();
-    req.session.destroy();
-    res.redirect('/login');
+    res.send('logout')
     // res.redirect('/home');
-    // res.send('logout')
   });
-  // app.post('/logout', function(req, res){ req.logOut(); res.send(200); }); - See more at: https://vickev.com/#!/article/authentication-in-single-page-applications-node-js-passportjs-angularjs
 
 	// route middleware to ensure user is logged in //
 	function isLoggedIn(req, res, next) {

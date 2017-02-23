@@ -49,26 +49,30 @@ class SpotForm extends React.Component {
 
 	render() {
     const { pathname } = this.props
-    if(pathname === '/profile') {
+    if(pathname === '/profile' || pathname === 'profile') {
   		return (
-  		<div>
-        <h1>Add a Destination</h1>
-  			<form onSubmit={this.handleDestinationSubmit} >
+  		<div className="addDestinationContainer">
+        <h1 className="addDestination">Add a Destination</h1>
+  			<form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
   				<label>
-  					<input onChange={this.handleChange} name="place" type="text" placeholder="City">
+  					<input className="location" onChange={this.handleChange} name="place" type="text" placeholder="Add City">
   					</input>
   				</label><br />
 
-  				<label><input onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Duration">
+  				<label><input className="duration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Add Duration">
   				</input></label><br />
 
-  				<label><input onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Country">
+  				<label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country">
   				</input></label><br />
 
-  				<label><input onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="Total Amount Spent">
+  				<label><input className="total"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
   				</input></label><br />
 
-  				<button type="submit">add destination</button>
+          <button className="btn btn-default eat"type="button">Eat</button>
+          <button className="btn btn-default play"type="button">Play</button>
+          <button className="btn btn-default sleep"type="button">Sleep</button>
+
+  				<button className="btn btn-default destination"type="submit">Share</button>
   			</form>
   		</div>
   		)
