@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Avatar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Create-Account" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Complete-Profile---Upload-Photo" transform="translate(-656.000000, -285.000000)">
+            <g id="Avatar" transform="translate(656.000000, 285.000000)">
+                <g id="Avatar/Default-User">
+                    <g id="Group-2">
+                        <circle id="Oval" fill="#DDF9F2" cx="64" cy="64" r="64"></circle>
+                        <g id="stone-heads.2.3.1" transform="translate(36.571429, 25.904762)" fill-rule="nonzero" fill="#3EE2C1">
+                            <g id="Group">
+                                <g id="Filled_Icons">
+                                    <path d="M55.2990476,10.24 C55.6617143,4.6872381 51.2548571,0 45.7142857,0 L32.4571429,0 C27.1634286,0 22.8571429,4.30933333 22.8571429,9.60609524 L22.8571429,13.12 L1.84380952,40.2072381 C1.06666667,41.2068571 1.78285714,42.6666667 3.04761905,42.6666667 L9.856,42.6666667 L6.14095238,57.536 C5.90019048,58.496 6.62552381,59.4285714 7.61904762,59.4285714 L14.0373333,59.4285714 L8.89295238,71.000381 C8.45104762,71.9969524 9.17638095,73.1428571 10.2857143,73.1428571 L50.5569524,73.1428571 C51.3980952,73.1428571 52.0807619,72.4601905 52.0807619,71.6190476 L52.0777143,58.5782857 L55.2990476,10.24 Z M36.5714286,24.3809524 L27.4285714,24.3809524 C26.5874286,24.3809524 25.9047619,23.6982857 25.9047619,22.8571429 C25.9047619,22.016 26.5874286,21.3333333 27.4285714,21.3333333 L36.5714286,21.3333333 C37.4125714,21.3333333 38.0952381,22.016 38.0952381,22.8571429 C38.0952381,23.6982857 37.4125714,24.3809524 36.5714286,24.3809524 Z" id="Shape" transform="translate(28.420650, 36.571429) scale(-1, 1) translate(-28.420650, -36.571429) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

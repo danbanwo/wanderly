@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import '../../styles/itinerary.css';
 import { browserHistory as history } from 'react-router';
 
+//import eatIcon from '../../ui/Icon_Food.svg';
+
 class Wanderspot extends Component {
 	//gives access to keyword THIS
 	constructor(props) {
@@ -11,7 +13,6 @@ class Wanderspot extends Component {
 	}
 
 	componentDidMount() {
-		// this.props.getProfile(2)
 		this.props.getSpots(this.props.params.destId)
 	}
 
@@ -20,58 +21,72 @@ class Wanderspot extends Component {
 	}
 
 	displaySpots = () => {
-		//get value of wanderspots
+		//get the value of the Destinations' Wanderspots
 		let spots = this.props.spots.wanderspotsArr.reverse()
 		return spots.map((curr, idx) => {
+			//render the correct Icon for the spots' category
+			var categoryIcon;
+			if(curr.category == 'eat') {
+				categoryIcon = (<div className='iconFood'></div>)
+			}
+			else if(curr.category == 'play') {
+				categoryIcon = (<div className='iconFun'></div>)
+			}
+			else if(curr.category == 'sleep') {
+				categoryIcon = (<div className='iconLodging'></div>)
+			}
 			return (
 				<div key={idx}>
-					<div className='wanderRowContainer'>
 
-						<div className='spotDesc'>
-							<h2>{curr.spot} </h2>
-							<h5>{curr.description} </h5>
+					<div className='wanderSpotContainer'>
+
+						<div className='wanderLeft'>
+							<div className='spotPicContainer'>
+								<img className='spotPic' src={curr.pictures} />
+							</div>
 						</div>
 
-						<div className='total'>
-							<h4>total spent: </h4>
-							<h5>{curr.total} </h5>
+						<div className='wanderRight'>
+							<div className='spotName'>
+								<span>{curr.spot} </span>
+							</div>
+					
+							<div className='spotCategoryTotal'>
+								<div className='spotIcon'>{categoryIcon}</div>
+								<div className='spotTotal'>${curr.total}</div>
+							</div>
+
+							<div className='spotDesc'>
+								<div>{curr.description} </div>
+							</div>
 						</div>
 
-						<div className='category'>
-							<h4>category:</h4>
-							<h5>{curr.category} </h5>
-						</div>
-						<h1>CURRENT ID: {curr.id}</h1>
 
-						<div className='wanderPicContainer'>
-							<img className='wanderPic' src={curr.pictures} />
-
-						</div>
 
 					</div>
+					<hr className="lineBreak"></hr>
 				</div>
 			)
 		})
 	}
 
 	render() {
-		console.log('THIS THIS THIS ===>', this)
+		console.log(this.props)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
-				<div>
-					<button onClick={this.backToDestinations}>Back</button>
+				<div className='backAddButtons'>
+					<div className='backButton' onClick={this.backToDestinations}></div>
 					<div>Loading...</div>
 				</div>
 			)
 		}
 		else {
 			return (
-				<div className='returnSpot'>
-					{/* <Link to={'/spot/add/'+this.props.params.destId}> */}
-					{/* <button className='addButton' type="button">add spot</button> */}
-					{/* </Link> */}
-					<button onClick={this.backToDestinations}>Back</button>
-					{this.displaySpots()}
+				<div>
+					<div className='backButton' onClick={this.backToDestinations}></div>
+					<div className='returnSpot'>
+						{this.displaySpots()}
+					</div>
 				</div>
 			)
 		}

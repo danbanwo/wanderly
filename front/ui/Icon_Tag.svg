@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Tag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-436.000000, -1001.000000)" id="Icon/Tag">
+            <g transform="translate(436.000000, 1001.000000)">
+                <g id="bookmark-1.2.3.1">
+                    <g id="Group">
+                        <g id="Filled_Icons_1_" fill-rule="nonzero" fill="#A5A5A5">
+                            <g id="Filled_Icons">
+                                <path d="M15.9026667,9.76466667 L6.23066667,0.106666667 C6.168,0.044 6.08333333,0.00933333333 5.99466667,0.00933333333 L0.333333333,0 C0.149333333,0 0,0.149333333 0,0.333333333 L0.00533333333,6 C0.00533333333,6.088 0.0406666667,6.17266667 0.103333333,6.23533333 L9.764,15.9026667 C9.894,16.0326667 10.1053333,16.0326667 10.2353333,15.9026667 L15.9026667,10.236 C16.0326667,10.1053333 16.0326667,9.89466667 15.9026667,9.76466667 Z M3.66666667,5.338 C2.74733333,5.338 2,4.59 2,3.67133333 C2,2.752 2.74733333,2.00466667 3.66666667,2.00466667 C4.58533333,2.00466667 5.33333333,2.752 5.33333333,3.67133333 C5.33333333,4.59 4.58533333,5.338 3.66666667,5.338 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                        <g id="Invisible_Shape">
+                            <rect id="Rectangle-path" x="0" y="0" width="16" height="16"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

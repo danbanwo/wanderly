@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Button/Edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24" rx="4"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="24" height="24" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-762.000000, -128.000000)" id="Button/Edit">
+            <g transform="translate(762.000000, 128.000000)">
+                <g id="pencil-2.3.3.1" stroke-width="1" fill-rule="evenodd" transform="translate(4.000000, 4.000000)">
+                    <g id="Group">
+                        <g id="Filled_Icons_1_" fill-rule="nonzero" fill="#D1D2D4">
+                            <g id="Filled_Icons">
+                                <g id="Group">
+                                    <path d="M0.234,15.3966667 C0.207333333,15.5086667 0.241333333,15.6266667 0.322666667,15.7086667 C0.401333333,15.788 0.517333333,15.8246667 0.634666667,15.7973333 C0.634666667,15.7973333 5.00133333,14.7686667 5.02666667,14.7553333 L1.27666667,11.0053333 C1.26266667,11.03 0.234,15.3966667 0.234,15.3966667 Z" id="Shape"></path>
+                                    <rect id="Rectangle-path" transform="translate(7.796253, 8.234546) rotate(-45.000000) translate(-7.796253, -8.234546) " x="1.8939767" y="5.56790441" width="11.8045535" height="5.33328219"></rect>
+                                    <path d="M14.6033333,5.19933333 L14.8393333,4.96333333 C15.4893333,4.314 15.4893333,3.25666667 14.8393333,2.60666667 L13.4253333,1.19333333 C13.1106667,0.877333333 12.692,0.704666667 12.2466667,0.704666667 C11.8013333,0.704666667 11.3826667,0.878 11.068,1.19333333 L10.832,1.428 L14.6033333,5.19933333 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Frames-24px">
+                            <rect id="Rectangle-path" x="0" y="0" width="16" height="16"></rect>
+                        </g>
+                    </g>
+                </g>
+                <use id="Rectangle-2" stroke="#D1D2D4" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
