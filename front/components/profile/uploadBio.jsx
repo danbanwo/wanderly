@@ -5,55 +5,70 @@ import axios from 'axios';
 import '../../styles/uploadBio.css';
 
 class UploadBio extends Component {
+	constructor(props) {
+	super(props);
+		this.state = {
+				categories: [],
+				catch_phrase: '',
+		}
+	}
 
-constructor(props){
-	super(props)
-	this.state = {catch_phrase: '', category:[]}
-}
+	handleClick = (e) => {
+		let check = this.state.categories
+		if(check.indexOf(e.target.name) === -1) {
+			this.setState({categories: this.state.categories.concat(e.target.name)})
+		} else {
+			check.splice(check.indexOf(e.target.name), 1)
+		}
+		console.log(this.state)
+	}
 
-changePhrase = (e) =>{
-	this.setState({[e.target.name]: e.target.value})
-	console.log(e.target.value,'catch_phrase')
-}
+	handleChange = (e) => {
+		this.setState({catch_phrase: e.target.value})
+	}
 
-selectCategory = (e, key)=>{
-	this.setState({'category' : this.state.category.concat([e.target.name])})
-	console.log(e.target.name, ': Category')
-}
+	submitProfile = () => {
+		let UserId = this.props.props.user.id
+		let profile = this.props.props.profile.profile
+		let arr = profile.categories
+		let catch_phrase = this.state.catch_phrase
+		let data = {...profile, catch_phrase, categories: arr.concat(this.state.categories), UserId: UserId}
+		let { submitProfile } = this.props.props
+		submitProfile(data)
+	}
 
 	render() {
-	return (
-		<div>
-			<div className="bioContainer">
-			<center>
-			<div className="welcome">
-				<h1 className="bioTitle"> Welcome, traveler!</h1>
-				<p id="aboutMe"> Tell us a little more about yourself. </p>
-			</div>
+		return (
+			<div>
+				<div className="bioContainer">
+					<center>
+					<div className="welcome">
+						<h1 className="bioTitle"> Welcome, traveler!</h1>
+						<p id="aboutMe"> Tell us a little more about yourself. </p>
+					</div>
 
-			<div className="bioQuestions">
-				<p id="questions"> What types of travel do you like? </p>
 
-				<div className="bioButtons">
-					<button type="button" className="btn btn-default one">Food</button>
-					<button type="button" className="btn btn-default two">Culture & Art</button>
-					<button type="button" className="btn btn-default three">Relaxation</button>
-					<button type="button" className="btn btn-default four">Backpacking</button>
-					<button type="button" className="btn btn-default five">Activities</button>
-					<button type="button" className="btn btn-default six">Independence</button>
+				<div className="bioQuestions">
+					<p id="questions"> What types of travel do you like? </p>
+
+					<div className="bioButtons">
+						<button onClick={this.handleClick} name='Food' type="button" className="btn btn-default one">Food</button>
+						<button onClick={this.handleClick} name='Culture & Art' type="button" className="btn btn-default two">Culture & Art</button>
+						<button onClick={this.handleClick} name='Relaxation' type="button" className="btn btn-default three">Relaxation</button>
+						<button onClick={this.handleClick} name='Backpacking' type="button" className="btn btn-default four">Backpacking</button>
+						<button onClick={this.handleClick} name='Activities' type="button" className="btn btn-default five">Activities</button>
+						<button onClick={this.handleClick} name='Independence' type="button" className="btn btn-default six">Independence</button>
+					</div>
 				</div>
-			</div>
 
-			<div className="bioIntro">
-				<p className="questions"> Introduce yourself </p>
-				<input type="text" placeholder="Write a brief intro..." className="intro"></input>
+				<div className="bioIntro">
+					<p className="questions"> Introduce yourself </p>
+					<input onChange={this.handleChange} type="text" placeholder="Write a brief intro..." className="intro"></input>
+					<button onClick={this.submitProfile} className="btn btn-default done" type="button">All done!</button>
+					<Link to='/' id="skip">Skip this step</Link>
+				</div>
+			</center>
 			</div>
-
-			<button className="btn btn-default done" type="button">All done!</button>
-				<Link to='/' id="skip">Skip this step</Link>
-				</center>
-			</div>
-
 		</div>
 		)
 	}

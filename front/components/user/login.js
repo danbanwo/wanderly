@@ -6,7 +6,7 @@ import '../../styles/user.css';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {email: 'a@a.com', password: '123' }
+		this.state = {email: '', password: '' }
 	}
 
 	handleSubmit = (e) => {
@@ -25,9 +25,9 @@ class Login extends Component {
 		const { email, password } = this.state;
 		return(
 			<div className="main-container login">
-				
+
 					<div className='logo'>
-					
+
 					</div>
 
 				<br />
