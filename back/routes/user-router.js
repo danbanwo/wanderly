@@ -40,7 +40,7 @@ module.exports = function (app, passport){
 	app.post("/login", function(req, res, next) {
 		passport.authenticate('local', function(err, user, info) {
 			if (err) { return next(err); }
-			if(!user) {return res.redirect('/login');}
+			if(!user) {return res.redirect('/');}
 			req.logIn(user, function(err) {
 				if (err) { return next(err); }
 				return res.redirect('/user/' + user.id);
@@ -91,10 +91,7 @@ module.exports = function (app, passport){
 			include: [{
 				model: Profile,
 				include: [{
-					model: Destination,
-			    order: [
-			      [Profile, Destination, 'createdAt', 'DESC']
-			    ]
+					model: Destination
 				}]
 			}]
 		})
@@ -123,6 +120,6 @@ module.exports = function (app, passport){
 		if (req.isAuthenticated()) {
 		  return next();
     }
-    res.redirect('/login');
+    res.redirect('/');
 	};
 };

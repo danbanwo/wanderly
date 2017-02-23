@@ -28,6 +28,7 @@ module.exports = function (passport) {
   	function(req, username, password, done) {
 			User.findOne({ email: username })
 			.then(function(user) {
+				console.log('PASSPORT-USER==>>', user)
 				if(!user) {
 					return done(null, false, { message: 'Incorrect email.'});
 				}
