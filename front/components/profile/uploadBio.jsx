@@ -44,10 +44,8 @@ class UploadBio extends Component {
 		console.log('UserId', this.props.props.user.id)
 		return (
 			<div>
-
 				<div className="bioContainer">
 					<center>
-
 					<div className="welcome">
 						<h1 className="bioTitle"> Welcome, traveler!</h1>
 						<p id="aboutMe"> Tell us a little more about yourself. </p>
@@ -67,19 +65,15 @@ class UploadBio extends Component {
 					</div>
 				</div>
 
-
 				<div className="bioIntro">
 					<p className="questions"> Introduce yourself </p>
 					<input onChange={this.handleChange} type="text" placeholder="Write a brief intro..." className="intro"></input>
-				</div>
-
-
 				<button onClick={this.submitProfile} className="btn btn-default done" type="button">All done!</button>
 					<Link to='/' id="skip">Skip this step</Link>
-					</center>
 				</div>
-
+			</center>
 			</div>
+		</div>
 		)
 	}
 };

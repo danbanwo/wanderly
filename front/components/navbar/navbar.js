@@ -11,22 +11,14 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log('THIS IS PROPS===>>>',this.props)
     //Render this is pathname is either '/', login or signup
      const { pathname } = this.props.routing
-    if(pathname === '/signup') {
-      return (
-        <div id='loggedout-navbar'>
-          <img src='#' />
-          <button><Link to='signup'>SignUp</Link></button>
-        </div>
-      )
-    } else if(pathname === '/') {
+  if(pathname === '/') {
       return (
         <div id='loggedout-navbar'>
           <img src='#' />
           <button onClick={this.props.loginPop}>Login</button>
-          <button><Link to='signup'>SignUp</Link></button>
+          <button><Link to='/signup'>SignUp</Link></button>
         </div>
       )
     } else {
