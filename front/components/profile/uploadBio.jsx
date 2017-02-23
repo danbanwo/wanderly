@@ -34,14 +34,10 @@ class UploadBio extends Component {
 		let catch_phrase = this.state.catch_phrase
 		let data = {...profile, catch_phrase, categories: arr.concat(this.state.categories), UserId: UserId}
 		let { submitProfile } = this.props.props
-		console.log('COMPILED DATA===>>>',data)
-		console.log('userid===>>>', UserId)
 		submitProfile(data)
 	}
 
 	render() {
-		console.log('In render', this.state)
-		console.log('UserId', this.props.props.user.id)
 		return (
 			<div>
 				<div className="bioContainer">

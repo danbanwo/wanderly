@@ -71,7 +71,6 @@ const uploadPhoto = (req,res)=>{
 }
 
 
-
 profileRouter.route('/')
 	.get(userProfiles)
 	.post(createProfile)
