@@ -42,13 +42,19 @@ button.btn.btn-default.dropdown-toggle{
 	padding-right: 47%;
 	color: #9e9e9e;
 	margin-top:15px;
-
+	cursor: pointer;
 }
-/*span.caret{
+.btn .caret {
+	margin-top:8px;
+	margin-left:125px;
+}
+
+span.caret{
 	margin-top:2px;
 	color:#00A799;
+	position: absolute;
 }
-*/button.btn.btn-default.continue{
+button.btn.btn-default.continue{
 	width: 256px;
 	height: 41px;
 	background-color: #00A799;
@@ -58,3 +64,39 @@ button.btn.btn-default.dropdown-toggle{
 	margin-left:11px;
 	margin-top:25px;
 }
+
+a#skippie{
+	margin-left: 100px;
+}
+
+div.dropdown{
+	position: relative;
+	display:in line-blocks;
+}
+
+div.dropdown-content{
+	display:none;
+	/*position: absolute;*/
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	min-width: 160px;
+	z-index: 1;
+}
+
+div.dropdown-content a{
+	text-decoration: none;
+	display: block;
+	color: #00A799;
+
+}
+
+div.dropdown-content a:hover{
+	background-color: #00A799;
+	color:white;
+}
+
+div.dropdown:hover div.dropdown-content{
+	display:block;
+}
+/*____*/
+/*____*/
+/*____*/

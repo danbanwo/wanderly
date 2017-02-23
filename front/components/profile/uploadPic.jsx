@@ -15,7 +15,7 @@ class UploadPic extends Component {
 						<h1 className="title"> Welcome, traveler!</h1>
 						<p id="subTitle"> Add a profile pic so friends can recognize you </p>
 						<UploadComponent pathname={this.props.props.routing.locationBeforeTransitions}/>
-						<Link to="createbio">Skip this step</Link>
+						<Link id="next" to="createbio">Skip this step</Link>
 					</center>
 				</div>
 			</div>
@@ -24,3 +24,4 @@ class UploadPic extends Component {
 };
 
 export default UploadPic;
+//
