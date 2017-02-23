@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../styles/modal.css';
 
 class SpotForm extends React.Component {
   constructor(props) {
@@ -52,8 +52,9 @@ class SpotForm extends React.Component {
     if(pathname === '/profile' || pathname === 'profile') {
   		return (
   		<div>
-        <h1>Add a Destination</h1>
+        <div className='addNew'>Add a Destination</div>
   			<form onSubmit={this.handleDestinationSubmit} >
+        
   				<label>
   					<input onChange={this.handleChange} name="place" type="text" placeholder="City">
   					</input>
@@ -75,7 +76,7 @@ class SpotForm extends React.Component {
     } else {
       return (
       <div>
-        <h1>Add a Spot</h1>
+        <div className='addNew'>Add a Spot</div>
         <form onSubmit={this.handleSpotSubmit} >
           <label>
             <input onChange={this.handleChange} name="spot" type="text" placeholder="spot">
@@ -88,7 +89,7 @@ class SpotForm extends React.Component {
           <label><input onChange={this.handleChange} name="description" value={this.state.description} type="text" placeholder="description">
           </input></label><br />
 
-          <button type="submit">add spot</button>
+          <button className='addSpotButton' type="submit">add spot</button>
         </form>
       </div>
       )
