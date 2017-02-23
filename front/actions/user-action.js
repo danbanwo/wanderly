@@ -21,12 +21,14 @@ const user_logout = (user) =>({
 
 export const userLogin = (info) => (
   (dispatch) => {
-    return  axios.post('/login', info)
+    axios.post('/login', info)
     .then((user) => {
+			console.log('INFO', info)
+			console.log('user', user)
   		dispatch(user_login(user.data))
     })
 		.then(() => {
-			history.push('profile')
+			history.push('/profile')
 		})
   }
 );
