@@ -2,14 +2,6 @@ body,html{
   font-family: 'Chivo', sans-serif;
 }
 
-div.uploadContainer{
-  display: flex;
-  justify-content: center;
-  margin-top:150px;
-  margin-left: -15px;
-}
-
-
 h1.title{
   font-weight: bold;
   color:#484848;
@@ -51,7 +43,7 @@ input.btn.btn-default{
   padding-left: 28%;
 
 }
-a{
+a#next{
   display: flex;
   text-decoration: none;
   font-weight:bold;
@@ -61,6 +53,13 @@ a{
   margin-left: 123px;
   align-content: space-between;
   margin-top: 20px;
+}
+
+div.uploadContainer{
+  display: flex;
+  justify-content: center;
+  margin-top:150px;
+  margin-left: -15px;
 }
 
 
