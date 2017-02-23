@@ -74,7 +74,7 @@ class Wanderspot extends Component {
 		console.log(this.props)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
-				<div>
+				<div className='backAddButtons'>
 					<div className='backButton' onClick={this.backToDestinations}></div>
 					<div>Loading...</div>
 				</div>

@@ -13,7 +13,24 @@ body, html {
   height: 12px;
   width: 8px;
   margin: 10px;
+  vertical-align: top;
+  background-color: red;
 }
+
+
+/*---------Add Destination/Spot Button--------*/
+
+.addDest {
+	background-image: url('../ui/Add_Button.svg');
+	background-repeat: none;
+	display: inline-block;
+  height: 46.2px;
+  width: 40px;
+  margin-left: 80%;
+}
+
+
+/*---------/Add Destination/Spot Button--------*/
 
 
 /*---------Category Icons--------*/
@@ -62,6 +79,7 @@ hr.lineBreak {
 	align-items: center;
 	padding-right: 15px;
 	padding-left: 15px;
+	background-color: rgba(130, 105, 239, 0.5);
 }
 
 .wanderRight {
