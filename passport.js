@@ -19,7 +19,7 @@ module.exports = function (passport) {
 
 
   //=====sign-up & log-in======
-  passport.use(new LocalStrategy({
+  passport.use('local', new LocalStrategy({
 		usernameField: 'email',
 		passwordField: 'password',
 		passReqToCallback: true,
