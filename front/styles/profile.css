@@ -47,7 +47,7 @@ body,html{
 	height: 52vh;
 	margin: 0;
 	align-self: flex-end;
-  	background-color: tomato;
+  	background-color: rgba(244, 137, 66, 0.5);
   	width: 100%;
 }
 /*---------/Profile Left Container--------*/

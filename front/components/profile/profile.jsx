@@ -4,14 +4,14 @@ import { Link } from 'react-router';
 
 //Import containers here:
 import Destination from '../destination/destination';
-import ItineraryBox from '../itinerary/itineraryBox';
+import Itinerary from '../itinerary/itinerary-container';
 import WanderMap from '../map/map';
 import Navbar from '../navbar/navbar';
 import DestinationModal from '../modal/destination-modal';
-import Logout from '../user/Logout'
+import Logout from '../user/Logout';
 
-import '../../styles/profile.css'
-// import
+import '../../styles/profile.css';
+import '../../styles/itinerary.css';
 
 class Profile extends Component {
   constructor(props){
@@ -51,7 +51,7 @@ class Profile extends Component {
               </div>
 
               <div className='destList'>
-                <button onClick={this.displayModal}>ADD</button>
+                <div className='addDest' onClick={this.displayModal}></div>
                 {this.props.children}
                 {/* <Destination destinations={this.props.destinations.destinations} /> */}
               </div>

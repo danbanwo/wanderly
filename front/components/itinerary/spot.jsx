@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../styles/modal.css';
 
 class SpotForm extends React.Component {
   constructor(props) {
@@ -68,10 +68,6 @@ class SpotForm extends React.Component {
   				<label><input className="total"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
   				</input></label><br />
 
-          <button className="btn btn-default eat"type="button">Eat</button>
-          <button className="btn btn-default play"type="button">Play</button>
-          <button className="btn btn-default sleep"type="button">Sleep</button>
-
   				<button className="btn btn-default destination"type="submit">Share</button>
   			</form>
   		</div>
@@ -79,7 +75,7 @@ class SpotForm extends React.Component {
     } else {
       return (
       <div>
-        <h1>Add a Spot</h1>
+        <div className='addNew'>Add a Spot</div>
         <form onSubmit={this.handleSpotSubmit} >
           <label>
             <input onChange={this.handleChange} name="spot" type="text" placeholder="spot">
@@ -92,7 +88,11 @@ class SpotForm extends React.Component {
           <label><input onChange={this.handleChange} name="description" value={this.state.description} type="text" placeholder="description">
           </input></label><br />
 
-          <button type="submit">add spot</button>
+          <button className="btn btn-default eat"type="button">Eat</button>
+          <button className="btn btn-default play"type="button">Play</button>
+          <button className="btn btn-default sleep"type="button">Sleep</button>
+
+          <button className='addSpotButton' type="submit">add spot</button>
         </form>
       </div>
       )
