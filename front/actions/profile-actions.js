@@ -22,6 +22,22 @@ export const getProfile = (id) => {
 
 
 //------------------------------------------------//
+const profileItem = (data) => {
+  return {
+    type: 'ADD_PROFILE_ITEM',
+    payload: data
+  }
+  console.log(data)
+}
+
+export const addProfileItem = (profile) => {
+  return (dispatch) => {
+    dispatch(profileItem(profile))
+  }
+}
+
+
+//------------------------------------------------//
 const user_auth = (data) => ({
 	type: "USER_LOGIN",
 	data: data,

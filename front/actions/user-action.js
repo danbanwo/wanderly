@@ -49,5 +49,8 @@ export const userLogout = () =>(
     .then((user) => {
       dispatch(user_logout(user))
       })
+			.then(() => {
+				history.push('/')
+			})
     }
   )
