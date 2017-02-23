@@ -34,20 +34,13 @@ const singleProfile = (req,res)=>{
 }
 
 const createProfile = (req,res)=>{
-	profile.create({
-		image:req.body.image,
-		first_name:req.body.first_name,
-		last_name:req.body.last_name,
-		gender:req.body.gender,
-		age:req.body.age,
-		country_origin:req.body.country_origin,
-		catch_phrase:req.body.catch_phrase
-	})
+	profile.create(req.body)
 	.then((data)=>{
-		res.sendStatus(200);
+		res.send(data.dataValues);
 	})
 	.catch((error)=>{
-		res.sendStatus(500);
+		throw(error)
+		// res.sendStatus(500);
 	})
 }
 
