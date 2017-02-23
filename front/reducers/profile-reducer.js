@@ -4,7 +4,7 @@ const defaultState = {
     first_name: '',
     last_name: '',
     gender: '',
-    age: 0,
+    age: '',
     image: '',
     country_origin: '',
     catch_phrase: '',
@@ -24,12 +24,7 @@ const profileReducer = (state=defaultState, action) => {
     break;
 
     case 'ADD_PROFILE_ITEM':
-    let profile = {...state.profile, ...action.payload}
-    return {...state, profile: profile}
-    break;
-
-    case 'NEW_PROFILE':
-    return state
+    return {...state, ...action.profileData, isAuth: true}
     break;
     default: return state
   }

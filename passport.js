@@ -19,16 +19,15 @@ module.exports = function (passport) {
 
 
   //=====sign-up & log-in======
-  passport.use('local', new LocalStrategy({
+  passport.use(new LocalStrategy({
 		usernameField: 'email',
 		passwordField: 'password',
 		passReqToCallback: true,
-		session: false
+		session: true
 	},
   	function(req, username, password, done) {
 			User.findOne({ email: username })
 			.then(function(user) {
-				console.log('PASSPORT-USER==>>', user)
 				if(!user) {
 					return done(null, false, { message: 'Incorrect email.'});
 				}

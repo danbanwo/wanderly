@@ -37,57 +37,53 @@ module.exports = function (app, passport){
 
 
 //--------------------LOGIN------------------------------------//
-	// app.post("/login", function(req, res, next) {
-	// 	passport.authenticate('local', function(err, user, info) {
-	// 		if (err) { return next(err); }
-	// 		if(!user) {return res.redirect('/');}
-	// 		req.logIn(user, function(err) {
-	// 			if (err) { return next(err); }
-	// 			return res.redirect('/user/' + user.id);
-	// 		});
-	// 	})(req, res, next);
-	// });
-
-
 	app.post("/login", function(req, res, next) {
 		passport.authenticate('local', function(err, user, info) {
 			if (err) { return next(err); }
-		User.findOne({
-			where: {'email': req.body.email },
-			include: [{
-				model: Profile,
-				include: [{
-					model: Destination
-				}]
-			}]
-		})
-      .then(function(user) {
-        // if no user is found, return the message
-        user = user.dataValues
-        if (!user) {
-          res.status(401);
-        }
-        else if (!bcrypt.compareSync(req.body.password, user.password)) {
-          res.status(401).end();
-        }
-        else {
-        	req.logIn(user, function(err) {
-			      if (err) { return next(err); }
-			      user = Object.assign({}, user);
-			      delete user.password
-			      res.end(JSON.stringify(user));
-			      return true;
-	    		})
-					// .then(() => {
-					// 	return res.redirect('/')
-					// })
-      	};
-      })
-      .catch(function(err){
-        res.status(500);
-      });
-    })(req, res, next);
+			if(!user) {return res.redirect('/login');}
+			req.logIn(user, function(err) {
+				if (err) { return next(err); }
+				return res.redirect('/user/' + user.id);
+			});
+		})(req, res, next);
 	});
+
+	// 	User.findOne({
+	// 		where: {'email': req.body.email },
+	// 		include: [{
+	// 			model: Profile,
+	// 			include: [{
+	// 				model: Destination
+	// 			}]
+	// 		}]
+	// 	})
+  //     .then(function(user) {
+  //       // if no user is found, return the message
+  //       user = user.dataValues
+  //       if (!user) {
+  //         res.status(401);
+  //       }
+  //       else if (!bcrypt.compareSync(req.body.password, user.password)) {
+  //         res.status(401).end();
+  //       }
+  //       else {
+  //       	req.logIn(user, function(err) {
+	// 		      if (err) { return next(err); }
+	// 		      user = Object.assign({}, user);
+	// 		      delete user.password
+	// 		      res.end(JSON.stringify(user));
+	// 		      return true;
+	//     		})
+	// 				// .then(() => {
+	// 				// 	return res.redirect('/')
+	// 				// })
+  //     	};
+  //     })
+  //     .catch(function(err){
+  //       res.status(500);
+  //     });
+  //   })(req, res, next);
+	// });
 
 	 //==========gets a user by Id after it logs in ==============//
 	app.get('/user/:id', isLoggedIn, function(req, res) {
@@ -96,7 +92,7 @@ module.exports = function (app, passport){
 				model: Profile,
 				include: [{
 					model: Destination
-				}]
+							}]
 			}]
 		})
       .then(function(user) {
@@ -124,6 +120,6 @@ module.exports = function (app, passport){
 		if (req.isAuthenticated()) {
 		  return next();
     }
-    res.redirect('/');
+    res.redirect('/login');
 	};
 };

@@ -12,11 +12,11 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(this.props)
+    console.log('THIS IS PROPS===>>>',this.props)
     //Render this is pathname is either '/', login or signup
-     /* <p>landing page</p>
+     /* <p>landing page</p>  
        <p>profile</p>*/
-  const { pathname } = this.props.routing
+     const { pathname } = this.props.routing
     if(pathname === '/') {
       return (
         <div className='loggedout-navbar navbar'>
@@ -28,22 +28,23 @@ class Navbar extends Component {
           </div>
        </div>
       )
-      } else {
-          return (
-            <div className='login-navbar navbar'>
-              <div className="parent-logo">
-                <div className='logo-nav '></div>
-              </div>
-              <div className="dropdown">
-                <button className="dropbtn">{this.props.profile.first_name}</button>
-                <div className="dropdown-content">
-                  <button onClick={this.handleClick}>Log out</button>
-                </div>
+    } else {
+        return (
+          <div className='login-navbar navbar'>
+            <div className="parent-logo">
+              <div className='logo-nav '></div>
+            </div>
+            <div className="dropdown">
+              <button className="dropbtn">Daniel</button>
+                {/* {this.props.profile.first_name} */}
+              <div className="dropdown-content">
+                <button onClick={this.handleClick}>Log out</button>
               </div>
             </div>
-          )
+          </div>
+        )
       }
     }
-  }
+}
 
 export default Navbar

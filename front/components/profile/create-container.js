@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 
 //import actions and component
 import { addProfileItem } from '../../actions/profile-actions';
-import { submitProfile } from '../../actions/profile-actions';
 
 import UploadBio from './uploadBio';
 import UploadIntro from './uploadIntro';
@@ -41,7 +40,6 @@ const mapStateToProps = (state) => ({
 
 const matchDispatchToProps = (dispatch) => ({
   addItem: bindActionCreators(addProfileItem, dispatch),
-  submitProfile: bindActionCreators(submitProfile, dispatch),
 })
 
 export default connect(mapStateToProps, matchDispatchToProps)(createProfileContainer);
