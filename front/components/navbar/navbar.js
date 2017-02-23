@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import '../../styles/navbar.css';
 
 class Navbar extends Component {
   constructor(props) {
@@ -13,31 +14,29 @@ class Navbar extends Component {
   render() {
     console.log('THIS IS PROPS===>>>',this.props)
     //Render this is pathname is either '/', login or signup
+     /* <p>landing page</p>  
+       <p>profile</p>*/
      const { pathname } = this.props.routing
-    if(pathname === '/signup') {
+    if(pathname === '/') {
       return (
-        <div id='loggedout-navbar'>
-          <img src='#' />
-          <button><Link to='signup'>SignUp</Link></button>
-        </div>
-      )
-    } else if(pathname === '/') {
-      return (
-        <div id='loggedout-navbar'>
-          <img src='#' />
-          <button onClick={this.props.loginPop}>Login</button>
-          <button><Link to='signup'>SignUp</Link></button>
-        </div>
+        <div className='loggedout-navbar navbar'>
+          <div className="parent-logo">
+            <div className='logo-nav '></div>
+          </div>
+          <div className='buttons'>
+            <button className='login-link button-log one' onClick={this.props.loginPop}>Login</button>
+          </div>
+       </div>
       )
     } else {
         return (
-          <div id='login-navbar' style={{height: '8vh', display: 'flex',
-            flexDirection: 'row', justifyContent: 'spaceBetween', borderBottom: 'black', borderColor: 'solid'
-          }}>
-            <img style={{height: 20}} src='#' />
-            <div className="dropdown" style={{display: 'flex', flexDirection: 'row', height: 20}}>
+          <div className='login-navbar navbar'>
+            <div className="parent-logo">
+              <div className='logo-nav '></div>
+            </div>
+            <div className="dropdown">
               <button className="dropbtn">Daniel</button>
-              {/* {this.props.profile.first_name} */}
+                {/* {this.props.profile.first_name} */}
               <div className="dropdown-content">
                 <button onClick={this.handleClick}>Log out</button>
               </div>
