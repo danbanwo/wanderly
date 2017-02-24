@@ -5,10 +5,10 @@ module.exports = function(sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: DataTypes.INTEGER,
-    categories: DataTypes.ARRAY(DataTypes.STRING),
     image: DataTypes.STRING,
     country_origin: DataTypes.STRING,
-    catch_phrase: DataTypes.STRING
+    catch_phrase: DataTypes.STRING,
+    categories: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     classMethods: {
       associate: function(models) {

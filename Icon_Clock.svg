@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-471.000000, -1001.000000)" id="Icon/Clock">
+            <g transform="translate(471.000000, 1001.000000)">
+                <g id="clock-2.3.3.1">
+                    <g id="Group">
+                        <g id="Filled_Icons_1_" fill-rule="nonzero" fill="#A5A5A5">
+                            <g id="Filled_Icons">
+                                <path d="M8,0 C3.58866667,0 0,3.58866667 0,8 C0,12.4113333 3.58866667,16 8,16 C12.4113333,16 16,12.4113333 16,8 C16,3.58866667 12.4113333,0 8,0 Z M11.9126667,11.892 C11.7866667,12.0293333 11.5746667,12.0353333 11.4413333,11.9126667 L7.44133333,8.246 C7.37266667,8.18266667 7.33333333,8.094 7.33333333,8 L7.33333333,4.33333333 C7.33333333,4.14933333 7.48266667,4 7.66666667,4 C7.85066667,4 8,4.14933333 8,4.33333333 L8,7.85333333 L11.892,11.4206667 C12.028,11.5453333 12.0366667,11.7566667 11.9126667,11.892 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                        <g id="Invisible_Shape">
+                            <rect id="Rectangle-path" x="0" y="0" width="16" height="16"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

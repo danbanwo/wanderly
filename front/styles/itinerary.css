@@ -14,7 +14,7 @@ body, html {
   width: 8px;
   margin: 10px;
   vertical-align: top;
-  background-color: red;
+  margin-top: -30px;
 }
 
 
@@ -65,7 +65,8 @@ body, html {
 /*---------Itinerary Row--------*/
 
 hr.lineBreak {
-	border-top: 1px solid #58585B;
+	border-top: 1px solid #E5E6E7;
+	width: 90%;
 }
 
 .spotName {
@@ -79,7 +80,6 @@ hr.lineBreak {
 	align-items: center;
 	padding-right: 15px;
 	padding-left: 15px;
-	background-color: rgba(130, 105, 239, 0.5);
 }
 
 .wanderRight {
