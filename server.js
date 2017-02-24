@@ -10,8 +10,11 @@ var passport = require('passport');
 var morgan = require('morgan');
 
 
-require('./passport.js')(passport);
 
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
+//dotenv to store env keys
+require('./passport.js')(passport);
+//sequelize an 
 app.use(bodyparser.urlencoded({ extended: false, }));
 app.use(bodyparser.json());
 app.use(express.static('front/public'));
@@ -22,8 +25,12 @@ app.use(cookieParser());
 app.use(flash());
 app.use(session({
 	secret: 'wanderly wander',
-	resave: true,
+	resave: false,
 	saveUninitialized: true,
+	// store: new SequelizeStore({
+ //    	db: db.sequelize,
+ //    	 table: 'Session'
+ // 	})
 }));
 app.use(passport.initialize());
 app.use(passport.session());

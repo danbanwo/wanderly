@@ -6,9 +6,11 @@
     align-content: space-between;
     box-sizing: border-box;
 	height: 51px;
-	background-color: pink;
+	background-color: white;
 	border: 1px solid #E5E6E7;
 	flex-direction: row;
+	padding-top: 15px;
+	margin-bottom: 0;
 }
 
 .parent-logo{
@@ -17,7 +19,6 @@
 	width: 60px;
     flex: 1 1 auto;
     align-self: flex-start;
-    background-color: red;
 }
 
 .logo-nav {
@@ -34,6 +35,12 @@
     align-items: flex-end;
     
 }
+
+
+.login-link:focus {
+	outline: none;
+}
+
 .button-log {
 	width: 48px;
 	height: 17px;
@@ -42,6 +49,9 @@
 	font-weight: bold;
 	line-height: 17px;
 	color: #00A799;
+	border: transparent;
+	background-color: white;
+
 }
 
 .dropbtn {

@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import Navbar from '../navbar/navbar'
 import LandingLogin from '../landingpage/landinglogin';
 import { render } from 'react-dom';
+import '../../styles/landing.css';
 
 class LandingPage extends Component {
   constructor(props) {
@@ -17,8 +18,15 @@ class LandingPage extends Component {
     return (
       <div>
         <Navbar loginPop={this.loginPop} routing={this.props.routing.locationBeforeTransitions}/>
+
+        <div className='landingpage'>
         <div id='login-popup'></div>
-          <h1>Hello from the landing page component</h1>
+          <div className='logo-land'></div>
+          <button id='join'><Link id='join' to='/signup'>Join</Link></button>
+           <div className='box-div'> 
+            <p id='p'>Already have an account? <Link to='/login' className='signup-link'>Sign In</Link></p>
+           </div>
+        </div>
       </div>
     )
   }
