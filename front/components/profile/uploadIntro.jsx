@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {browserHistory} from 'react-router';
+import { Link } from 'react-router';
 
 import '../../styles/uploadIntro.css';
 
@@ -33,7 +34,7 @@ class UploadIntro extends Component {
 						<h1 className="bioTitle"> Welcome, traveler!</h1>
 						<p className="aboutYou"> Tell us a little more about yourself. </p>
 						<input type="text" name='name' onChange={this.handleChange} className="name" placeholder="Name"></input>
-						<div className="dropdwn">
+						<div className="dropdown">
 							<button className="btn btn-default dropdown-toggle"
 								type="button"
 								data-toggle="dropdwn">Home Country
@@ -49,6 +50,7 @@ class UploadIntro extends Component {
 							</ul>
 						</div>
 						<button type="button" className="btn btn-default continue" onClick={this.onClick}>Continue</button>
+						<Link to="createprofile" id="skippie">Skip this step</Link>
 					</center>
 				</div>
 			</div>

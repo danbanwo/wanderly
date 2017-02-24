@@ -5,6 +5,22 @@ import axios from 'axios';
 import '../../styles/uploadBio.css';
 
 class UploadBio extends Component {
+
+constructor(props){
+	super(props)
+	this.state = {catch_phrase: '', category:[]}
+}
+
+changePhrase = (e) =>{
+	this.setState({[e.target.name]: e.target.value})
+	console.log(e.target.value,'catch_phrase')
+}
+
+selectCategory = (e, key)=>{
+	this.setState({'category' : this.state.category.concat([e.target.name])})
+	console.log(e.target.name, ': Category')
+}
+
 	render() {
 	return (
 		<div>

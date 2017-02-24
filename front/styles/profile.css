@@ -1,3 +1,7 @@
+body,html{
+  font-family: 'Chivo', sans-serif;
+}
+
 .returnSpot {
 	height: 44vh;
 	overflow-y: scroll;
@@ -12,7 +16,7 @@
 
 /*---------Profile Left Container--------*/
 .profileLeft {
-	width: 33%;
+	width: 40%;
 	display: flex;
 	flex-direction: column;
 	margin-left: 0;
@@ -43,17 +47,14 @@
 	height: 52vh;
 	margin: 0;
 	align-self: flex-end;
-  background-color: rgba(244, 137, 66, 0.5);
   width: 100%;
 }
 /*---------/Profile Left Container--------*/
 
 
-
-
 /*---------Profile Right Container--------*/
 .profileRight {
-	width: 67%;
+	width: 60%;
 	align-items: right;
 	margin: 0;
 }
@@ -63,3 +64,34 @@
 }
 
 /*---------/Profile Right Container--------*/
+
+
+
+/*-------- User Bio Container ----------*/
+
+h2.userName{
+	font-size: 24px;
+	line-height: 29px;
+	color:#484848;
+}
+
+p.userBio{
+	font-size: 14px;
+	line-height: 20px;
+	color:#58585B;
+}
+
+p.userCountry{
+	font-size: 14px;
+	line-height: 20px;
+	color:#58585B;
+}
+
+a#edit{
+	color:#00A799;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+	margin-left: 0px;
+	margin-top: 5px;
+}

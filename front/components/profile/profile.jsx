@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import { Link } from 'react-router';
 
 //Import containers here:
 import Destination from '../destination/destination';
@@ -11,7 +12,6 @@ import Logout from '../user/Logout';
 
 import '../../styles/profile.css';
 import '../../styles/itinerary.css';
-
 
 class Profile extends Component {
   constructor(props){
@@ -29,11 +29,13 @@ class Profile extends Component {
 
   render() {
     return (
+
       <div id='master-container'>
         <Navbar routing={this.props.routing.locationBeforeTransitions} action={this.props.userLogout} profile={this.props.profile} />
         <div className='profileContainer'>
           <div id='renderModal'>
             {/* <DestinationModal /> will render here*/}
+
           </div>
             <div className='profileLeft'>
               <div className='profileInfo'>
@@ -41,9 +43,10 @@ class Profile extends Component {
                   <img className='profilePhoto' src={this.props.profile.image} />
                 </div>
                 <div className='profileBio'>
-                  <h2>{this.props.profile.first_name} {this.props.profile.last_name}</h2>
-                  <h4>{this.props.profile.catch_phrase}</h4>
-                  <h4>{this.props.profile.country_origin}</h4>
+                  <h2 className="userName">Jane Doe{/*this.props.profile.first_name*/} {/*this.props.profile.last_name*/}</h2>
+                  <p className="userCountry">United States{/*this.props.profile.country_origin*/}</p>
+                  <p className="userBio">I'm Here For A Good Time, Not A Long Time!{/*this.props.profile.catch_phrase*/}</p>
+                  <Link to='/profile' id="edit">Edit Profile</Link>
                 </div>
               </div>
 
@@ -59,8 +62,8 @@ class Profile extends Component {
                 routing={this.props.routing.locationBeforeTransitions} profileId={this.props.profile.id}
               />
             </div>
-            --
         </div>
+
       </div>
     )
   }

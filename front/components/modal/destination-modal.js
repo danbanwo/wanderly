@@ -18,9 +18,10 @@ class DestinationModal extends Component {
               <div id='close' onClick={this.props.closeButton}></div>
             </div>
             <div id='modal-text'>
-              <SpotForm closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />
               <UploadComponent pathname={this.props.pathname} />
+              <SpotForm closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />
             </div>
+       
           </div>
         </div>
       </div>
