@@ -50,11 +50,6 @@ class UploadBio extends Component {
 						<h1 className="bioTitle"> Welcome, traveler!</h1>
 						<p id="aboutMe"> Tell us a little more about yourself. </p>
 					</div>
-
-
-				<div className="bioQuestions">
-					<p id="questions"> What types of travel do you like? </p>
-
 					<div className="bioButtons">
 						<button onClick={this.handleClick} name='Food' type="button" className="btn btn-default one">Food</button>
 						<button onClick={this.handleClick} name='Culture & Art' type="button" className="btn btn-default two">Culture & Art</button>
@@ -63,7 +58,6 @@ class UploadBio extends Component {
 						<button onClick={this.handleClick} name='Activities' type="button" className="btn btn-default five">Activities</button>
 						<button onClick={this.handleClick} name='Independence' type="button" className="btn btn-default six">Independence</button>
 					</div>
-				</div>
 
 				<div className="bioIntro">
 					<p className="questions"> Introduce yourself </p>

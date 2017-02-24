@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-
-import '../../styles/itinerary.css';
 import { browserHistory as history } from 'react-router';
 
-//import eatIcon from '../../ui/Icon_Food.svg';
+import '../../styles/itinerary.css';
 
 class Wanderspot extends Component {
 	//gives access to keyword THIS
@@ -39,10 +37,7 @@ class Wanderspot extends Component {
 					categoryIcon = (<div className='iconLodging'></div>)
 				}
 				return (
-					<div key={idx}>
-
 						<div className='wanderSpotContainer'>
-
 							<div className='wanderLeft'>
 								<div className='spotPicContainer'>
 									<img className='spotPic' src={curr.pictures} />
@@ -63,19 +58,14 @@ class Wanderspot extends Component {
 									<div>{curr.description} </div>
 								</div>
 							</div>
-
-
-
+							<hr className="lineBreak"></hr>
 						</div>
-						<hr className="lineBreak"></hr>
-					</div>
 				)
 			})
 		}
 	}
 
 	render() {
-		console.log(this.props)
 		if(!this.props.spots.wanderspotsArr) {
 			return (
 				<div className='backAddButtons'>

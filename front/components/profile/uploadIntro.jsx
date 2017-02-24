@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {browserHistory} from 'react-router';
+import { Link } from 'react-router';
 
 import '../../styles/uploadIntro.css';
 
@@ -54,6 +55,7 @@ class UploadIntro extends Component {
 							</ul>
 						</div>
 						<button type="button" className="btn btn-default continue" onClick={this.onClick}>Continue</button>
+						<Link to="createprofile" id="skippie">Skip this step</Link>
 					</center>
 				</div>
 			</div>

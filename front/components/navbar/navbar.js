@@ -12,10 +12,6 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(this.props)
-    //Render this is pathname is either '/', login or signup
-     /* <p>landing page</p>
-       <p>profile</p>*/
   const { pathname } = this.props.routing
     if(pathname === '/') {
       return (

@@ -2,5 +2,86 @@
 	height: 48vh;
 	overflow-y: scroll;
   width: 100%;
-  background-color: rgba(103, 193, 100, 0.5);
 }
+
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Chivo', sans-serif;
+	color: #58585B;
+}
+
+hr.lineBreak {
+	border-top: 1px solid #E5E6E7;
+	width: 90%;
+}
+
+/*---------Destination Row--------*/
+.destContainer {
+	font-size: 18px;
+	margin-left: 41px;
+}
+
+.destPlace {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 28px;
+	color: #484848;
+}
+
+.destLocation {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-bottom: 4px;
+}
+
+.destClock {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-bottom: 4px;
+}
+
+.destExpense {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-bottom: 4px;
+}
+/*---------/Destination Row--------*/
+
+
+
+/*---------Destination Category Icons--------*/
+
+.iconLocation {
+	background-image: url('../ui/Icon_Location.svg');
+	height: 16px;
+	width: 13px;
+	background-repeat: none;
+	margin-top: 3px;
+	margin-right: 16px;
+}
+
+.iconClock {
+	background-image: url('../ui/Icon_Clock.svg');
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	background-repeat: none;
+	margin-top: 3px;
+	margin-right: 15px;
+}
+
+.iconExpense {
+	background-image: url('../ui/Icon_Expense_US.svg');
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	background-repeat: none;
+	margin-top: 3px;
+	margin-right: 15px;
+}
+
+/*---------Destination Category Icons--------*/

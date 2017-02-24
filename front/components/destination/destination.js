@@ -5,8 +5,6 @@ import DestinationModal from '../modal/destination-modal';
 
 import '../../styles/destination.css'
 
-
-
 class Destination extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +14,20 @@ class Destination extends Component {
     const { destinations } = this.props.destinations;
     let dests = destinations.reverse()
     return dests.map((destination, i) => (
-      <div key={'destination-'+i}>
-        <Link to={{pathname: 'itinerary/'+destination.id, query: {place: destination.place}}}><h2 key={'place-'+i}>{destination.place}</h2></Link>
-        <p key={'duration-'+i}>DURATION: {destination.duration} </p>
-        <p key={'country-'+i}>COUNTRY: {destination.country} </p>
-        <p key={'total-'+i}>TOTAL AMOUT SPENT: ${destination.total_spent}</p>
-        <hr/>
+      <div className='destContainer' key={'destination-'+i}>
+        <Link to={{pathname: 'itinerary/'+destination.id, query: {place: destination.place}}}><div className='destPlace' key={'place-'+i}>{destination.place}</div></Link>
+        <div className='destLocation'>
+          <div className='iconLocation'></div> <div key={'country-'+i}>{destination.country} </div>
+        </div>
+        <div className='destClock'>
+          <div className='iconClock'></div>
+          <div key={'duration-'+i}>{destination.duration} </div>
+        </div>
+        <div className='destExpense'>
+          <div className='iconExpense'></div>
+          <div key={'total-'+i}>${destination.total_spent}</div>
+        </div>
+        <hr className='lineBreak' />
       </div>
     ))
   }
@@ -35,7 +41,7 @@ class Destination extends Component {
       )
     }
     else {
-      return (<h2>Loading...</h2>)
+      return (<div>Loading...</div>)
     }
   }
 }
