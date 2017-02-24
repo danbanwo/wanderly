@@ -50,51 +50,6 @@ class SpotForm extends React.Component {
   render() {
     const { pathname } = this.props
     if(pathname === '/profile' || pathname === 'profile') {
-<<<<<<< HEAD
-  		return (
-
-  		<div className="addDestinationContainer">
-        <h1 className="addDestination">Add a Destination</h1>
-  			<form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
-
-  				<label>
-  					<input className="location" onChange={this.handleChange} name="place" type="text" placeholder="Add City">
-  					</input>
-  				</label><br />
-
-  				<label><input className="duration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Add Duration">
-  				</input></label><br />
-
-  				<label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country">
-  				</input></label><br />
-
-  				<label><input className="total"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
-  				</input></label><br />
-
-  				<button className="btn btn-default destination"type="submit">Share</button>
-  			</form>
-  		</div>
-  		)
-    } else {
-      return (
-      <div>
-
-        <div className='addNewSpot'>Add a Spot</div>
-
-        <div className="spotContainer">
-
-        <form onSubmit={this.handleSpotSubmit} >
-
-        <div className="expense">
-          <div id="expenseSVG"></div>
-          <label><input className="spots"onChange={this.handleChange} name="spot" type="text" placeholder="Add Spot">
-          </input></label><br />
-        </div>
-
-        <div className="location">
-          <div id="locationSVG"></div>
-          <label><input  className="destination" onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="Add Destination">
-=======
       return (
       <div className="addDestinationContainer">
         <h1 className="addDestination">Add a Destination</h1>
@@ -108,44 +63,13 @@ class SpotForm extends React.Component {
           </input></label><br />
 
           <label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country">
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
           </input></label><br />
-        </div>
 
-<<<<<<< HEAD
-        <div className="city">
-          <div id="citySVG"></div>
-          <label><input  className="total" onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="$0">
-=======
           <label><input className="total"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-          </input></label><br />
-        </div>
-
-        <div className="btns">
-          <div className="spotButtons">
-          <div id="tagSVG"></div>
-            <button className="btn btn-default eat"type="button">Eat</button>
-            <button className="btn btn-default play"type="button">Play</button>
-            <button className="btn btn-default sleep"type="button">Sleep</button>
-          </div>
-        </div>
-
-
-          <label><input className="describe" onChange={this.handleChange} name="description" value={this.state.description} type="text" placeholder="Write a caption...">
           </input></label><br />
 
-
-
-          <button className='btn btn-default share' type="submit">Share</button>
-
-
-<<<<<<< HEAD
-=======
           <button className="btn btn-default destination"type="submit">Share</button>
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
         </form>
-        </div>
       </div>
       )
     } else {
@@ -195,10 +119,4 @@ class SpotForm extends React.Component {
   }
 }
 
-<<<<<<< HEAD
 export default SpotForm;
-/*____*/
-/*____*/
-=======
-export default SpotForm;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d

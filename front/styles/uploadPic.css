@@ -44,10 +44,7 @@ input.btn.btn-default{
   padding-left: 28%;
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 a#next{
   display: flex;
   text-decoration: none;
@@ -63,14 +60,7 @@ a#next{
 div.uploadContainer{
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   margin-top:150px;
   margin-left: -15px;
 }
 
-
-=======
-  margin-top: 150px;
-  margin-left: -15px;
-}
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d

@@ -41,7 +41,6 @@ button.btn.btn-default.dropdown-toggle{
 	border-radius: 2px;
 	margin-left: 11px;
 	padding-right: 47%;
-<<<<<<< HEAD
 	color: #9e9e9e;
 	margin-top:15px;
 	cursor: pointer;
@@ -56,24 +55,7 @@ span.caret{
 	color:#00A799;
 	position: absolute;
 }
-=======
-	color: #9E9E9E;
-	margin-top: 15px;
-	cursor: pointer;
-}
 
-.btn .caret {
-	margin-top: 8px;
-	margin-left: 125px;
-}
-
-span.caret{
-	margin-top: 2px;
-	color: #00A799;
-	position: absolute;
-}
-
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 button.btn.btn-default.continue{
 	width: 256px;
 	height: 41px;
@@ -113,17 +95,16 @@ div.dropdown-content a:hover{
 	color:white;
 }
 
-<<<<<<< HEAD
 a#skippie{
 	margin-left: 100px;
 }
 
-div.dropdown{
+div.dropdown {
 	position: relative;
 	display:in line-blocks;
 }
 
-div.dropdown-content{
+div.dropdown-content {
 	display:none;
 	/*position: absolute;*/
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -131,7 +112,7 @@ div.dropdown-content{
 	z-index: 1;
 }
 
-div.dropdown-content a{
+div.dropdown-content a {
 	text-decoration: none;
 	display: block;
 	color: #00A799;
@@ -144,13 +125,6 @@ div.dropdown-content a:hover{
 }
 
 div.dropdown:hover div.dropdown-content{
-	display:block;
-}
-/*____*/
-/*____*/
-/*____*/
-=======
-div.dropdown:hover div.dropdown-content{
 	display: block;
 }
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
+
