@@ -33,7 +33,7 @@ body, html {
   position: absolute;
   background: white;
   height: 500px;
-  width: 300px;
+  width: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +51,68 @@ body, html {
   flex-direction: column;
   align-items: center;
 }
+
+/*div.addDestinationContainer{
+  display: flex;
+  justify-content: center;
+}
+*/
+
+h1.addDestination{
+  color:#484848;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top:-45px;
+  margin-left: -30px;
+
+}
+
+form.destinationForm{
+  margin-top:25px;
+}
+
+input[type="text"]{
+  color:#A5A5A5;
+  font-size: 13px;
+}
+
+input.location{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+input.duration{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+input.country{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+input.total{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+}
+
+button.btn.btn-default.destination{
+  background-color: #00A799;
+  border-radius: 4px;
+  width: 89px;
+  height:41px;
+  color:white;
+}
+
 /*---------/Modal--------*/
 
 /*---------Modal Button--------*/
@@ -67,26 +129,168 @@ body, html {
   background-repeat: none;
   height: 16px;
   width: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 20px;
+  align-self: flex-end;
+  margin-left: -20px;
+  position: absolute;
 }
 /*---------/Modal Button--------*/
 
 
-/*---------Modal Form--------*/
+/*---------Spot Modal Form--------*/
 
-.addNew {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+div.addNewSpot{
+  color:#484848;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top:-160px;
+  margin-left: 20px;
+}
+div.spotContainer{
+  display:flex;
+  align-items: center;
+}
+div.spotButtons{
+  margin-top: 10px;
+}
+div.expense{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: 90px;
+  margin-top: 20px;
 }
 
-.addSpotButton {
+div.city{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left:50px;
+}
+div.location{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left:53px;
+}
+div.btns{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left:53px;
+}
+input.spots{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  padding-left: 5%;
+  margin-left: 15px;
+}
+input.destination{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  padding-left: 5%;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+input.total{
+  width:256px;
+  height:36px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  padding-left: 5%;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+
+button.btn.btn-default.eat{
+  width:57px;
+  height:36px;
+  background-color: #F4F4F4;
+  border:none;
+  margin-left: 15px;
+}
+button.btn.btn-default.play{
+  width:57px;
+  height:36px;
+  background-color: #F4F4F4;
+  border:none;
+  margin-left: 15px;
+}
+button.btn.btn-default.sleep{
+  width:57px;
+  height:36px;
+  background-color: #F4F4F4;
+  border:none;
+  margin-left: 15px;
+}
+input.describe{
+  width:220px;
+  height:84px;
+  background-color: #FFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 4px;
+  padding-left: 5%;
+  padding-bottom:17%;
+  margin-left: 135px;
+  margin-top:35px;
+}
+button.btn.btn-default.share{
   background-color: #00A799;
   height: 41px;
   width: 89px;
   border: none;
   color: white;
+  margin-left: 300px;
+  margin-top: 40px;
 }
 
-/*---------/Modal Form--------*/
+div#expenseSVG{
+  background-image: url('../ui/Icon_Expense.svg');
+  height:15.5px;
+  width:15.5px;
+  background-repeat: none;
+  display: inline-block;
+  margin-left: -40px;
+  margin-top: -20px;
+}
+div#locationSVG{
+  background-image: url('../ui/Icon_Location.svg');
+  height:16px;
+  width:13px;
+  background-repeat: none;
+/*  display: inline-block;*/
+}
+div#tagSVG{
+  background-image: url('../ui/Icon_Tag.svg');
+  height:15px;
+  width:15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div#citySVG{
+  background-image: url('../ui/Icon_City.svg');
+  height:15px;
+  width:15px;
+  background-repeat: none;
+  display: inline-block;
+}
 
+input#file{
+  margin-left:-187px;
+  margin-top:95px;
+}
+/*---------/Spot Modal Form--------*/
+
+/*____*/
+/*____*/
+/*____*/
+/*____*/
