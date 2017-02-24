@@ -1,0 +1,6 @@
+#master_itinerary {
+	height: 48vh;
+	overflow-y: scroll;
+  width: 100%;
+  background-color: rgba(103, 193, 100, 0.5);
+}
