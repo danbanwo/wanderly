@@ -43,6 +43,7 @@ p#questions{
 	margin-left: -213px;
 }
 
+
 #btnone:focus {background-color: #00A799; color: white; outline: none;}
 #btntwo:focus {background-color: #00A799; color: white; outline: none;}
 #btnthree:focus {background-color: #00A799; color: white; outline: none;}

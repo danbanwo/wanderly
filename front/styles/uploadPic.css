@@ -60,7 +60,6 @@ a#next{
 div.uploadContainer{
   display: flex;
   justify-content: center;
-  margin-top:150px;
+  margin-top: 150px;
   margin-left: -15px;
 }
-

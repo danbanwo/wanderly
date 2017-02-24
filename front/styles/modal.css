@@ -85,60 +85,28 @@ input[type="text"]{
 input.location{
   width:256px;
   height:36px;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-  background-color: #FFFF;
-=======
   background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-  background-color: #FFFFFF;
->>>>>>> Stashed changes
   border: 1px solid #D0D2D3;
   border-radius: 2px;
 }
 input.duration{
   width:256px;
   height:36px;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-  background-color: #FFFF;
-=======
   background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-  background-color: #FFFFFF;
->>>>>>> Stashed changes
   border: 1px solid #D0D2D3;
   border-radius: 2px;
 }
 input.country{
   width:256px;
   height:36px;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-  background-color: #FFFF;
-=======
   background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-  background-color: #FFFFFF;
->>>>>>> Stashed changes
   border: 1px solid #D0D2D3;
   border-radius: 2px;
 }
 input.total{
   width:256px;
   height:36px;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-  background-color: #FFFF;
-=======
   background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-  background-color: #FFFFFF;
->>>>>>> Stashed changes
   border: 1px solid #D0D2D3;
   border-radius: 2px;
 }
@@ -167,19 +135,11 @@ button.btn.btn-default.destination{
   background-repeat: none;
   height: 16px;
   width: 16px;
-<<<<<<< HEAD
-  /*margin-top: 10px;*/
-=======
   margin-top: 10px;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
   margin-right: 20px;
   align-self: flex-end;
   margin-left: -20px;
   position: absolute;
-<<<<<<< HEAD
-  margin-top: 20px;
-=======
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 }
 /*---------/Modal Button--------*/
 
@@ -193,37 +153,16 @@ div.addNewSpot{
   margin-top:-160px;
   margin-left: 20px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
->>>>>>> Stashed changes
 div.spotContainer{
   display:flex;
   align-items: center;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-div.spotButtons{
-  margin-top: 10px;
-}
-=======
 
 div.spotButtons{
   margin-top: 10px;
 }
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
-div.spotButtons{
-  margin-top: 10px;
-}
-
->>>>>>> Stashed changes
 div.expense{
   display: flex;
   flex-direction: row;
@@ -238,101 +177,35 @@ div.city{
   align-items: baseline;
   margin-left:50px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
->>>>>>> Stashed changes
 div.location{
   display: flex;
   flex-direction: row;
   align-items: baseline;
   margin-left:53px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
->>>>>>> Stashed changes
 div.btns{
   display: flex;
   flex-direction: row;
   align-items: baseline;
   margin-left:53px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-
->>>>>>> Stashed changes
-input.spots{
-  width:256px;
-  height:36px;
-  background-color: #FFFF;
-=======
 
 input.spots{
   width:256px;
   height:36px;
   background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
   border: 1px solid #D0D2D3;
   border-radius: 2px;
   padding-left: 5%;
   margin-left: 15px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-input.destination{
-  width:256px;
-  height:36px;
-  background-color: #FFFF;
-=======
 
 input.destination{
   width:256px;
   height:36px;
   background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
-input.destination{
-  width:256px;
-  height:36px;
-  background-color: #FFFFFF;
->>>>>>> Stashed changes
-  border: 1px solid #D0D2D3;
-  border-radius: 2px;
-  padding-left: 5%;
-  margin-top: 10px;
-  margin-left: 15px;
-}
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-input.total{
-  width:256px;
-  height:36px;
-  background-color: #FFFF;
-=======
-
-input.total{
-  width:256px;
-  height:36px;
-  background-color: #FFFFFF;
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
-input.total{
-  width:256px;
-  height:36px;
-  background-color: #FFFFFF;
->>>>>>> Stashed changes
   border: 1px solid #D0D2D3;
   border-radius: 2px;
   padding-left: 5%;
@@ -340,13 +213,17 @@ input.total{
   margin-left: 15px;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
+input.total{
+  width:256px;
+  height:36px;
+  background-color: #FFFFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  padding-left: 5%;
+  margin-top: 10px;
+  margin-left: 15px;
+}
 
-=======
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
->>>>>>> Stashed changes
 button.btn.btn-default.eat{
   width:57px;
   height:36px;
@@ -354,14 +231,7 @@ button.btn.btn-default.eat{
   border:none;
   margin-left: 15px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
->>>>>>> Stashed changes
 button.btn.btn-default.play{
   width:57px;
   height:36px;
@@ -369,36 +239,6 @@ button.btn.btn-default.play{
   border:none;
   margin-left: 15px;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-
->>>>>>> Stashed changes
-button.btn.btn-default.sleep{
-  width:57px;
-  height:36px;
-  background-color: #F4F4F4;
-  border:none;
-  margin-left: 15px;
-}
-
-input.describe{
-  width:220px;
-  height:84px;
-  background-color: #FFFFFF;
-  border: 1px solid #D0D2D3;
-  border-radius: 4px;
-  padding-left: 5%;
-  padding-bottom:17%;
-  margin-left: 135px;
-  margin-top:35px;
-}
-
-<<<<<<< Updated upstream
-/*button.btn.btn-default.share{
----------Modal Form--------*/
-=======
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 
 button.btn.btn-default.sleep{
   width:57px;
@@ -420,8 +260,6 @@ input.describe{
   margin-top:35px;
 }
 
-=======
->>>>>>> Stashed changes
 button.btn.btn-default.share{
   background-color: #00A799;
   height: 41px;
@@ -430,27 +268,6 @@ button.btn.btn-default.share{
   color: white;
   margin-left: 300px;
   margin-top: 40px;
-<<<<<<< HEAD
-}
-
-div#expenseSVG{
-  background-image: url('../ui/Icon_Expense.svg');
-  height:15.5px;
-  width:15.5px;
-  background-repeat: none;
-  display: inline-block;
-  margin-left: -40px;
-  margin-top: -20px;
-}
-div#locationSVG{
-  background-image: url('../ui/Icon_Location.svg');
-  height:16px;
-  width:13px;
-  background-repeat: none;
-/*  display: inline-block;*/
-}
-<<<<<<< Updated upstream
-=======
 }
 
 div#expenseSVG{
@@ -470,7 +287,6 @@ div#locationSVG{
   background-repeat: none;
 }
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 div#tagSVG{
   background-image: url('../ui/Icon_Tag.svg');
   height:15px;
@@ -478,13 +294,7 @@ div#tagSVG{
   background-repeat: none;
   display: inline-block;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-
->>>>>>> Stashed changes
 div#citySVG{
   background-image: url('../ui/Icon_City.svg');
   height:15px;
@@ -492,30 +302,8 @@ div#citySVG{
   background-repeat: none;
   display: inline-block;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-/*---------/Spot Modal Form--------*/
->>>>>>> Stashed changes
-
-input#file{
-  margin-left:-187px;
-  margin-top:95px;
-<<<<<<< Updated upstream
-}
-/*---------/Spot Modal Form--------*/
-
-/*____*/
-/*____*/
-/*____*/
-/*____*/
-=======
 
 input#file{
   margin-left:-187px;
   margin-top:95px;
 }
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-}
->>>>>>> Stashed changes

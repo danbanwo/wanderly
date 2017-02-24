@@ -15,15 +15,7 @@ class UploadPic extends Component {
 						<h1 className="title"> Welcome, traveler!</h1>
 						<p id="subTitle"> Add a profile pic so friends can recognize you </p>
 						<UploadComponent pathname={this.props.props.routing.locationBeforeTransitions}/>
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-						<Link to="bio">Skip this step</Link>
-=======
 						<Link id="next" to="bio">Skip this step</Link>
->>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
-=======
-						<Link id="next" to="bio">Skip this step</Link>
->>>>>>> Stashed changes
 					</center>
 				</div>
 			</div>
@@ -32,4 +24,3 @@ class UploadPic extends Component {
 };
 
 export default UploadPic;
-//
