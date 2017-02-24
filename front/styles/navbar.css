@@ -35,9 +35,11 @@
     align-items: flex-end;
     
 }
+
 .login-link:focus {
 	outline: none;
 }
+
 .button-log {
 	width: 48px;
 	height: 17px;
@@ -46,6 +48,7 @@
 	font-weight: bold;
 	line-height: 17px;
 	color: #00A799;
+
 	border: transparent;
 	background-color: white;
 }
