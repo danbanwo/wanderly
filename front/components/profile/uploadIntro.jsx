@@ -9,7 +9,8 @@ class UploadIntro extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: '',
+			first_name: '',
+			last_name: '',
 			country: ''
 		}
 	}
@@ -23,19 +24,28 @@ class UploadIntro extends Component {
 	}
 
 	onClick = () => {
+		const { addItem } = this.props.props
+		addItem(this.state)
 		browserHistory.push('/uploadpic');
 	}
 
 	render() {
+		console.log(this.state)
 		return (
 			<div>
 				<div className="introContainer">
 					<center>
 						<h1 className="bioTitle"> Welcome, traveler!</h1>
 						<p className="aboutYou"> Tell us a little more about yourself. </p>
+<<<<<<< HEAD
 
 						<div className="dropdown">
 
+=======
+						<input type="text" name='first_name' onChange={this.handleChange} className="name" placeholder="First Name"></input>
+						<input type="text" name='last_name' onChange={this.handleChange} className="name" placeholder="Last Name"></input>
+						<div className="dropdwn">
+>>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 							<button className="btn btn-default dropdown-toggle"
 								type="button"
 								data-toggle="dropdwn">Home Country

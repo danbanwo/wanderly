@@ -4,15 +4,16 @@ body,html{
 
 h1.title{
   font-weight: bold;
-  color:#484848;
+  color: #484848;
   font-size: 32px;
 }
 
 p#subtitle{
   font-size: 18px;
-  color:#58585B;
+  color: #58585B;
   margin-top: 40px;
 }
+
 input#file {
   display: inline-block;
   width: 100px;
@@ -33,21 +34,25 @@ input.btn.btn-default{
   flex-wrap: wrap;
   margin-left: 15px;
   align-content: space-between;
-  width:276px;
+  width: 276px;
   margin-left: 30px;
   text-align: center;
-  color:white;
-  height:41px;
+  color: white;
+  height: 41px;
   background-color: #00A799;
   border-radius: 4px;
   padding-left: 28%;
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d
 a#next{
   display: flex;
   text-decoration: none;
-  font-weight:bold;
-  color:#00A799;
+  font-weight: bold;
+  color: #00A799;
   font-size: 14px;
   line-height: 17px;
   margin-left: 123px;
@@ -58,8 +63,14 @@ a#next{
 div.uploadContainer{
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   margin-top:150px;
   margin-left: -15px;
 }
 
 
+=======
+  margin-top: 150px;
+  margin-left: -15px;
+}
+>>>>>>> 8997c5b951069cdb5389ab5692cd157cc189082d

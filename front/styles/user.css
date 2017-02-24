@@ -16,12 +16,11 @@
 	background-size: 100% auto;
 }
 
-
 .box {
 	display: flex;
 	flex-direction: column;
 	align-self: center;
-	width:256px;
+	width: 256px;
 	height: auto;
 }
 
@@ -49,19 +48,19 @@ fieldset {
 
 .txt {
 	border: 1px solid #D0D2D3;
-    border-radius: 2px;
-    font-family: Chivo;
+  border-radius: 2px;
+  font-family: Chivo;
 	font-size: 14px;
 	color: #A5A5A5;
-	width:256px;
-	height:36px;
+	width: 256px;
+	height: 36px;
 }
 
 .sub {
 	background-color: #00A799;
 	border-radius: 4px;
-	width:256px;
-	height:36px;
+	width: 256px;
+	height: 36px;
 	font-family: Chivo;
 	font-size: 14px;
 	font-weight: bold;
@@ -69,7 +68,6 @@ fieldset {
 	color: #FFFFFF;
 	border: 0;
 }
-
 
 @media only screen and (max-width: 600px) {
 
@@ -82,5 +80,4 @@ fieldset {
 		background-position: center center;
 	}
 
-	
 }

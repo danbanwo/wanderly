@@ -40,7 +40,7 @@ export const userSignUp = (info) => (
       dispatch(user_signup(user.data))
     })
 		.then(() => {
-			history.push('createintro')
+			history.push('/intro')
 		})
   }
 );

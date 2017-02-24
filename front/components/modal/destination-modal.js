@@ -13,6 +13,8 @@ class DestinationModal extends Component {
   }
 
   render() {
+    const { pathname } = this.props
+    console.log(pathname)
     return (
       <div id='modal-outer'>
         <div id='modal-middle'>
@@ -23,7 +25,7 @@ class DestinationModal extends Component {
             <div id='modal-text'>
               <UploadComponent pathname={this.props.pathname} />
               <SpotForm closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />
-              <UploadComponent pathname={this.props.pathname} />
+              {pathname === '/profile' || pathname ==='profile' ? null : <UploadComponent pathname={this.props.pathname} />}
             </div>
        
           </div>

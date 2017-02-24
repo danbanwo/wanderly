@@ -28,7 +28,10 @@ const getAllDestinations = (req, res) => {
 const getProfileDestinations = (req, res) => {
   Destination.findAll({
     where: { ProfileId: req.params.id },
-    include: [{model: Wanderspot}]
+    include: [{model: Wanderspot}],
+    order: [
+      ['createdAt', 'DESC']
+    ]
   })
   .then((prof_destinations) => {
     res.send(prof_destinations)

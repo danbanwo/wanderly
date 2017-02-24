@@ -1,5 +1,5 @@
 import axios from 'axios';
-import store from '../store/store'
+import {browserHistory as history} from 'react-router';
 
 const profileData = (profile) => {
   return {
@@ -27,7 +27,6 @@ const profileItem = (data) => {
     type: 'ADD_PROFILE_ITEM',
     payload: data
   }
-  console.log(data)
 }
 
 export const addProfileItem = (profile) => {
@@ -56,3 +55,22 @@ export const userAuth = () => (
 		// })
   }
 );
+
+//------------------------------------------------//
+const newProfile = (data) => ({
+  type: 'NEW_PROFILE',
+  payload: data
+  })
+
+export const submitProfile = (data) => {
+  return (dispatch) => {
+    axios.post('/api/profile', data)
+    .then((response) => {
+      dispatch(newProfile(response))
+      console.log(response)
+    })
+    .then(() => {
+      history.push('/profile')
+    })
+  }
+}
