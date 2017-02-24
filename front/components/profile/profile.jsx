@@ -43,9 +43,9 @@ class Profile extends Component {
                   <img className='profilePhoto' src={this.props.profile.image} />
                 </div>
                 <div className='profileBio'>
-                  <h2 className="userName">Jane Doe{/*this.props.profile.first_name*/} {/*this.props.profile.last_name*/}</h2>
-                  <p className="userCountry">United States{/*this.props.profile.country_origin*/}</p>
-                  <p className="userBio">I'm Here For A Good Time, Not A Long Time!{/*this.props.profile.catch_phrase*/}</p>
+                  <h2 className="userName">{this.props.profile.first_name} {this.props.profile.last_name}</h2>
+                  <p className="userCountry">{this.props.profile.country_origin}</p>
+                  <p className="userBio">{this.props.profile.catch_phrase}</p>
                   <Link to='/profile' id="edit">Edit Profile</Link>
                 </div>
               </div>
