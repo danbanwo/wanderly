@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: DataTypes.INTEGER,
-    image: DataTypes.STRING, 
+    categories: DataTypes.ARRAY(DataTypes.STRING),
+    image: DataTypes.STRING,
     country_origin: DataTypes.STRING,
     catch_phrase: DataTypes.STRING
   }, {
@@ -14,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         Profile.hasMany(models.Destination, {
           onDelete: "CASCADE",
           foreignKey:{
-            allowNull: false
+            allowNull: true
           }
         });
       }

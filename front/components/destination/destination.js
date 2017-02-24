@@ -27,7 +27,6 @@ class Destination extends Component {
   }
 
   render() {
-    console.log('I AM PLACE ===>>>', this.props.params.place)
     if(this.props.profile.id) {
       return (
         <div id='master_itinerary'>
