@@ -26,7 +26,7 @@ class Navbar extends Component {
         <div id='loggedout-navbar'>
           <img src='#' />
           <button onClick={this.props.loginPop}>Login</button>
-          <button><Link to='signup'>SignUp</Link></button>
+          <button><Link to='/signup'>SignUp</Link></button>
         </div>
       )
     } else {
