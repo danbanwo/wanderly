@@ -1,5 +1,5 @@
 .landingpage {
-	/*background-image: url('../ui/Landscape.png');*/
+	background-image: url('../ui/Landscape.png');
 	background-size: cover;
 	height: 92vh;
 	background-position: center center;
@@ -10,14 +10,16 @@
 	margin-bottom: -1px;
 	background-repeat: no-repeat;
 
+
 }
 
 #login-popup {
-	align-self: flex-end;
+
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	background-color: white;
+		align-self: flex-end;
 	
 }
 
@@ -39,13 +41,15 @@
 	DOM MANIPULATION ASK LEV FOR SYNTAX
 	*/
 
+
 .logo-land{
 	background-image: url('../ui/Wanderly-Logo.svg');
-	width: 277.02px;
-height: 62.86px;
+	width: 400px;
+	height: 62.86px;
 	display: inline-block;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+	margin-bottom: 40px;
 }
 
 #join{
@@ -57,8 +61,11 @@ height: 62.86px;
 	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
-	color: #FFFFFF;
+	color: white;
 	border: 0;
+	text-decoration: none;
+	margin-bottom: 15px;
+
 
 }
 
@@ -70,6 +77,27 @@ height: 62.86px;
 #btn-signin {
 	background-color: black;
 	border: 0;
-	width: ;
+	
+}
+/*#btn-signin:focus {
+	outline: none;
+}
+*/
+.p {
+/*	width: 170px;
+height: 20px;*/
+font-family: Chivo;
+font-size: 10px;
+line-height: 20px;
+color: #58585B;
+}
 
+.signup-link {
+/*width: 48px;
+height: 17px*/;
+font-family: Chivo;
+font-size: 14px;
+font-weight: bold;
+line-height: 17px;
+color: #00A799;
 }

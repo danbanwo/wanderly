@@ -13,6 +13,7 @@ import Logout from '../user/Logout';
 import '../../styles/profile.css';
 import '../../styles/itinerary.css';
 
+
 class Profile extends Component {
   constructor(props){
     super(props)
@@ -29,7 +30,7 @@ class Profile extends Component {
 
   render() {
     return (
-
+ 
       <div id='master-container'>
         <Navbar routing={this.props.routing.locationBeforeTransitions} action={this.props.userLogout} profile={this.props.profile} />
         <div className='profileContainer'>

@@ -51,9 +51,11 @@ class SpotForm extends React.Component {
     const { pathname } = this.props
     if(pathname === '/profile' || pathname === 'profile') {
   		return (
+
   		<div className="addDestinationContainer">
         <h1 className="addDestination">Add a Destination</h1>
   			<form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
+
   				<label>
   					<input className="location" onChange={this.handleChange} name="place" type="text" placeholder="Add City">
   					</input>
@@ -75,9 +77,11 @@ class SpotForm extends React.Component {
     } else {
       return (
       <div>
+
         <div className='addNewSpot'>Add a Spot</div>
 
         <div className="spotContainer">
+
         <form onSubmit={this.handleSpotSubmit} >
 
         <div className="expense">
@@ -112,7 +116,10 @@ class SpotForm extends React.Component {
           </input></label><br />
 
 
+
           <button className='btn btn-default share' type="submit">Share</button>
+
+
         </form>
         </div>
       </div>

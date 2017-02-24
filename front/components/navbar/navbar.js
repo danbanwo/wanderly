@@ -30,11 +30,13 @@ class Navbar extends Component {
       )
     } else {
         return (
+
           <div className='login-navbar navbar'>
             <div className="parent-logo">
               <div className='logo-nav '></div>
             </div>
             <div className="dropdown">
+
               <button className="dropbtn">Daniel</button>
                 {/* {this.props.profile.first_name} */}
               <div className="dropdown-content">

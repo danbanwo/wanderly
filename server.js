@@ -11,7 +11,7 @@ var morgan = require('morgan');
 
 
 
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
 //dotenv to store env keys
 require('./passport.js')(passport);
 //sequelize an 
@@ -27,10 +27,10 @@ app.use(session({
 	secret: 'wanderly wander',
 	resave: false,
 	saveUninitialized: true,
-	store: new SequelizeStore({
-    	db: db.sequelize,
-    	 table: 'Session'
- 	})
+	// store: new SequelizeStore({
+ //    	db: db.sequelize,
+ //    	 table: 'Session'
+ // 	})
 }));
 app.use(passport.initialize());
 app.use(passport.session());

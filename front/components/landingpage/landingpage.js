@@ -22,9 +22,9 @@ class LandingPage extends Component {
         <div className='landingpage'>
         <div id='login-popup'></div>
           <div className='logo-land'></div>
-          <button id='join'>Join</button>
+          <button id='join'><Link id='join' to='/signup'>Join</Link></button>
            <div className='box-div'> 
-            <p>Already have an account? <Link to='signup' className='signup-link'>Sign In</Link></p>
+            <p id='p'>Already have an account? <Link to='/login' className='signup-link'>Sign In</Link></p>
            </div>
         </div>
       </div>
