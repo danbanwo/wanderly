@@ -75,7 +75,7 @@ class SpotForm extends React.Component {
     } else {
       return (
       <div>
-        <div className='addNewSpot'>Add a Spot</div>
+        <div className='addNew'>Add a Spot</div>
 
         <div className="spotContainer">
         <form onSubmit={this.handleSpotSubmit} >
