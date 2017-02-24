@@ -13,7 +13,6 @@ class Destination extends Component {
   displayDestination() {
     const { destinations } = this.props.destinations;
     return destinations.map((destination, i) => (
-      <div>
       <div className='destContainer' key={'destination-'+i}>
         <Link to={{pathname: 'itinerary/'+destination.id, query: {place: destination.place}}}><div className='destPlace' key={'place-'+i}>{destination.place}</div></Link>
         <div className='destLocation'>
@@ -23,13 +22,10 @@ class Destination extends Component {
           <div className='iconClock'></div>
           <div key={'duration-'+i}>{destination.duration} </div>
         </div>
-
         <div className='destExpense'>
           <div className='iconExpense'></div>
           <div key={'total-'+i}>${destination.total_spent}</div>
         </div>
-
-      </div>
         <hr className='lineBreak' />
       </div>
     ))
