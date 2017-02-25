@@ -53,7 +53,7 @@ class Login extends Component {
 
 
 
-					<p id='p'>Do not have an accout? <Link to='/singup' className='signup-link'>Sing Up!</Link></p>
+					<p id='p'>Do not have an accout? <Link to='/signup' className='signup-link'>Sign Up!</Link></p>
 
 
 				</div>
