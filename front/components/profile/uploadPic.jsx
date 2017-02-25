@@ -10,7 +10,7 @@ class UploadPic extends Component {
 	render() {
 		return (
 			<div>
-				<div className="uploadContainer">
+				<div className="uploadPicContainer">
 					<center>
 						<h1 className="title"> Welcome, traveler!</h1>
 						<p id="subTitle"> Add a profile pic so friends can recognize you </p>
