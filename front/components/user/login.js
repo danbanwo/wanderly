@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router';
 import {browserHistory as history} from 'react-router';
 import '../../styles/user.css';
 
@@ -48,6 +49,13 @@ class Login extends Component {
 							<input className=" sub" type='submit' value='Log In'/>
 						 </fieldset>
 					</form>
+			
+
+
+
+					<p id='p'>Do not have an accout? <Link to='/singup' className='signup-link'>Sing Up!</Link></p>
+
+
 				</div>
 			</div>
 		)
