@@ -58,7 +58,6 @@ class UploadBio extends Component {
 						<button id="btnFive" onClick={this.handleClick} name='Activities' type="button" className="btn btn-default five">Activities</button>
 						<button id="btnSix" onClick={this.handleClick} name='Independence' type="button" className="btn btn-default six">Independence</button>
 					</div>
-
 				<div className="bioIntro">
 					<p className="questions"> Introduce yourself </p>
 					<input onChange={this.handleChange} type="text" placeholder="Write a brief intro..." className="intro"></input>

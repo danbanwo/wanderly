@@ -63,7 +63,7 @@ class UploadIntro extends Component {
            				 		</div>
            					</div>
 						<button type="button" className="btn btn-default continue" onClick={this.onClick}>Continue</button>
-						<Link to="createprofile" id="skippie">Skip this step</Link>
+						<Link to="/uploadpic" id="skippie">Skip this step</Link>
 					</center>
 				</div>
 			</div>
