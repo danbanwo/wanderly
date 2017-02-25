@@ -45,29 +45,24 @@ const createProfile = (req,res)=>{
 }
 
 
-const uploadPhoto = (req,res)=>{
+const uploadPhoto = (req,res) => {
 	var form = new formidable.IncomingForm();
 
 	form.parse(req);
 
-	form.on('fileBegin', (name,file)=>{
+	form.on('fileBegin', (name, file) => {
 		file.path = path.join(__dirname, '../../front/public/userphotos', file.name);
 	});
 
-	form.on('file', (name,file)=>{
+	form.on('file', (name,file) => {
 	//checking to see if an image exist, if not a default photo will be set
 		let imageExist = file.path
 
 		if(imageExist){
-			console.log('Image Exist ' + file.name);
-		}
-		else{
-			console.log('Image Does Not Exist');
+			let imagePath = path.join('http://localhost:3000/userphotos/', file.name)
+			res.end(JSON.stringify({imagePath: imagePath}))
 		}
 	});
-
-	res.send('File uploaded');
-
 }
 
 
