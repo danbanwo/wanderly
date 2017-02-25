@@ -14,10 +14,11 @@ var morgan = require('morgan');
 // const SequelizeStore = require('connect-session-sequelize')(session.Store);
 //dotenv to store env keys
 require('./passport.js')(passport);
-//sequelize an 
+//sequelize an
 app.use(bodyparser.urlencoded({ extended: false, }));
 app.use(bodyparser.json());
 app.use(express.static('front/public'));
+app.use('/userphotos', express.static('front/public/userphotos'));
 
 //passport midleware
 app.use(morgan('dev'));

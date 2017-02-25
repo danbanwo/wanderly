@@ -74,3 +74,24 @@ export const submitProfile = (data) => {
     })
   }
 }
+
+const addProfileImage = (data) => {
+  return {
+    type: 'ADD_PROFILE_IMAGE',
+    payload: data.imagePath
+  }
+}
+
+export const uploadImage = (form) => {
+  return (dispatch) => {
+    // const config = { headers: { 'Content-Type': 'multipart/form-data' } };
+    axios.post("api/profile/upload", form)
+    .then((imagePath) => {
+        console.log(imagePath)
+      dispatch(addProfileImage(imagePath.data))
+    })
+    .then(() => {
+      history.push('/bio')
+    })
+  }
+}

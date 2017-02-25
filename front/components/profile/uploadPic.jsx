@@ -14,7 +14,7 @@ class UploadPic extends Component {
 					<center>
 						<h1 className="title"> Welcome, traveler!</h1>
 						<p id="subTitle"> Add a profile pic so friends can recognize you </p>
-						<UploadComponent pathname={this.props.props.routing.locationBeforeTransitions}/>
+						<UploadComponent uploadImage={this.props.props.uploadImage} pathname={this.props.props.routing.locationBeforeTransitions}/>
 						<Link id="next" to="bio">Skip this step</Link>
 					</center>
 				</div>

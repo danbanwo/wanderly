@@ -1,5 +1,6 @@
 import React, { Component, } from 'react';
 import { withGoogleMap, GoogleMap, Marker, } from 'react-google-maps';
+import '../../styles/map.css';
 
 // import MarkerClusterer from "../../../lib/addons/MarkerClusterer";
 
@@ -36,13 +37,13 @@ export default class WanderMap extends Component {
     const { pathname } = this.props.routing;
     if(pathname === '/profile' || pathname === 'profile') {
       return (
-        <div style={{width: 868, height: '92vh', background: 'blue'}}>
+        <div id='wandermap'>
           <WanderGoogleMap
             containerElement={
-              <div style={{ height: '100%', }} />
+              <div id='wandermap-containerElement' />
             }
             mapElement={
-              <div style={{ height: '100%', }} />
+              <div id='wandermap-mapElement' />
             }
             markers={this.props.map}
           />
@@ -50,13 +51,13 @@ export default class WanderMap extends Component {
       );
     } else {
       return (
-        <div style={{width: 868, height: '92vh', background: 'blue'}}>
+        <div id='wandermap'>
           <WanderGoogleMap
             containerElement={
-              <div style={{ height: '100%', }} />
+              <div id='wandermap-containerElement' />
             }
             mapElement={
-              <div style={{ height: '100%', }} />
+              <div id='wandermap-mapElement' />
             }
             markers={this.props.mapSpot}
           />
