@@ -47,12 +47,12 @@ input.btn.btn-default{
 
 a#next{
   display: flex;
+  display: inline-block;
   text-decoration: none;
   font-weight: bold;
   color: #00A799;
   font-size: 14px;
   line-height: 17px;
-  margin-left: 123px;
   align-content: space-between;
   margin-top: 20px;
 }
@@ -60,6 +60,9 @@ a#next{
 div.uploadContainer{
   display: flex;
   justify-content: center;
-  margin-top: 150px;
-  margin-left: -15px;
+  margin-top: -55px;
+  margin-left: -25px;
+}
+div.uploadPicContainer{
+  margin-top: 90px;
 }
