@@ -1,0 +1,12 @@
+#wandermap {
+  width: 100%;
+  height: 92vh;
+}
+
+#wandermap-containerElement {
+  height: 100%;
+}
+
+#wandermap-mapElement {
+  height: 100%;
+}

@@ -28,6 +28,11 @@ const profileReducer = (state=defaultState, action) => {
     return {...state, profile: profile}
     break;
 
+    case 'ADD_PROFILE_IMAGE':
+    let image = {...state.profile, image: action.payload}
+    return {...state, profile: image}
+    break;
+
     case 'NEW_PROFILE':
     return state
     break;
