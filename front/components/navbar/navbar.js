@@ -30,11 +30,14 @@ class Navbar extends Component {
               <div className="parent-logo">
                 <div className='logo-nav '></div>
               </div>
-              <div className="dropdown">
-                <button className="dropbtn">{this.props.profile.first_name}</button>
-                <div className="dropdown-content">
-                  <button onClick={this.handleClick}>Log out</button>
-                </div>
+              <div className="dropdown buttons">
+              <div id='name-nav' className='dropbtn'>
+                <button className="dropbtn button-log">{this.props.profile.first_name}</button>
+                <div className='arrow-down'></div>
+              </div>
+              <div className="dropdown-content button-log">
+                  <button className='logout' onClick={this.handleClick}>Log out</button>
+              </div>
               </div>
             </div>
           )
@@ -43,3 +46,4 @@ class Navbar extends Component {
   }
 
 export default Navbar
+
