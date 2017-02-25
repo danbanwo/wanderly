@@ -37,8 +37,8 @@ class UploadIntro extends Component {
 					<center>
 						<h1 className="bioTitle"> Welcome, traveler!</h1>
 						<p className="aboutYou"> Tell us a little more about yourself. </p>
-						<input type="text" name='first_name' onChange={this.handleChange} className="name" placeholder="First Name"></input>
-						<input type="text" name='last_name' onChange={this.handleChange} className="name" placeholder="Last Name"></input>
+						<input type="text" name='first_name' onChange={this.handleChange} className="firstName" placeholder="First Name"></input>
+						<input type="text" name='last_name' onChange={this.handleChange} className="lastName" placeholder="Last Name"></input>
 						<div className="dropdwn">
 							<button className="btn btn-default dropdown-toggle"
 								type="button"

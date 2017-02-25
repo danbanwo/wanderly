@@ -22,7 +22,19 @@ p.aboutYou{
 	line-height: 22px;
 }
 
-input.name{
+input.firstName{
+	width: 256px;
+	height: 36px;
+	background-color: #FFFFFF;
+	border: 1px solid #D0D2D3;
+	border-radius: 2px;
+	margin-top: 25px;
+	margin-left: 11px;
+	padding-left: 5%;
+	display:flex;
+	flex-wrap: wrap;
+}
+input.lastName{
 	width: 256px;
 	height: 36px;
 	background-color: #FFFFFF;
@@ -32,7 +44,6 @@ input.name{
 	margin-left: 11px;
 	padding-left: 5%;
 }
-
 button.btn.btn-default.dropdown-toggle{
 	width: 256px;
 	height: 36px;
@@ -40,7 +51,7 @@ button.btn.btn-default.dropdown-toggle{
 	border: 1px solid #D0D2D3;
 	border-radius: 2px;
 	margin-left: 11px;
-	padding-right: 47%;
+	padding-right: 50%;
 	color: #9E9E9E;
 	margin-top: 15px;
 	cursor: pointer;
@@ -66,10 +77,17 @@ button.btn.btn-default.continue{
 	color: white;
 	margin-left: 11px;
 	margin-top: 25px;
+	padding-right:9%;
 }
 
 a#skippie{
 	margin-left: 100px;
+	display:flex;
+	margin-top:25px;
+	font-weight: bold;
+	color: #00A799;
+	font-size: 14px;
+	line-height: 17px;
 }
 
 div.dropdown{
