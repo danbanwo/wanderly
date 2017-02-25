@@ -106,3 +106,9 @@ div.log-arrow {
 .logout:focus {
 	outline: none;
 }
+
+.dropdown-content .logout:hover {background-color: white}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
