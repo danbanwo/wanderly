@@ -28,7 +28,6 @@ class Profile extends Component {
   }
 
   render() {
-    console.log(this.props.profile.image)
     return (
 
       <div id='master-container'>

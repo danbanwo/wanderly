@@ -15,7 +15,6 @@ class UploadComponent extends Component {
 		var file = fileInput.files[0];
 		var formData = new FormData(form);
 		formData.append('file', file);
-		console.log(formData)
 		this.props.uploadImage(formData)
 	}
 
