@@ -31,7 +31,7 @@ class Navbar extends Component {
                 <div className='logo-nav '></div>
               </div>
               <div className="dropdown buttons">
-              <div id='name-nav' className='dropbtn'>
+              <div id='name-nav'>
                 <button className="dropbtn button-log">{this.props.profile.first_name}</button>
                 <div className='arrow-down'></div>
               </div>
@@ -46,4 +46,3 @@ class Navbar extends Component {
   }
 
 export default Navbar
-
