@@ -59,7 +59,7 @@ const uploadPhoto = (req,res) => {
 		let imageExist = file.path
 
 		if(imageExist){
-			let imagePath = path.join('http://localhost:3000/userphotos/', file.name)
+			let imagePath = 'http://localhost:3000/userphotos/'+ file.name
 			res.end(JSON.stringify({imagePath: imagePath}))
 		}
 	});
