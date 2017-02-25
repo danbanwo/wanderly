@@ -22,6 +22,7 @@ div.bioButtons{
 	display: flex;
 	flex-wrap: wrap ;
 	margin-left:65px;
+	margin-top:35px;
 }
 
 h1.bioTitle{
@@ -44,12 +45,12 @@ p#questions{
 }
 
 
-#btnone:focus {background-color: #00A799; color: white; outline: none;}
-#btntwo:focus {background-color: #00A799; color: white; outline: none;}
-#btnthree:focus {background-color: #00A799; color: white; outline: none;}
-#btnfour:focus {background-color: #00A799; color: white; outline: none;}
-#btnfive:focus {background-color: #00A799; color: white; outline: none;}
-#btnsix:focus {background-color: #00A799; color: white; outline: none;}
+#btnOne:focus{background-color: #00A799; color: white; outline: none;}
+#btnTwo:focus{background-color: #00A799; color: white; outline: none;}
+#btnThree:focus {background-color: #00A799; color: white; outline: none;}
+#btnFour:focus {background-color: #00A799; color: white; outline: none;}
+#btnFive:focus {background-color: #00A799; color: white; outline: none;}
+#btnSix:focus {background-color: #00A799; color: white; outline: none;}
 
 button.btn.btn-default.one{
 	background-color: #FFFFFF;
@@ -57,9 +58,9 @@ button.btn.btn-default.one{
 	border: 1px solid #00A799;
 	width: 93px;
 	height: 35px;
-  font-size: 14px;
-  line-height: 17px;
-  color: #00A799;
+  	font-size: 14px;
+  	line-height: 17px;
+  	color: #00A799;
 
 }
 
@@ -144,6 +145,7 @@ input.intro{
 	padding: 0 0 45px 10px;
 }
 
+
 button.btn.btn-default.done{
 	width: 256px;
 	height: 41px;
@@ -151,16 +153,18 @@ button.btn.btn-default.done{
 	border-radius: 4px;
 	text-align: center;
 	color: white;
-	margin-top: 45px;
+	margin-top: 35px;
 	margin-left: 20px;
 }
 
 a#skip{
 	font-weight: bold;
 	color: #00A799;
-	size: 14px;
+	font-size: 14px;
 	line-height: 17px;
-	margin-left: 243px;
+	margin-left: 10px;
+	margin-top:25px;
+
 }
 
 .bioIntro {
