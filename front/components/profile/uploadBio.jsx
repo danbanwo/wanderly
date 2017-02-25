@@ -51,12 +51,12 @@ class UploadBio extends Component {
 						<p id="aboutMe"> Tell us a little more about yourself. </p>
 					</div>
 					<div className="bioButtons">
-						<button onClick={this.handleClick} name='Food' type="button" className="btn btn-default one">Food</button>
-						<button onClick={this.handleClick} name='Culture & Art' type="button" className="btn btn-default two">Culture & Art</button>
-						<button onClick={this.handleClick} name='Relaxation' type="button" className="btn btn-default three">Relaxation</button>
-						<button onClick={this.handleClick} name='Backpacking' type="button" className="btn btn-default four">Backpacking</button>
-						<button onClick={this.handleClick} name='Activities' type="button" className="btn btn-default five">Activities</button>
-						<button onClick={this.handleClick} name='Independence' type="button" className="btn btn-default six">Independence</button>
+						<button id="btnOne" onClick={this.handleClick} name='Food' type="button" className="btn btn-default one">Food</button>
+						<button id="btnTwo" onClick={this.handleClick} name='Culture & Art' type="button" className="btn btn-default two">Culture & Art</button>
+						<button id="btnThree" onClick={this.handleClick} name='Relaxation' type="button" className="btn btn-default three">Relaxation</button>
+						<button id="btnFour" onClick={this.handleClick} name='Backpacking' type="button" className="btn btn-default four">Backpacking</button>
+						<button id="btnFive" onClick={this.handleClick} name='Activities' type="button" className="btn btn-default five">Activities</button>
+						<button id="btnSix" onClick={this.handleClick} name='Independence' type="button" className="btn btn-default six">Independence</button>
 					</div>
 
 				<div className="bioIntro">

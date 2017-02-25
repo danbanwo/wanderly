@@ -56,7 +56,34 @@ button.btn.btn-default.dropdown-toggle{
 	margin-top: 15px;
 	cursor: pointer;
 }
+div.btn-group{
+	margin-left: -308px;
+	position:relative;
+	display: inline-block;
+}
 
+*{
+	box-sizing: border-box;
+}
+/*ul.dropdown-menu.scrollable-menu > li{
+	display: inline-block;
+}
+*/
+ul.dropdown-menu{
+	position: absolute;
+	font-size: 14px;
+	background-color: white;
+	box-shadow: 0 6px 12px rbga(0,0,0, .175);
+	background-clip: padding-box;
+}
+ul{
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+/*.btn-group:hover ul{
+	display: block;
+}*/
 .btn .caret {
 	margin-top: 8px;
 	margin-left: 125px;
@@ -90,25 +117,13 @@ a#skippie{
 	line-height: 17px;
 }
 
-div.dropdown{
-	position: relative;
-/*	display:in line-blocks;*/
-}
 
-div.dropdown-content{
-	display:none;
-	/*position: absolute;*/
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	min-width: 160px;
-	z-index: 1;
-}
-
-div.dropdown-content a{
+/*ul.dropdown-content a{
 	text-decoration: none;
 	display: block;
 	color: #00A799;
-}
-
+}*/
+/*
 div.dropdown-content a:hover{
 	background-color: #00A799;
 	color:white;
@@ -116,4 +131,5 @@ div.dropdown-content a:hover{
 
 div.dropdown:hover div.dropdown-content{
 	display: block;
-}
+}*/
+
