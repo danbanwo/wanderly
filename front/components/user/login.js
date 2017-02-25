@@ -38,11 +38,11 @@ class Login extends Component {
 					<form className='maindiv' onSubmit={this.handleSubmit} >
 		 			 <fieldset>
 							<div className="form-group ">
-								<input className="form-control txt" type='email' value={email} onChange={this.handleChange.bind(this,"email")} placeholder="  Your email"/>
+								<input className="form-control txt" type='email' value={email} onChange={this.handleChange.bind(this,"email")} placeholder="Your email"/>
 							</div>
 							<br />
 							<div className="form-group input">
-								<input className="form-control txt"  type='Password' value={password} onChange={this.handleChange.bind(this, "password")} placeholder="  Password" />
+								<input className="form-control txt"  type='Password' value={password} onChange={this.handleChange.bind(this, "password")} placeholder="Password" />
 							</div>
 							<br />
 							<input className=" sub" type='submit' value='Log In'/>
