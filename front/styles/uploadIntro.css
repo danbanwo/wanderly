@@ -30,7 +30,7 @@ input.firstName{
 	border-radius: 2px;
 	margin-top: 25px;
 	margin-left: 11px;
-	padding-left: 2.5%;
+	padding-left: 6.5%;
 	display:flex;
 	flex-wrap: wrap;
 }
@@ -42,7 +42,7 @@ input.lastName{
 	border-radius: 2px;
 	margin-top: 25px;
 	margin-left: 11px;
-	padding-left: 2.5%;
+	padding-left: 6.5%;
 }
 button.btn.btn-default.dropdown-toggle{
 	width: 256px;
@@ -182,11 +182,11 @@ button.btn.btn-default.continue{
 	color: white;
 	margin-left: 11px;
 	margin-top: 25px;
-	padding-right:4%;
+	padding-right:7%;
 }
 
 a#skippie{
-	margin-left: 115px;
+	margin-left: 106px;
 	display:flex;
 	margin-top:25px;
 	font-weight: bold;

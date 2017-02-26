@@ -27,17 +27,11 @@ body,html{
 }
 
 .profilePhoto {
-	justify-content: center;
-	width: 200px;
-	margin-left: 5px;
-	margin-top: 5px;
-	border-radius: -6px;
-	/*height: 200px;
-	justify-content: center;
-	width: 200px;
-	border-radius: 80px;
-  	margin-left: 20px;
-  	margin-top: 20px;*/
+  justify-content: center;
+  width: 200px;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .profileInfo {
