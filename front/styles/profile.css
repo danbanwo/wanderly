@@ -27,16 +27,18 @@ body,html{
 }
 
 .profilePhoto {
-	/*height: 100%;*/
+	height: 200px;
 	justify-content: center;
 	width: 200px;
-	border-radius: 80px;
+	/*border-radius: 80px;*/
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .profileInfo {
 	display: flex;
 	flex-direction: row;
-	height: 40vh;
+	height: 34vh;
 }
 
 .profileBio {
@@ -45,7 +47,7 @@ body,html{
 }
 
 .destList {
-	height: 52vh;
+	height: 58vh;
 	margin: 0;
 	align-self: flex-end;
   width: 100%;
@@ -55,7 +57,7 @@ body,html{
 
 /*---------Profile Right Container--------*/
 .profileRight {
-	width: 50%;
+	width: 60%;
 	align-items: right;
 	margin: 0;
 }
@@ -95,4 +97,9 @@ a#edit{
 	line-height: 17px;
 	margin-left: 0px;
 	margin-top: 5px;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
