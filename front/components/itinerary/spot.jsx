@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PlacesAutocomplete, { geocodeByAddress, geocodeByPlaceId } from 'react-places-autocomplete';
 import '../../styles/destForm.css';
 import '../../styles/modal.css';
 
@@ -14,6 +14,9 @@ class SpotForm extends React.Component {
       spot: '',
       total: '',
       description: '',
+      lat: 0,
+      lng: 0,
+      city: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -22,34 +25,81 @@ class SpotForm extends React.Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+//Handles autocomplete component change
+  handlePlaceChange = (address) => {
+    this.setState({ place: address })
+    console.log(address)
+  }
+
+
+//Handles autocomplete component change
+  handleSpotChange = (address) => {
+    this.setState({ spot: address })
+    console.log(address)
+  }
+
+
+//Adds map coordinates retieved from the autocomplete API for Destination
+  handleDestSelect = (address, placeId) => {
+    let place = this.state.place
+    geocodeByAddress(place,  (err, { lat, lng }) => {
+      if (err) { console.log('Oh no!', err) }
+      console.log(`Yay! got latitude and longitude for ${place}`, { lat, lng })
+      this.setState({lat, lng})
+    })
+  }
+
+//Adds map coordinates retieved from the autocomplete API for spots
+  handleSpotSelect = (address, placeId) => {
+    let spot = this.state.spot
+    geocodeByAddress(spot,  (err, { lat, lng }) => {
+      if (err) { console.log('Oh no!', err) }
+      console.log(`Yay! got latitude and longitude for ${spot}`, { lat, lng })
+      this.setState({lat, lng})
+    })
+  }
+
+  //Handles the submission for Wanderspots Modal
   handleSpotSubmit = (e) => {
     //USED TO GRAB DESTINATION ID NEEDED FOR ASSOCIATION
     //ID GRABBED FROM URL
     let destId = this.props.pathname.split('/')
     destId = destId[1]
-    console.log(destId)
     this.props.addSpot({
       ...this.state,
       DestinationId: destId,
-      lat: 52.375218,
-      lng:4.883977
+      // lat: 52.375218,
+      // lng:4.883977
     })
     this.props.closeButton()
     e.preventDefault()
   }
 
+//Handles submissions for destinationi modal
   handleDestinationSubmit = (e) => {
     this.props.addDestination({
       ...this.state,
       ProfileId: this.props.profile.id,
-      lat: 6.465422,
-      lng: 3.406448
+      // lat: 6.465422,
+      // lng: 3.406448
     })
     this.props.closeButton()
     e.preventDefault()
   }
 
   render() {
+    console.log(this.props)
+    const destLocation = {
+      root: 'destLocation',
+      input: 'destLocation',
+      // autocompleteContainer: 'my-autocomplete-container'
+    }
+
+    const spots = {
+      root: 'spots',
+      input: 'spots'
+    }
+
     const { pathname } = this.props
     if(pathname === '/profile' || pathname === 'profile') {
       return (
@@ -60,8 +110,13 @@ class SpotForm extends React.Component {
           <div className='destLocation'>
             <div className="iconLocation"></div>
             <label>
-              <input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
-              </input>
+              <PlacesAutocomplete
+                value={this.state.place}
+                onChange={this.handlePlaceChange}
+                onSelect={this.handleDestSelect}
+                placeholder='Add Adventure'
+                classNames={destLocation}
+              />
             </label>
           </div><br />
 
@@ -77,8 +132,10 @@ class SpotForm extends React.Component {
             </input></label>
           </div><br />
 
-          {//<label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country"></input></label><br />
-          }
+          <div className='destExpense'>
+            <div className="iconCountry"></div>
+            <label><input className="country" onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country"></input></label><br />
+          </div><br />
 
           <button className="shareDest" type="submit">Share</button>
         </form>
@@ -92,20 +149,27 @@ class SpotForm extends React.Component {
         <div className="spotContainer">
         <form onSubmit={this.handleSpotSubmit} >
 
-        <div className="expense">
-          <div id="expenseSVG"></div>
-          <label><input className="spots"onChange={this.handleChange} name="spot" type="text" placeholder="Add Spot">
-          </input></label><br />
-        </div>
-
         <div className="location">
           <div id="locationSVG"></div>
-          <label><input  className="destination" onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="Add City">
-          </input></label><br />
+          <label>
+            <PlacesAutocomplete
+              value={this.state.spot}
+              onChange={this.handleSpotChange}
+              onSelect={this.handleSpotSelect}
+              placeholder='Add Spot'
+              classNames={spots}
+            />
+          </label><br />
         </div>
 
         <div className="city">
           <div id="citySVG"></div>
+          <label><input  className="destination" onChange={this.handleChange} name="city" value={this.state.city} type="text" placeholder="Add City">
+          </input></label><br />
+        </div>
+
+        <div className="expense">
+          <div id="expenseSVG"></div>
           <label><input  className="total" onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="$0">
           </input></label><br />
         </div>
@@ -132,3 +196,9 @@ class SpotForm extends React.Component {
 }
 
 export default SpotForm;
+
+//<input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
+//</input>
+
+//<input className="spots" onChange={this.handleChange} name="spot" type="text" placeholder="Add Spot">
+//</input>

@@ -6,7 +6,7 @@
 
 form.destinationForm{
   margin-top: 30px;
-}	
+}
 
 input.destLocation {
   width: 256px;
@@ -86,5 +86,12 @@ input.destTotal {
 	background-image: url('../ui/Icon_Expense_US.svg');
 	height: 16px;
 	width: 16px;
+	background-repeat: none;
+}
+
+.iconCountry {
+	background-image: url('../ui/earth-globe.svg');
+	height: 20px;
+	width: 31px;
 	background-repeat: none;
 }
