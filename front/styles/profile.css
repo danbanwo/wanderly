@@ -10,20 +10,20 @@ body,html{
 .profileContainer {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin: 0;
 }
 
 /*---------Profile Left Container--------*/
 .profileLeft {
-	width: 45%;
+	width: 40%;
 	display: flex;
 	flex-direction: column;
 	margin-left: 0;
 }
 
 .profilePhotoContainer {
-	/*height: 200px;*/
+	padding-right: 15px;
 }
 
 .profilePhoto {
@@ -41,6 +41,7 @@ body,html{
 
 .profileBio {
 	width: 70%;
+	padding-left: 15px;
 }
 
 .destList {
@@ -54,7 +55,7 @@ body,html{
 
 /*---------Profile Right Container--------*/
 .profileRight {
-	width: 55%;
+	width: 50%;
 	align-items: right;
 	margin: 0;
 }
