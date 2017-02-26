@@ -8,10 +8,8 @@ import Wandermap from './map/map';
 import DestinationModal from './modal/destination-modal';
 import Login from './user/login';
 import Signup from './user/signup';
-// import UploadPic from './profile/uploadPic';
-// import UploadBio from './profile/uploadBio';
-// import UploadIntro from './profile/UploadIntro';
 import Spot from './itinerary/spot';
+import Places from './autocomplete/places';
 
 //import containers here:
 import mapContainer from './map/map-container';
@@ -34,13 +32,11 @@ export {
   landingPageContainer,
   Login,
   mapContainer,
+  Places,
   Profile,
   profileContainer,
   userContainer,
   Signup,
-  // UploadPic,
-  // UploadBio,
-  // UploadIntro,
   Wandermap,
   spotContainer
 }
