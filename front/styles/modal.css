@@ -65,6 +65,7 @@ input#file{
 .addNew {
   margin-left: 50px;
   font-size: 1.3em;
+  margin-bottom: 20px;
 }
 
 input[type="text"]{
@@ -187,7 +188,7 @@ input.total{
   border: 1px solid #D0D2D3;
   border-radius: 2px;
   padding-left: 5%;
-  margin-top: 10px;
+  margin-top: -200px;
   margin-left: 15px;
 }
 

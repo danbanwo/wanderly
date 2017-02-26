@@ -16,7 +16,8 @@ class SpotForm extends React.Component {
       description: '',
       lat: 0,
       lng: 0,
-      city: ''
+      city: '',
+      pictures:''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -122,7 +123,7 @@ class SpotForm extends React.Component {
 
           <div className='destClock'>
             <div className="iconClock"></div>
-            <label><input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Add Duration">
+            <label><input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Duration of Adventure">
             </input></label>
           </div><br />
 
@@ -134,7 +135,7 @@ class SpotForm extends React.Component {
 
           <div className='destExpense'>
             <div className="iconCountry"></div>
-            <label><input className="country" onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country"></input></label><br />
+            <label><input className="country" onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Country of Adventure"></input></label><br />
           </div><br />
 
           <button className="shareDest" type="submit">Share</button>
@@ -196,9 +197,3 @@ class SpotForm extends React.Component {
 }
 
 export default SpotForm;
-
-//<input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
-//</input>
-
-//<input className="spots" onChange={this.handleChange} name="spot" type="text" placeholder="Add Spot">
-//</input>

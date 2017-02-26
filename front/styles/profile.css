@@ -27,10 +27,10 @@ body,html{
 }
 
 .profilePhoto {
-	height: 200px;
+	/*height: 200px;*/
 	justify-content: center;
 	width: 200px;
-	/*border-radius: 80px;*/
+	border-radius: 20px;
   margin-left: 20px;
   margin-top: 20px;
 }
