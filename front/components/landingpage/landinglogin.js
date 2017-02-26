@@ -21,14 +21,15 @@ class LandingLogin extends Component {
   render() {
     console.log(this.props)
     return (
-      <div>
+      <div className='popbox'>
+      <p>Sign In</p>
         <label name='email'>
-          <input name='email' type='text' placeholder='Email' onChange={this.handleChange}></input>
+          <input className='input-pop' name='email' type='text' placeholder='Email' onChange={this.handleChange}></input>
         </label>
         <label name='password'>
-          <input name='password' type='password' placeholder='Password' onChange={this.handleChange}></input>
+          <input className='input-pop' name='password' type='password' placeholder='Password' onChange={this.handleChange}></input>
         </label>
-        <input type='button' value='signin' onClick={this.handleSubmit}></input>
+        <input  className='button-pop' type='button' value='sign in' onClick={this.handleSubmit}></input>
       </div>
     )
   }
