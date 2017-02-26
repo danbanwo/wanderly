@@ -29,7 +29,8 @@ body,html{
 .profilePhoto {
 	justify-content: center;
 	width: 200px;
-	margin-left: -62px;
+	margin-left: 5px;
+	margin-top: 5px;
 	border-radius: -6px;
 	/*height: 200px;
 	justify-content: center;
