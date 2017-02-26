@@ -8,9 +8,6 @@ import Wandermap from './map/map';
 import DestinationModal from './modal/destination-modal';
 import Login from './user/login';
 import Signup from './user/signup';
-// import UploadPic from './profile/uploadPic';
-// import UploadBio from './profile/uploadBio';
-// import UploadIntro from './profile/UploadIntro';
 import Spot from './itinerary/spot';
 
 //import containers here:
@@ -38,9 +35,6 @@ export {
   profileContainer,
   userContainer,
   Signup,
-  // UploadPic,
-  // UploadBio,
-  // UploadIntro,
   Wandermap,
   spotContainer
 }
