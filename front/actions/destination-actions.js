@@ -23,7 +23,7 @@ export const addDestination = (destinationForm) => (
   (dispatch) => {
     axios.post('/api/destination', destinationForm)
     .then((response) => {
-      dispatch(add_Destination_action(destinationForm))
+      dispatch(add_Destination_action(response.data))
     })
   }
 )

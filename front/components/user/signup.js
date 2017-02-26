@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import '../../styles/user.css';
 
 class Signup extends Component {
@@ -40,7 +41,9 @@ class Signup extends Component {
 								<input className="sub" type='submit' value='Signup!'/>
 							</form>
 						</div>
+						
 					</div>
+					 <p id='p'>Already a member? <Link to='/login' className='signup-link'>Sign In</Link></p>
 				</div>
 			</div>
 		)
