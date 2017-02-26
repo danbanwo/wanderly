@@ -70,7 +70,7 @@ export const submitProfile = (data) => {
       console.log(response)
     })
     .then(() => {
-      history.push('/profile')
+      history.push('/')
     })
   }
 }
