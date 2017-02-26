@@ -177,9 +177,9 @@ class SpotForm extends React.Component {
         <div className="btns">
           <div className="spotButtons">
           <div id="tagSVG"></div>
-            <button className="btn btn-default eat"type="button">Fun</button>
-            <button className="btn btn-default play"type="button">Food</button>
-            <button className="btn btn-default sleep"type="button">Lodging</button>
+            <button id="btnEat"className="btn btn-default eat"type="button">Food</button>
+            <button id="btnFun"className="btn btn-default play"type="button">Fun</button>
+            <button id="btnSleep"className="btn btn-default sleep"type="button">Lodging</button>
           </div>
         </div>
 

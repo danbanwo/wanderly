@@ -190,6 +190,9 @@ input.total{
   margin-top: -10px;
   margin-left: 15px;
 }
+#btnEat:focus{background-color: #00A799; color: white; outline: none;}
+#btnFun:focus{background-color: #00A799; color: white; outline: none;}
+#btnSleep:focus{background-color: #00A799; color: white; outline: none;}
 
 button.btn.btn-default.eat{
   width: 57px;
