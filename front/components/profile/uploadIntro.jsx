@@ -39,29 +39,33 @@ class UploadIntro extends Component {
 						<p className="aboutYou"> Tell us a little more about yourself. </p>
 						<input type="text" name='first_name' onChange={this.handleChange} className="firstName" placeholder="First Name"></input>
 						<input type="text" name='last_name' onChange={this.handleChange} className="lastName" placeholder="Last Name"></input>
-							<div className="container">
-    							<div className="row">
-        							<div className="col-lg-10">
-           						 	<div className="btn-group">
+           						 	<div className="dropdown">
                 						<button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">Home Country
                 					 		<span className="caret"></span>
                 						</button>
-						                <ul className="dropdown-menu scrollable-menu">
+						                <div className="dropdown-content">
+						                <div className="usaSVG"></div>
 						                    <li onClick={this.handleCountry} name="USA"><a href="#">USA</a></li>
+						                 <div className="canadaSVG"></div>
 						                    <li onClick={this.handleCountry} name="CA"><a href="#">CA</a></li>
-						                    <li onClick={this.handleCountry} name="UK"><a href="#">UK</a></li>
+						                <div className="barbadosSVG"></div>
+						                    <li onClick={this.handleCountry} name="UK"><a href="#">BB</a></li>
+						                <div className="chinaSVG"></div>
 						                    <li onClick={this.handleCountry} name="CN"><a href="#">CN</a></li>
+						                <div className="afghanSVG"></div>
 						                    <li onClick={this.handleCountry} name="AF"><a href="#">AF</a></li>
-						                    <li onClick={this.handleCountry} name="FR"><a href="#">FR</a></li>
+						                <div className="mexicoSVG"></div>
+						                    <li onClick={this.handleCountry} name="FR"><a href="#">MEX</a></li>
+						                <div className="brazilSVG"></div>
 						                    <li onClick={this.handleCountry} name="BR"><a href="#">BR</a></li>
-						                    <li onClick={this.handleCountry} name="DO"><a href="#">DO</a></li>
-						                    <li onClick={this.handleCountry} name="EG"><a href="#">EG</a></li>
-						                    <li onClick={this.handleCountry} name="GR"><a href="#">GR</a></li>
-						                </ul>
+						                <div className="japanSVG"></div>
+						                    <li onClick={this.handleCountry} name="DO"><a href="#">JPN</a></li>
+						                <div className="southAfricaSVG"></div>
+						                    <li onClick={this.handleCountry} name="EG"><a href="#">ZAF</a></li>
+						                <div className="koreaSVG"></div>
+						                    <li onClick={this.handleCountry} name="GR"><a href="#">KOR</a></li>
+						                </div>
            				 			</div>
-           				 			</div>
-           				 		</div>
-           					</div>
 						<button type="button" className="btn btn-default continue" onClick={this.onClick}>Continue</button>
 						<Link to="/uploadpic" id="skippie">Skip this step</Link>
 					</center>

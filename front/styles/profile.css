@@ -27,10 +27,10 @@ body,html{
 }
 
 .profilePhoto {
-	/*height: 100%;*/
 	justify-content: center;
 	width: 200px;
-	border-radius: 80px;
+	margin-left: -62px;
+	border-radius: -6px;
 }
 
 .profileInfo {
@@ -93,6 +93,6 @@ a#edit{
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 17px;
-	margin-left: 0px;
-	margin-top: 5px;
+	/*margin-left: -170px;*/
+	/*margin-top: 30px;*/
 }
