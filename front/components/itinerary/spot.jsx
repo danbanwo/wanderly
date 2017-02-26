@@ -60,27 +60,27 @@ class SpotForm extends React.Component {
           <div className='destLocation'>
             <div className="iconLocation"></div>
             <label>
-              <input className="destLocation" class='locationTxt' onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
+              <input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
               </input>
             </label>
           </div><br />
 
           <div className='destClock'>
             <div className="iconClock"></div>
-            <label><input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} class='durationTxt' type="text" placeholder="Add Duration">
+            <label><input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Add Duration">
             </input></label>
           </div><br />
 
           <div className='destExpense'>
             <div className="iconExpense"></div>
-            <label><input className="destTotal"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} class='totalTxt' type="text" placeholder="$0">
+            <label><input className="destTotal"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
             </input></label>
           </div><br />
 
           {//<label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country"></input></label><br />
           }
 
-          <button className="shareDest"type="submit">Share</button>
+          <button className="shareDest" type="submit">Share</button>
         </form>
       </div>
       )
