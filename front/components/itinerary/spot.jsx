@@ -88,6 +88,7 @@ class SpotForm extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const destLocation = {
       root: 'destLocation',
       input: 'destLocation',

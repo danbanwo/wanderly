@@ -2,7 +2,7 @@
 import { Router, Route, browserHistory } from 'react-router';
 
 //import components/containers below:
-import { App, createProfileContainer, Destination, DestinationModal, destinationContainer, Places, profileContainer,
+import { App, createProfileContainer, Destination, DestinationModal, destinationContainer, profileContainer,
   landingPageContainer, UploadPic, UploadBio, UploadIntro, userContainer, mapContainer, Profile, SignUp, spotContainer, itineraryContainer} from '../components';
 import store from '../store/store';
 import { syncHistoryWithStore } from 'react-router-redux';

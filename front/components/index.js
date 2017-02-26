@@ -9,7 +9,6 @@ import DestinationModal from './modal/destination-modal';
 import Login from './user/login';
 import Signup from './user/signup';
 import Spot from './itinerary/spot';
-import Places from './autocomplete/places';
 
 //import containers here:
 import mapContainer from './map/map-container';
@@ -32,7 +31,6 @@ export {
   landingPageContainer,
   Login,
   mapContainer,
-  Places,
   Profile,
   profileContainer,
   userContainer,
