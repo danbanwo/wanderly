@@ -4,11 +4,21 @@
 	height: 92vh;
 	background-position: center center;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	/*justify-content: center;*/
+	/*align-items: center;*/
 	flex-direction: column;
 	margin-bottom: -1px;
 	background-repeat: no-repeat;
+}
+
+.landingpage-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 32vh;
+	margin-left: 60vh;
+	position: fixed;
 }
 
 #login-popup {
@@ -16,26 +26,8 @@
 	justify-content: center;
 	flex-direction: column;
 	background-color: white;
-	align-self: flex-end;	
+	align-self: flex-end;
 }
-
-/*width: auto;
-	height: 200px;
-	border: 1px solid black;
-	border-radius: 10px;
-	background-color: white;
-	float: right;
-	margin-top: 1%;
-	margin-left: 60%;
-	padding: 20px;
-	display: none;
-
-	 IN YOUR LOGIN POP FUNCTION, YOURE GOING TO HAVE TO SAY
-	DOCUMENT.GET ELEMENT BY ID (#LOGINPOP) AND WRITE IT'S CSS
-	AS 'display: initial' or 'display: inherit'
-
-	DOM MANIPULATION ASK LEV FOR SYNTAX
-	*/
 
 
 .logo-land{
@@ -48,7 +40,7 @@
 	margin-bottom: 40px;
 }
 
-#join{
+#join {
 	background-color: #00A799;
 	border-radius: 4px;
 	width:256px;
@@ -63,6 +55,11 @@
 	margin-bottom: 15px;
 }
 
+#join:focus {
+	outline: none;
+}
+
+
 .box-div {
 	display: flex;
 	justify-content: center;
@@ -72,25 +69,32 @@
 	background-color: black;
 	border: 0;
 }
-/*#btn-signin:focus {
+#btn-signin:focus {
 	outline: none;
 }
-*/
-.p {
-/*	width: 170px;
-height: 20px;*/
-font-family: Chivo;
-font-size: 10px;
-line-height: 20px;
-color: #58585B;
+
+#p {
+	/*	width: 170px;
+	height: 20px;*/
+	font-family: Chivo;
+	font-size: 14px;
+	line-height: 20px;
+	color: #58585B;
+	margin-top:5px; 
+	align-self: center;
 }
 
-.signup-link {
-/*width: 48px;
-height: 17px*/;
-font-family: Chivo;
-font-size: 14px;
-font-weight: bold;
-line-height: 17px;
-color: #00A799;
+a.signup-link {
+	/*width: 48px;
+	height: 17px*/;
+	font-family: Chivo;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 17px;
+	color: #00A799;
+	text-decoration: none;
+}
+
+a.signup-link:focus {
+	outline: none;
 }
