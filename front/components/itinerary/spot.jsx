@@ -54,31 +54,40 @@ class SpotForm extends React.Component {
     if(pathname === '/profile' || pathname === 'profile') {
       return (
       <div className="addDestinationContainer">
-        <h1 className="addDestination">Add a Destination</h1>
+        <div className="addDestination">Add a Destination</div>
         <form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
 
           <div className='destLocation'>
             <div className="iconLocation"></div>
             <label>
-              <input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
+              <input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add an Adventure">
+              </input>
+            </label>
+          </div><br />
+
+          <div className='destCountryInfo'>
+            <div className='iconCountry'></div>
+            <label>
+              <input className="destCountry" onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Country of Adventure">
               </input>
             </label>
           </div><br />
 
           <div className='destClock'>
             <div className="iconClock"></div>
-            <label><input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Add Duration">
-            </input></label>
+              <label>
+                <input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Duration of Adventure">
+                </input>
+              </label>
           </div><br />
 
           <div className='destExpense'>
             <div className="iconExpense"></div>
-            <label><input className="destTotal"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
-            </input></label>
+              <label>
+                <input className="destTotal"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
+                </input>
+              </label>
           </div><br />
-
-          {//<label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country"></input></label><br />
-          }
 
           <button className="shareDest" type="submit">Share</button>
         </form>

@@ -1,6 +1,6 @@
 .addDestination {
   color:#484848;
-  font-size: 24px;
+  font-size: 1.3em;
   line-height: 29px;
 }
 
@@ -15,6 +15,7 @@ input.destLocation {
   border: 1px solid #D0D2D3;
   border-radius: 2px;
   text-indent: 10px;
+  margin-bottom: 0px;
 }
 
 input.destDuration {
@@ -37,6 +38,16 @@ input.destTotal {
   margin-top: -100px;
 }
 
+input.destCountry {
+  width: 256px;
+  height: 36px;
+  background-color: #FFFFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  text-indent: 10px;
+  margin-top: -100px;
+}
+
 .shareDest {
   background-color: #00A799;
   border-radius: 4px;
@@ -45,8 +56,8 @@ input.destTotal {
   height: 41px;
   color: white;
   font-size: .8em;
-  margin-left: 165px;
-  margin-top: 30px;
+  margin-left: 195px;
+  margin-top: 20px;
 }
 
 
@@ -54,6 +65,7 @@ input.destTotal {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
+  margin-bottom: 0px;
 }
 
 .destClock {
@@ -66,6 +78,12 @@ input.destTotal {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
+}
+
+.destCountryInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .iconLocation {
@@ -88,3 +106,12 @@ input.destTotal {
 	width: 16px;
 	background-repeat: none;
 }
+
+.iconCountry {
+  background-image: url('../ui/Icon_City.svg');
+  height: 23px;
+  width: 19px;
+  background-repeat: none;
+  margin-right: 11px;
+}
+
