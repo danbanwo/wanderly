@@ -33,7 +33,7 @@ class UploadComponent extends Component {
   		return (
   			<div className="uploadContainer">
   				<form action="/api/profile/upload" encType="multipart/form-data" method="post">
-  					<input id="file" type="file" name="upload" multiple/>
+  					<input id="spotfile" type="file" name="upload" multiple/>
   				</form>
   			</div>
   		)

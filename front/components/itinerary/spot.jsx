@@ -16,7 +16,8 @@ class SpotForm extends React.Component {
       description: '',
       lat: 0,
       lng: 0,
-      city: ''
+      city: '',
+      pictures:''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -196,9 +197,3 @@ class SpotForm extends React.Component {
 }
 
 export default SpotForm;
-
-//<input className="destLocation" onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
-//</input>
-
-//<input className="spots" onChange={this.handleChange} name="spot" type="text" placeholder="Add Spot">
-//</input>
