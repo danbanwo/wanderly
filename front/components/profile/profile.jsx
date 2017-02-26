@@ -29,7 +29,6 @@ class Profile extends Component {
 
   render() {
     return (
-
       <div id='master-container'>
         <Navbar routing={this.props.routing.locationBeforeTransitions} action={this.props.userLogout} profile={this.props.profile} />
         <div className='profileContainer'>
@@ -68,5 +67,6 @@ class Profile extends Component {
     )
   }
 }
+
 
 export default Profile;
