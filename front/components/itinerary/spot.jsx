@@ -1,4 +1,6 @@
 import React from 'react';
+
+import '../../styles/destForm.css';
 import '../../styles/modal.css';
 
 class SpotForm extends React.Component {
@@ -54,21 +56,31 @@ class SpotForm extends React.Component {
       <div className="addDestinationContainer">
         <h1 className="addDestination">Add a Destination</h1>
         <form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
-          <label>
-            <input className="location" onChange={this.handleChange} name="place" type="text" placeholder="Add City">
-            </input>
-          </label><br />
 
-          <label><input className="duration" onChange={this.handleChange} name="duration" value={this.state.duration} type="text" placeholder="Add Duration">
-          </input></label><br />
+          <div className='destLocation'>
+            <div className="iconLocation"></div>
+            <label>
+              <input className="destLocation" class='locationTxt' onChange={this.handleChange} name="place" type="text" placeholder="Add Adventure">
+              </input>
+            </label>
+          </div><br />
 
-          <label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country">
-          </input></label><br />
+          <div className='destClock'>
+            <div className="iconClock"></div>
+            <label><input className="destDuration" onChange={this.handleChange} name="duration" value={this.state.duration} class='durationTxt' type="text" placeholder="Add Duration">
+            </input></label>
+          </div><br />
 
-          <label><input className="total"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} type="text" placeholder="$0">
-          </input></label><br />
+          <div className='destExpense'>
+            <div className="iconExpense"></div>
+            <label><input className="destTotal"onChange={this.handleChange} name="total_spent" value={this.state.total_spent} class='totalTxt' type="text" placeholder="$0">
+            </input></label>
+          </div><br />
 
-          <button className="btn btn-default destination"type="submit">Share</button>
+          {//<label><input className="country"onChange={this.handleChange} name="country" value={this.state.country} type="text" placeholder="Add Country"></input></label><br />
+          }
+
+          <button className="shareDest"type="submit">Share</button>
         </form>
       </div>
       )
@@ -88,7 +100,7 @@ class SpotForm extends React.Component {
 
         <div className="location">
           <div id="locationSVG"></div>
-          <label><input  className="destination" onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="Add Destination">
+          <label><input  className="destination" onChange={this.handleChange} name="total" value={this.state.total} type="text" placeholder="Add City">
           </input></label><br />
         </div>
 
@@ -101,9 +113,9 @@ class SpotForm extends React.Component {
         <div className="btns">
           <div className="spotButtons">
           <div id="tagSVG"></div>
-            <button className="btn btn-default eat"type="button">Eat</button>
-            <button className="btn btn-default play"type="button">Play</button>
-            <button className="btn btn-default sleep"type="button">Sleep</button>
+            <button className="btn btn-default eat"type="button">Fun</button>
+            <button className="btn btn-default play"type="button">Food</button>
+            <button className="btn btn-default sleep"type="button">Lodging</button>
           </div>
         </div>
 

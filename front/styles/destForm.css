@@ -1,0 +1,90 @@
+.addDestination {
+  color:#484848;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+form.destinationForm{
+  margin-top: 30px;
+}	
+
+input.destLocation {
+  width: 256px;
+  height: 36px;
+  background-color: #FFFFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  text-indent: 10px;
+}
+
+input.destDuration {
+  width: 256px;
+  height: 36px;
+  background-color: #FFFFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+ 	text-indent: 10px;
+ 	margin-top: -100px;
+}
+
+input.destTotal {
+  width: 256px;
+  height: 36px;
+  background-color: #FFFFFF;
+  border: 1px solid #D0D2D3;
+  border-radius: 2px;
+  text-indent: 10px;
+  margin-top: -100px;
+}
+
+.shareDest {
+  background-color: #00A799;
+  border-radius: 4px;
+  border: none;
+  width: 89px;
+  height: 41px;
+  color: white;
+  font-size: .8em;
+  margin-left: 165px;
+  margin-top: 30px;
+}
+
+
+.destLocation {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.destClock {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.destExpense {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.iconLocation {
+	background-image: url('../ui/Icon_Location.svg');
+	height: 16px;
+	width: 13px;
+	background-repeat: none;
+}
+
+.iconClock {
+	background-image: url('../ui/Icon_Clock.svg');
+	height: 16px;
+	width: 16px;
+	background-repeat: none;
+}
+
+.iconExpense {
+	background-image: url('../ui/Icon_Expense_US.svg');
+	height: 16px;
+	width: 16px;
+	background-repeat: none;
+}
