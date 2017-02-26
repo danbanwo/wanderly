@@ -15,6 +15,7 @@ body, html {
   margin: 10px;
   vertical-align: top;
   margin-top: -30px;
+  cursor: pointer;
 }
 
 
@@ -27,6 +28,7 @@ body, html {
   height: 46.2px;
   width: 40px;
   margin-left: 80%;
+  cursor: pointer;
 }
 
 
@@ -119,7 +121,6 @@ hr.lineBreak {
 .spotDesc {
 	font-size: .7em;
 }
-
 
 .return_spot {
 	height: 48vh;
