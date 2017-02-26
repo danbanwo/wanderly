@@ -1,0 +1,61 @@
+
+.popbox { 
+	display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-right: 15px;
+    width: 220px;
+	height: 200px;
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+	border-radius: 4px;
+	align-items: center;
+	
+}
+
+.p {
+	font-family: Chivo;
+	font-size: 24px;
+	line-height: 29px;
+	color: #484848;
+	position: center;
+	align-self: center;
+	background-color: red;
+}
+
+.button-pop {
+	background-color: #00A799;
+	border-radius: 4px;
+	font-family: Chivo;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 17px;
+	color: #FFFFFF;
+	border-radius: 2px;
+	width:200px;
+	height:30px;
+	border: 0;
+}
+
+.button-pop:focus {
+	outline: none;
+}
+
+input.input-pop{
+	background-color: #FFFFFF;
+	border: 1px solid #D0D2D3;
+	border-radius: 2px;
+	width:200px;
+	height:30px;
+	font-family: Chivo;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A5A5A5;	
+}
+
+input.input-pop:focus {
+	outline: none;
+}
+
+

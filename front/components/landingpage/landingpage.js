@@ -4,6 +4,7 @@ import Navbar from '../navbar/navbar'
 import LandingLogin from '../landingpage/landinglogin';
 import { render } from 'react-dom';
 import '../../styles/landing.css';
+import '../../styles/login-nav.css';
 
 class LandingPage extends Component {
   constructor(props) {
@@ -19,15 +20,20 @@ class LandingPage extends Component {
       <div>
         <Navbar loginPop={this.loginPop} routing={this.props.routing.locationBeforeTransitions}/>
 
-        <div className='landingpage'>
-        <div id='login-popup'></div>
+<div className='landingpage'>
+<div id='login-popup'></div>
+        <div className='landingpage-logo'>
+        
           <div className='logo-land'></div>
           <button id='join'><Link id='join' to='/signup'>Join</Link></button>
            <div className='box-div'> 
             <p id='p'>Already have an account? <Link to='/login' className='signup-link'>Sign In</Link></p>
            </div>
         </div>
-      </div>
+
+
+</div>
+    </div>
     )
   }
 }

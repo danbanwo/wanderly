@@ -48,8 +48,8 @@ fieldset {
 
 .txt {
 	border: 1px solid #D0D2D3;
-  border-radius: 2px;
-  font-family: Chivo;
+    border-radius: 2px;
+ 	font-family: Chivo;
 	font-size: 14px;
 	color: #A5A5A5;
 	width: 256px;
@@ -67,6 +67,11 @@ fieldset {
 	text-align: center;
 	color: #FFFFFF;
 	border: 0;
+}
+
+
+input.txt:focus {
+	outline: none;
 }
 
 @media only screen and (max-width: 600px) {
