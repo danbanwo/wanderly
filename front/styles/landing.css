@@ -9,18 +9,14 @@
 	flex-direction: column;
 	margin-bottom: -1px;
 	background-repeat: no-repeat;
-
-
 }
 
 #login-popup {
-
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	background-color: white;
-		align-self: flex-end;
-	
+	align-self: flex-end;	
 }
 
 /*width: auto;
@@ -65,19 +61,16 @@
 	border: 0;
 	text-decoration: none;
 	margin-bottom: 15px;
-
-
 }
 
 .box-div {
 	display: flex;
 	justify-content: center;
-
 } 
+
 #btn-signin {
 	background-color: black;
 	border: 0;
-	
 }
 /*#btn-signin:focus {
 	outline: none;

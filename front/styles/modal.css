@@ -27,12 +27,11 @@ input#file{
 #modal-middle {
   height: 100vh;
   width: 100vw;
-  /*background: grey;*/
-  /*opacity: 0.8;*/
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(192,192,192,0.7);
 }
 
 #modal-inner {
@@ -58,23 +57,14 @@ input#file{
   align-items: center;
 }
 
-/*div.addDestinationContainer{
-  display: flex;
-  justify-content: center;
-}
-*/
+/*---------/Modal--------*/
 
-h1.addDestination{
-  color:#484848;
-  font-size: 24px;
-  line-height: 29px;
-  margin-top:-45px;
-  margin-left: -30px;
 
-}
+/*---------Destination Form--------*/
 
-form.destinationForm{
-  margin-top:25px;
+.addNew {
+  margin-left: 50px;
+  font-size: 1.3em;
 }
 
 input[type="text"]{
@@ -83,43 +73,22 @@ input[type="text"]{
 }
 
 input.location{
-  width:256px;
-  height:36px;
-  background-color: #FFFFFF;
-  border: 1px solid #D0D2D3;
-  border-radius: 2px;
-}
-input.duration{
-  width:256px;
-  height:36px;
+  width: 256px;
+  height: 36px;
   background-color: #FFFFFF;
   border: 1px solid #D0D2D3;
   border-radius: 2px;
 }
 input.country{
-  width:256px;
-  height:36px;
-  background-color: #FFFFFF;
-  border: 1px solid #D0D2D3;
-  border-radius: 2px;
-}
-input.total{
-  width:256px;
-  height:36px;
+  width: 256px;
+  height: 36px;
   background-color: #FFFFFF;
   border: 1px solid #D0D2D3;
   border-radius: 2px;
 }
 
-button.btn.btn-default.destination{
-  background-color: #00A799;
-  border-radius: 4px;
-  width: 89px;
-  height:41px;
-  color:white;
-}
 
-/*---------/Modal--------*/
+/*---------/Destination Form--------*/
 
 /*---------Modal Button--------*/
 
@@ -135,11 +104,9 @@ button.btn.btn-default.destination{
   background-repeat: none;
   height: 16px;
   width: 16px;
-  margin-top: 10px;
-  margin-right: 20px;
-  align-self: flex-end;
-  margin-left: -20px;
-  position: absolute;
+  margin-top: 25px;
+  margin-right: 24px;
+  cursor: pointer;
 }
 /*---------/Modal Button--------*/
 
@@ -150,12 +117,12 @@ div.addNewSpot{
   color:#484848;
   font-size: 24px;
   line-height: 29px;
-  margin-top:-160px;
+  margin-top: -160px;
   margin-left: 20px;
 }
 
 div.spotContainer{
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
@@ -175,14 +142,14 @@ div.city{
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-left:50px;
+  margin-left: 50px;
 }
 
 div.location{
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-left:53px;
+  margin-left: 53px;
 }
 
 div.btns{
@@ -193,8 +160,8 @@ div.btns{
 }
 
 input.spots{
-  width:256px;
-  height:36px;
+  width: 256px;
+  height: 36px;
   background-color: #FFFFFF;
   border: 1px solid #D0D2D3;
   border-radius: 2px;
@@ -203,8 +170,8 @@ input.spots{
 }
 
 input.destination{
-  width:256px;
-  height:36px;
+  width: 256px;
+  height: 36px;
   background-color: #FFFFFF;
   border: 1px solid #D0D2D3;
   border-radius: 2px;
@@ -214,8 +181,8 @@ input.destination{
 }
 
 input.total{
-  width:256px;
-  height:36px;
+  width: 256px;
+  height: 36px;
   background-color: #FFFFFF;
   border: 1px solid #D0D2D3;
   border-radius: 2px;
@@ -225,39 +192,39 @@ input.total{
 }
 
 button.btn.btn-default.eat{
-  width:57px;
-  height:36px;
+  width: 57px;
+  height: 36px;
   background-color: #F4F4F4;
-  border:none;
+  border: none;
   margin-left: 15px;
 }
 
 button.btn.btn-default.play{
-  width:57px;
-  height:36px;
+  width: 57px;
+  height: 36px;
   background-color: #F4F4F4;
-  border:none;
+  border: none;
   margin-left: 15px;
 }
 
 button.btn.btn-default.sleep{
-  width:57px;
-  height:36px;
+  width: 75px;
+  height: 36px;
   background-color: #F4F4F4;
-  border:none;
+  border: none;
   margin-left: 15px;
 }
 
 input.describe{
-  width:220px;
-  height:84px;
+  width: 220px;
+  height: 84px;
   background-color: #FFFFFF;
   border: 1px solid #D0D2D3;
   border-radius: 4px;
   padding-left: 5%;
-  padding-bottom:17%;
+  padding-bottom: 17%;
   margin-left: 135px;
-  margin-top:35px;
+  margin-top: 35px;
 }
 
 button.btn.btn-default.share{
@@ -272,8 +239,8 @@ button.btn.btn-default.share{
 
 div#expenseSVG{
   background-image: url('../ui/Icon_Expense_US.svg');
-  height:15.5px;
-  width:15.5px;
+  height: 15.5px;
+  width: 15.5px;
   background-repeat: none;
   display: inline-block;
   margin-left: -40px;
@@ -282,28 +249,28 @@ div#expenseSVG{
 
 div#locationSVG{
   background-image: url('../ui/Icon_Location.svg');
-  height:16px;
-  width:13px;
+  height: 16px;
+  width: 13px;
   background-repeat: none;
 }
 
 div#tagSVG{
   background-image: url('../ui/Icon_Tag.svg');
-  height:15px;
-  width:15px;
+  height: 15px;
+  width: 15px;
   background-repeat: none;
   display: inline-block;
 }
 
 div#citySVG{
   background-image: url('../ui/Icon_City.svg');
-  height:15px;
-  width:15px;
+  height: 15px;
+  width: 15px;
   background-repeat: none;
   display: inline-block;
 }
 
 input#file{
-  margin-left:-187px;
-  margin-top:95px;
+  margin-left: -187px;
+  margin-top: 95px;
 }
