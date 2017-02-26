@@ -31,9 +31,7 @@ input#file{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: grey;
-  opacity: 0.8;
-/*  still have to fix modal background blur */
+  background-color: rgba(192,192,192,0.7);
 }
 
 #modal-inner {
