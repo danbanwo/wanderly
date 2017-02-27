@@ -34,7 +34,7 @@ const profileReducer = (state=defaultState, action) => {
     break;
 
     case 'NEW_PROFILE':
-    return state
+    return action.payload
     break;
     default: return state
   }

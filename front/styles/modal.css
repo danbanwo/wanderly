@@ -7,9 +7,21 @@ body, html {
 }
 
 /*---------Modal Pic--------*/
-input#file{
-  margin-left:-187px;
-  margin-top:95px;
+input#spotfile {
+  display: inline-block;
+  width: 100px;
+  padding: 120px 0 0 0;
+  height: 100px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url('http://i61.photobucket.com/albums/h58/tionnaw95/default_zpsjmlmomqn.png') center center no-repeat ;
+  border-radius: 20px;
+  background-size: cover;
+  margin-left: -187px;
+  margin-top: -136px;
+  position: absolute;
 }
 /*---------/Modal Pic--------*/
 
