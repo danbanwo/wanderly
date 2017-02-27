@@ -66,11 +66,11 @@ export const submitProfile = (data) => {
   return (dispatch) => {
     axios.post('/api/profile', data)
     .then((response) => {
-      dispatch(newProfile(response))
+      dispatch(newProfile(response.data))
       console.log(response)
     })
     .then(() => {
-      history.push('/')
+      history.push('/profile')
     })
   }
 }
