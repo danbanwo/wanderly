@@ -30,7 +30,7 @@ input.firstName{
 	border-radius: 2px;
 	margin-top: 25px;
 	margin-left: 11px;
-	padding-left: 5%;
+	padding-left: 6.5%;
 	display:flex;
 	flex-wrap: wrap;
 }
@@ -42,7 +42,7 @@ input.lastName{
 	border-radius: 2px;
 	margin-top: 25px;
 	margin-left: 11px;
-	padding-left: 5%;
+	padding-left: 6.5%;
 }
 button.btn.btn-default.dropdown-toggle{
 	width: 256px;
@@ -56,34 +56,112 @@ button.btn.btn-default.dropdown-toggle{
 	margin-top: 15px;
 	cursor: pointer;
 }
-div.btn-group{
-	margin-left: -308px;
-	position:relative;
-	display: inline-block;
+
+div.dropdown{
+	position: relative;	
+	width:268px;
 }
 
-*{
-	box-sizing: border-box;
+div.dropdown a{
+	text-decoration: none;
+	color:#00A799;
 }
-/*ul.dropdown-menu.scrollable-menu > li{
-	display: inline-block;
-}
-*/
-ul.dropdown-menu{
+div.dropdown-content{
+	list-style: none;
+	font-size:16px;
+	display: none;
 	position: absolute;
-	font-size: 14px;
-	background-color: white;
-	box-shadow: 0 6px 12px rbga(0,0,0, .175);
-	background-clip: padding-box;
-}
-ul{
-	margin-top: 0px;
-	margin-left: 10px;
+	background-color: #ffff;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+	/*padding: 12px 16px;*/
+	
+	
+	width:256px;
+	margin-left:11px;
 }
 
-/*.btn-group:hover ul{
+div.dropdown:hover div.dropdown-content{
 	display: block;
-}*/
+	background-color:#white;
+	padding:0;
+	overflow-y: auto;
+	height:160px;
+	position: relative;
+
+}
+
+div.usaSVG{
+  background-image: url('../ui/usa.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+
+div.canadaSVG{
+  background-image: url('../ui/canda.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.japanSVG{
+  background-image: url('../ui/japan.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.chinaSVG{
+  background-image: url('../ui/china.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.afghanSVG{
+  background-image: url('../ui/afghanistan.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.southAfricaSVG{
+  background-image: url('../ui/southAfrica.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.koreaSVG{
+  background-image: url('../ui/korea.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.brazilSVG{
+  background-image: url('../ui/brazil.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.barbadosSVG{
+  background-image: url('../ui/barbados.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
+div.mexicoSVG{
+  background-image: url('../ui/mexico.svg');
+  height: 15px;
+  width: 15px;
+  background-repeat: none;
+  display: inline-block;
+}
 .btn .caret {
 	margin-top: 8px;
 	margin-left: 125px;
@@ -104,11 +182,11 @@ button.btn.btn-default.continue{
 	color: white;
 	margin-left: 11px;
 	margin-top: 25px;
-	padding-right:9%;
+	padding-right:7%;
 }
 
 a#skippie{
-	margin-left: 100px;
+	margin-left: 106px;
 	display:flex;
 	margin-top:25px;
 	font-weight: bold;
@@ -116,20 +194,3 @@ a#skippie{
 	font-size: 14px;
 	line-height: 17px;
 }
-
-
-/*ul.dropdown-content a{
-	text-decoration: none;
-	display: block;
-	color: #00A799;
-}*/
-/*
-div.dropdown-content a:hover{
-	background-color: #00A799;
-	color:white;
-}
-
-div.dropdown:hover div.dropdown-content{
-	display: block;
-}*/
-

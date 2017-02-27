@@ -3,7 +3,7 @@ import SpotForm from '../itinerary/spot';
 import UploadComponent from '../profile/uploadComponent';
 
 import '../../styles/modal.css';
-
+import '../../styles/modalPic.css';
 class DestinationModal extends Component {
   constructor(props) {
     super(props);

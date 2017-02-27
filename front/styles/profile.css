@@ -27,10 +27,9 @@ body,html{
 }
 
 .profilePhoto {
-	/*height: 200px;*/
-	justify-content: center;
-	width: 200px;
-	border-radius: 20px;
+  justify-content: center;
+  width: 200px;
+  border-radius: 20px;
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -95,8 +94,8 @@ a#edit{
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 17px;
-	margin-left: 0px;
-	margin-top: 5px;
+	/*margin-left: -170px;*/
+	/*margin-top: 30px;*/
 }
 
 hr {
