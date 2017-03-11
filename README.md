@@ -49,10 +49,10 @@ $ npm start
 ```
 
 ##Introduction
-Welcome to Wanderly. The social travel application where we make sharing your adventures and budget/itinerary easy.
+Welcome to Wanderly. The social travel application where we make sharing your adventures, itinerary and budget easy.
 
 ##The journey so far
-The **why** behind our app is to give wanderers a platform to share their adventures as experienced while also helping other wanderers plan for similar experiences.
+The **why** behind our app is to give wanderers a platform to share their adventures as experienced, while helping other wanderers plan for similar experiences.
 
 ###What can it do?
 ![picture](projectpics/landingpage.png)
@@ -78,7 +78,7 @@ After signing up, your profile will assist you in keeping track of both your exp
 
 ####Overview of All Destinations
 All the adventures you've ever been on presented to you on a beautiful interface.
- * Browse a list of destinations you've been on.
+ * Browse a list of destinations you've been to.
  * Better yet, use our interactive map to navigate every adventure you've been on til date.
  ![picture](projectpics/profile-destinations_page.png)
  
@@ -96,8 +96,8 @@ Currently on another one of your adventures? No worries! With Wanderly, you can 
 
 
 ####Overview of All Wanderspots
-In Wanderly, a Wanderspot is a term given to an establishment, point of interest (POI), or anything in between a user visits while on an adventure. All Wanderspots are contained within an itinerary, and are represented as Markers on the map.
-Clicking on a destination will instantly populate a list of Wanderspots visited during the clicked adventure.
+In Wanderly, a Wanderspot is a term given to an establishment, point of interest (POI), or anything in between, visited by a user while on an adventure. All Wanderspots are contained within an itinerary, and are represented as Markers on the map.
+Clicking on a destination will instantly populate a list of Wanderspots and Markers visited during the clicked adventure.
 ![picture](projectpics/profile-wanderspots_page.png)
 #####fig 6. Wanderspots Page.
 ***
