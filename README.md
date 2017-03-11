@@ -81,6 +81,7 @@ All the adventures you've ever been on presented to you on a beautiful interface
  * Browse a list of destinations you've been on.
  * Better yet, use our interactive map to navigate every adventure you've been on til date.
  ![picture](projectpics/profile-destinations_page.png)
+ 
 #####fig 4. Destination Page.
 ***
 
