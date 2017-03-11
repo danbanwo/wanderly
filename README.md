@@ -55,24 +55,31 @@ Welcome to Wanderly. The social travel application where we make sharing your ad
 The **why** behind our app is to give wanderers a platform to share their adventures as experienced while also helping other wanderers plan for similar experiences.
 
 ###What can it do?
+![picture](projectpics/landingpage.png)
 ####Profile Creation
 Start your journey around Wanderly by creating a profile. Tell us your name, some of your interests, a quick bio about you, and say hello by uploading a cool picture of yourself!
 After signing up, your profile will assist you in keeping track of both your expenses and experiences.
+![picture](projectpics/createprofile-uploadpic.png)
+![picture](projectpics/createprofile-interests.png)
 
 ####Overview of All Destinations
 All the adventures you've ever been on presented to you on a beautiful interface.
  * Browse a list of destinations you've been on.
  * Better yet, use our interactive map to navigate every adventure you've been on til date.
+ ![picture](projectpics/profile-destinations_page.png)
 
 ####New Destination
 Currently on another one of your adventures? No worries! With Wanderly, you can add destinations on the fly, and begin to collect memories as you go.
+![picture](projectpics/profile-add_destination_modal.png)
 
 ####Overview of All Wanderspots
 In Wanderly, a Wanderspot is a term given to an establishment, point of interest (POI), or anything in between a user visits while on an adventure. All Wanderspots are contained within an itinerary, and are represented as Markers on the map.
 Clicking on a destination will instantly populate a list of Wanderspots visited during the clicked adventure.
+![picture](projectpics/profile-wanderspots_page.png)
 
 ####New Wanderspot
 Similar to the ease of creating a new destination, creating a new Wanderspot is a breeze! Just Click on the add button while on a trip, and your new Wanderspot pops up on your list of Wanderspots instantly. You can add the name of the spot visited, amount spent, a brief description of what you did, and even upload a memorable photo.
+![picture](projectpics/profile-wanderspots_modal.png)
 
 ###The Future of Wanderly
 We absolutely believe this is a cool way to share experiences while helping others plan budget-conscious trips of their own. To further flesh out the vision we have for Wanderly, we'll be looking to build the following features as soon as possible:
