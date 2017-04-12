@@ -54,7 +54,7 @@ $ npm start
 ```
 
 ## The journey so far
-The **why** behind our app is to give wanderers a platform to share their adventures as experienced while also helping other wanderers plan for similar experiences.
+The **why** behind our app is to give wanderers a platform to share their adventures as experienced, while also helping other wanderers plan for similar experiences, making them more financially responsible.
 
 ### What can it do?
 ***
@@ -105,7 +105,7 @@ Clicking on a destination will instantly populate a list of Wanderspots visited 
 
 
 #### New Wanderspot
-Similar to the ease of creating a new destination, creating a new Wanderspot is a breeze! Just Click on the add button while on a trip, and your new Wanderspot pops up on your list of Wanderspots instantly. You can add the name of the spot visited, amount spent, a brief description of what you did, and even upload a memorable photo.
+Similar to the ease of creating a new destination, creating a new Wanderspot is a breeze! Just click on the add button while on a trip, and your new Wanderspot pops up on your list of Wanderspots instantly. You can add the name of the spot visited, amount spent, a brief description of what you did, and even upload a memorable photo.
 ![picture](projectpics/profile-wanderspots_modal.png)
 ##### fig 7. Wanderspots Page - Add Wanderspot Modal.
 ***
@@ -115,7 +115,7 @@ Similar to the ease of creating a new destination, creating a new Wanderspot is 
 
 
 ### The Future of Wanderly
-We absolutely believe this is a cool way to share experiences while helping others plan budget-conscious trips of their own. To further flesh out the vision we have for Wanderly, we'll be looking to build the following features as soon as possible:
+We absolutely believe this is a cool way to share experiences while helping others plan budget-conscious trips of their own. To further flesh out the vision we have for Wanderly, we'll be looking to build the following features:
 * Budget
 * Album for each destination
 * Search functionality filterable by destinations(country, city, states)/POI etc
