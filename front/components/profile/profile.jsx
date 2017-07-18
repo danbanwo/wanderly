@@ -8,7 +8,7 @@ import Itinerary from '../itinerary/itinerary-container';
 import WanderMap from '../map/map';
 import Navbar from '../navbar/navbar';
 import DestinationModal from '../modal/destination-modal';
-import Logout from '../user/Logout';
+import Logout from '../user/logout';
 
 import '../../styles/profile.css';
 import '../../styles/itinerary.css';
