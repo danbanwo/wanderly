@@ -23,8 +23,6 @@ export const userLogin = (info) => (
   (dispatch) => {
     axios.post('/login', info)
     .then((user) => {
-			console.log('INFO', info)
-			console.log('user', user)
   		dispatch(user_login(user.data))
     })
 		.then(() => {
