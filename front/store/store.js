@@ -1,5 +1,4 @@
 import { createStore, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
 import promise from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
 import { routerMiddleware, push } from 'react-router-redux';
@@ -9,7 +8,7 @@ import { browserHistory } from 'react-router';
 import allReducers from '../reducers'
 
 const browser = routerMiddleware(browserHistory)
-const middleware = applyMiddleware(logger(), promise(), thunk, browser);
+const middleware = applyMiddleware(promise(), thunk, browser);
 
 const store = createStore(allReducers, middleware);
 
