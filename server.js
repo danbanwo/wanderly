@@ -8,6 +8,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
 var morgan = require('morgan');
+var PORT = process.env.PORT || 3000
 
 
 
@@ -47,7 +48,7 @@ app.get('/*', function (req, res) {
 
 
 db.sequelize.sync().then(function () {
-  app.listen(3000, () => console.log('Server running on Port 3000'));
+  app.listen(PORT, () => console.log('Server running on Port ' + PORT));
 });
 
 module.exports = app;
