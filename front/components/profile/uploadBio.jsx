@@ -16,7 +16,7 @@ class UploadBio extends Component {
 	handleClick = (e) => {
 		let check = this.state.categories
 		if(check.indexOf(e.target.name) === -1) {
-			this.setState({categories: this.state.categories.concat(e.target.name)})
+			this.setState({categories: check.categories.concat(e.target.name)})
 		} else {
 			check.splice(check.indexOf(e.target.name), 1)
 		}
