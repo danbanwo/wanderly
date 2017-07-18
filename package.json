@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "webpack"
+    "heroku-postbuild": "webpack"
   },
   "repository": {
     "type": "git",
