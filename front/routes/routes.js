@@ -15,7 +15,6 @@ const Routes = (props) => (
       <Route path='/' component={landingPageContainer} />
       <Route path='/login' component={userContainer} />
       <Route path='signup' component={userContainer} />
-            {/* <Route path='/' component={App}> */}
       <Route component={profileContainer}>
         <Route path='/profile' component={destinationContainer}/>
         <Route path='itinerary/:destId' component={itineraryContainer} />

@@ -20,8 +20,6 @@ export const getProfile = (id) => {
   }
 }
 
-
-//------------------------------------------------//
 const profileItem = (data) => {
   return {
     type: 'ADD_PROFILE_ITEM',
@@ -36,7 +34,6 @@ export const addProfileItem = (profile) => {
 }
 
 
-//------------------------------------------------//
 const user_auth = (data) => ({
 	type: "USER_LOGIN",
 	data: data,
@@ -50,13 +47,9 @@ export const userAuth = () => (
     .then((user) => {
   		dispatch(user_auth(user.data))
     })
-		// .then(() => {
-		// 	history.push('/')
-		// })
   }
 );
 
-//------------------------------------------------//
 const newProfile = (data) => ({
   type: 'NEW_PROFILE',
   payload: data
@@ -67,7 +60,6 @@ export const submitProfile = (data) => {
     axios.post('/api/profile', data)
     .then((response) => {
       dispatch(newProfile(response.data))
-      console.log(response)
     })
     .then(() => {
       history.push('/profile')
@@ -84,10 +76,8 @@ const addProfileImage = (data) => {
 
 export const uploadImage = (form) => {
   return (dispatch) => {
-    // const config = { headers: { 'Content-Type': 'multipart/form-data' } };
     axios.post("api/profile/upload", form)
     .then((imagePath) => {
-        console.log(imagePath)
       dispatch(addProfileImage(imagePath.data))
     })
     .then(() => {

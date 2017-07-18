@@ -7,12 +7,10 @@ class Logout extends Component {
 	}
 
 	handleSubmit = (e) => {
-		// e.preventDefault()
 		this.props.actions()
 	}
 
 	render(){
-		console.log(this.props.actions())
 		return(
 			<div>
 				<button onClick={this.handleSubmit}>Log out!</button>

@@ -18,5 +18,3 @@ const userReducer = (state = _defaultState, action) => {
 
 
 export default userReducer;
-
-//

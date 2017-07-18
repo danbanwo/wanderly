@@ -11,7 +11,6 @@ class DestinationModal extends Component {
 
   render() {
     const { pathname } = this.props
-    console.log(pathname)
     return (
       <div id='modal-outer'>
         <div id='modal-middle'>

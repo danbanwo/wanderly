@@ -11,7 +11,6 @@ class LandingLogin extends Component {
 
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
-    console.log(e.target.name, e.target.value)
   }
 
   handleSubmit = () => {
@@ -19,7 +18,6 @@ class LandingLogin extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className='popbox'>
       <p>Sign In</p>

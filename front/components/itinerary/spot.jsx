@@ -29,14 +29,12 @@ class SpotForm extends React.Component {
 //Handles autocomplete component change
   handlePlaceChange = (address) => {
     this.setState({ place: address })
-    console.log(address)
   }
 
 
 //Handles autocomplete component change
   handleSpotChange = (address) => {
     this.setState({ spot: address })
-    console.log(address)
   }
 
 
@@ -44,8 +42,7 @@ class SpotForm extends React.Component {
   handleDestSelect = (address, placeId) => {
     let place = this.state.place
     geocodeByAddress(place,  (err, { lat, lng }) => {
-      if (err) { console.log('Oh no!', err) }
-      console.log(`Yay! got latitude and longitude for ${place}`, { lat, lng })
+      if (err) { throw(err) }
       this.setState({lat, lng})
     })
   }
@@ -54,8 +51,7 @@ class SpotForm extends React.Component {
   handleSpotSelect = (address, placeId) => {
     let spot = this.state.spot
     geocodeByAddress(spot,  (err, { lat, lng }) => {
-      if (err) { console.log('Oh no!', err) }
-      console.log(`Yay! got latitude and longitude for ${spot}`, { lat, lng })
+      if (err) { throw(err) }
       this.setState({lat, lng})
     })
   }
@@ -69,8 +65,6 @@ class SpotForm extends React.Component {
     this.props.addSpot({
       ...this.state,
       DestinationId: destId,
-      // lat: 52.375218,
-      // lng:4.883977
     })
     this.props.closeButton()
     e.preventDefault()
@@ -81,19 +75,15 @@ class SpotForm extends React.Component {
     this.props.addDestination({
       ...this.state,
       ProfileId: this.props.profile.id,
-      // lat: 6.465422,
-      // lng: 3.406448
     })
     this.props.closeButton()
     e.preventDefault()
   }
 
   render() {
-    console.log(this.props)
     const destLocation = {
       root: 'destLocation',
       input: 'destLocation',
-      // autocompleteContainer: 'my-autocomplete-container'
     }
 
     const spots = {

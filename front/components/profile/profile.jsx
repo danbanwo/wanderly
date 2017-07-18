@@ -55,7 +55,6 @@ class Profile extends Component {
                 <div className='addDest' onClick={this.displayModal}></div>
                 <hr />
                 {this.props.children}
-                {/* <Destination destinations={this.props.destinations.destinations} /> */}
               </div>
             </div>
 
