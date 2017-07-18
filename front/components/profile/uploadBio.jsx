@@ -16,14 +16,15 @@ class UploadBio extends Component {
 	handleClick = (e) => {
 		let check = this.state.categories
 		if(check.indexOf(e.target.name) === -1) {
-			this.setState({categories: check.categories.concat(e.target.name)})
+			check = check.categories.concat(e.target.name)
+			this.setState({...this.state, categories: check})
 		} else {
 			check.splice(check.indexOf(e.target.name), 1)
 		}
 	}
 
 	handleChange = (e) => {
-		this.setState({catch_phrase: e.target.value})
+		this.setState({...this.state, catch_phrase: e.target.value})
 	}
 
 	submitProfile = () => {
