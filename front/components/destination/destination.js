@@ -33,7 +33,8 @@ class Destination extends Component {
   }
 
   render() {
-    if(this.props.profile.id) {
+      const { destinations } = this.props.destinations;
+    if(this.props.profile.id && destinations.length !== 0) {
       return (
         <div id='master_itinerary'>
           {this.displayDestination()}
@@ -41,7 +42,7 @@ class Destination extends Component {
       )
     }
     else {
-      return (<div>Loading...</div>)
+      return (<div>Add a Destination!</div>)
     }
   }
 }
