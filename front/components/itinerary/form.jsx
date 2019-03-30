@@ -1,9 +1,10 @@
 import React from 'react';
+import ModalInput from '../form/input';
 import PlacesAutocomplete, { geocodeByAddress, geocodeByPlaceId } from 'react-places-autocomplete';
 import '../../styles/destForm.css';
 import '../../styles/modal.css';
 
-class SpotForm extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,7 +75,9 @@ class SpotForm extends React.Component {
   handleDestinationSubmit = (e) => {
     this.props.addDestination({
       ...this.state,
-      ProfileId: this.props.profile.id,
+      ProfileId: this.props.profile.profileInfo.id,
+      // lat: 6.465422,
+      // lng: 3.406448
     })
     this.props.closeButton()
     e.preventDefault()
@@ -90,6 +93,15 @@ class SpotForm extends React.Component {
       root: 'spots',
       input: 'spots'
     }
+    const testArray = [{
+      handleChange: this.handlePlaceChange,
+      handleSelect: this.handleDestSelect,
+      name: '',
+      place: true,
+      placeHolder: 'Add Adventure',
+      svgType: 'iconLocation',
+      value: this.state.place,
+    }]
 
     const { pathname } = this.props
     if(pathname === '/profile' || pathname === 'profile') {
@@ -97,8 +109,12 @@ class SpotForm extends React.Component {
       <div className="addDestinationContainer">
         <h1 className="addDestination">Add a Destination</h1>
         <form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
-
-          <div className='destLocation'>
+          {
+            testArray.map(arr => (
+              <ModalInput {...arr} />
+            ))
+          }
+          {/* <div className='destLocation'>
             <div className="iconLocation"></div>
             <label>
               <PlacesAutocomplete
@@ -109,7 +125,7 @@ class SpotForm extends React.Component {
                 classNames={destLocation}
               />
             </label>
-          </div><br />
+          </div><br /> */}
 
           <div className='destClock'>
             <div className="iconClock"></div>
@@ -186,4 +202,4 @@ class SpotForm extends React.Component {
   }
 }
 
-export default SpotForm;
+export default Form;

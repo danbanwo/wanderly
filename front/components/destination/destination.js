@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { render } from 'react-dom';
-import DestinationModal from '../modal/destination-modal';
+import DestinationModal from '../modal/modal';
 
 import '../../styles/destination.css'
 
@@ -33,8 +33,8 @@ class Destination extends Component {
   }
 
   render() {
-      const { destinations } = this.props.destinations;
-    if(this.props.profile.id && destinations.length !== 0) {
+
+    if(this.props.profile.profileInfo.UserId) {
       return (
         <div id='master_itinerary'>
           {this.displayDestination()}
