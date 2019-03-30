@@ -9,7 +9,7 @@ const userReducer = (state = _defaultState, action) => {
 			return action.data
 			break;
 		case "USER_LOGOUT":
-			return action
+			return action.user
 			break;
 		default:
 			return state;

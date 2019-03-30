@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import SpotForm from '../itinerary/spot';
+import Form from '../itinerary/form';
 import UploadComponent from '../profile/uploadComponent';
 
 import '../../styles/modal.css';
 
-class DestinationModal extends Component {
+class Modal extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     const { pathname } = this.props
-    console.log(pathname)
+
     return (
       <div id='modal-outer'>
         <div id='modal-middle'>
@@ -20,7 +20,7 @@ class DestinationModal extends Component {
               <div id='close' onClick={this.props.closeButton}></div>
             </div>
             <div id='modal-text'>
-              <SpotForm closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />
+              <Form closeButton={this.props.closeButton} addSpot={this.props.addSpot} addDestination={this.props.addDestination} profile={this.props.profile} pathname={this.props.pathname} />
               {pathname === '/profile' || pathname ==='profile' ? null : <UploadComponent pathname={this.props.pathname} />}
             </div>
           </div>
@@ -30,4 +30,4 @@ class DestinationModal extends Component {
   }
 }
 
-export default DestinationModal;
+export default Modal;

@@ -5,10 +5,10 @@ import App from './app';
 import Destination from './destination/destination';
 import Profile from './profile/profile';
 import Wandermap from './map/map';
-import DestinationModal from './modal/destination-modal';
+import DestinationModal from './modal/modal';
 import Login from './user/login';
 import Signup from './user/signup';
-import Spot from './itinerary/spot';
+import Spot from './itinerary/form';
 
 //import containers here:
 import mapContainer from './map/map-container';

@@ -4,8 +4,8 @@ class LandingLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: ''
+      email: 'danbanwo@gmail.com',
+      password: '1234'
     }
   }
 
@@ -19,15 +19,14 @@ class LandingLogin extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className='popbox'>
       <p>Sign In</p>
         <label name='email'>
-          <input className='input-pop' name='email' type='text' placeholder='Email' onChange={this.handleChange}></input>
+          <input className='input-pop' name='email' type='text' placeholder='Email' onChange={this.handleChange} value={this.state.email}></input>
         </label>
         <label name='password'>
-          <input className='input-pop' name='password' type='password' placeholder='Password' onChange={this.handleChange}></input>
+          <input className='input-pop' name='password' type='password' placeholder='Password' onChange={this.handleChange} value={this.state.password}></input>
         </label>
         <input  className='button-pop' type='button' value='sign in' onClick={this.handleSubmit}></input>
       </div>

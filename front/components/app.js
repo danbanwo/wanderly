@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './navbar/navbar';
+import Navbar from './navbar/container';
 
 const App = (props) => {
-  console.log(props)
   return(
     <div>
-      <Navbar pathname={props.location.pathname}/>
+      <Navbar />
       {props.children}
     </div>
   )
