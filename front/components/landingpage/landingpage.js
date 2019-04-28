@@ -17,24 +17,24 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className='landingpage'>
-        <div className='login__block-wrapper'>
-          <div id='login-popup'></div>
-          <div className='landingpage-logo'>
+      <div>
+        <Navbar loginPop={this.loginPop} routing={this.props.routing.locationBeforeTransitions}/>
 
-            <section className='login__block'>
-              <div className='logo-land'></div>
-              <button id='join'><Link id='join' to='/signup'>Join</Link></button>
-              <div className='box-div'>
-                <p id='p'>Already have an account? <Link to='/login' className='signup-link'>Sign In</Link></p>
-              </div>
-            </section>
-          </div>
+<div className='landingpage'>
+<div id='login-popup'></div>
+        <div className='landingpage-logo'>
 
-
+          <div className='logo-land'></div>
+          <button id='join'><Link id='join' to='/signup'>Join</Link></button>
+           <div className='box-div'>
+            <p id='p'>Already have an account? <Link to='/login' className='signup-link'>Sign In</Link></p>
+           </div>
         </div>
-      </div>
-    );
+
+
+</div>
+    </div>
+    )
   }
 }
 

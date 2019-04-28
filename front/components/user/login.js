@@ -7,10 +7,7 @@ import '../../styles/user.css';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {
-      email: 'danbanwo@gmail.com',
-      password: '1234'
-    }
+		this.state = {email: '', password: '' }
 	}
 
 	handleSubmit = (e) => {

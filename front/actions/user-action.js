@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { history } from '../routes/routes';
+import {browserHistory as history} from 'react-router';
 
 
 const user_login = (data) => ({
@@ -23,6 +23,8 @@ export const userLogin = (info) => (
   (dispatch) => {
     axios.post('/login', info)
     .then((user) => {
+			console.log('INFO', info)
+			console.log('user', user)
   		dispatch(user_login(user.data))
     })
 		.then(() => {
@@ -43,11 +45,14 @@ export const userSignUp = (info) => (
   }
 );
 
-export const userLogout = () =>
+export const userLogout = () =>(
   (dispatch) => {
-   axios.get('/logout')
+   return axios.get('/logout')
     .then((user) => {
-      history.push('/')
       dispatch(user_logout(user))
-    })
-  }
+      })
+			.then(() => {
+				history.push('/')
+			})
+    }
+  )

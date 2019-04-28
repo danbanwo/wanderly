@@ -9,12 +9,8 @@ import allReducers from '../reducers'
 
 const browser = routerMiddleware(browserHistory)
 const middleware = applyMiddleware(logger(), promise(), thunk, browser);
-const initialize = JSON.parse(sessionStorage.getItem('Wanderly')) || {};
-const store = createStore(allReducers, initialize, middleware);
 
-store.subscribe(() => {
-  sessionStorage.setItem('Wanderly', JSON.stringify(store.getState()));
-})
+const store = createStore(allReducers, middleware);
 
 
 //export store for use in the entry file

@@ -1,6 +1,6 @@
 const defaultState = {
   isAuth: false,
-  profileInfo: {
+  profile: {
     first_name: '',
     last_name: '',
     gender: '',
@@ -16,21 +16,17 @@ const defaultState = {
 const profileReducer = (state=defaultState, action) => {
   switch(action.type) {
     case 'USER_LOGIN':
-    return {...state, profileInfo: {...action.profileData}, isAuth: true}
-    break;
-    
-    case 'USER_LOGOUT':
-    return {isAuth: false}
+    return {...state, ...action.profileData, isAuth: true}
     break;
 
     case 'ADD_PROFILE_ITEM':
-    let profileInfo = {...state.profileInfo, ...action.payload}
-    return {...state, profileInfo}
+    let profile = {...state.profile, ...action.payload}
+    return {...state, profile: profile}
     break;
 
     case 'ADD_PROFILE_IMAGE':
-    let updateProfileImage = {...state.profileInfo, image: action.payload}
-    return {...state, profileInfo: updateProfileImage}
+    let image = {...state.profile, image: action.payload}
+    return {...state, profile: image}
     break;
 
     case 'NEW_PROFILE':
