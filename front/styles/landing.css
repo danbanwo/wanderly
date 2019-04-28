@@ -1,7 +1,7 @@
 .landingpage {
 	background-image: url('../ui/Landscape.png');
 	background-size: cover;
-	height: 100vh;
+	height: 92vh;
 	background-position: center center;
 	display: flex;
 	/*justify-content: center;*/
@@ -11,12 +11,14 @@
 	background-repeat: no-repeat;
 }
 
-.login__block {
+.landingpage-logo {
 	display: flex;
-	flex-direction: column;
-	height: 90vh;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	margin-top: 32vh;
+	margin-left: 60vh;
+	position: fixed;
 }
 
 #login-popup {
@@ -26,6 +28,7 @@
 	background-color: white;
 	align-self: flex-end;
 }
+
 
 .logo-land{
 	background-image: url('../ui/Wanderly-Logo.svg');

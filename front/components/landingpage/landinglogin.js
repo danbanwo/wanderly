@@ -4,14 +4,13 @@ class LandingLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'danbanwo@gmail.com',
-      password: '1234'
+      email: '',
+      password: ''
     }
   }
 
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
-    console.log(e.target.name, e.target.value)
   }
 
   handleSubmit = () => {
@@ -19,14 +18,15 @@ class LandingLogin extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className='popbox'>
       <p>Sign In</p>
         <label name='email'>
-          <input className='input-pop' name='email' type='text' placeholder='Email' onChange={this.handleChange} value={this.state.email}></input>
+          <input className='input-pop' name='email' type='text' placeholder='Email' onChange={this.handleChange}></input>
         </label>
         <label name='password'>
-          <input className='input-pop' name='password' type='password' placeholder='Password' onChange={this.handleChange} value={this.state.password}></input>
+          <input className='input-pop' name='password' type='password' placeholder='Password' onChange={this.handleChange}></input>
         </label>
         <input  className='button-pop' type='button' value='sign in' onClick={this.handleSubmit}></input>
       </div>

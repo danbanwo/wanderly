@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import Login from "./login.js"
 import SignUp from "./signup.js"
-import {userLogin as login, userSignUp as signup} from '../../actions/user-action.js'
+import {userLogin, userSignUp} from '../../actions/user-action.js'
 
 class userContainer extends Component {
 	constructor(props){
@@ -38,9 +38,11 @@ const mapStateToProps = state => ({
 	routing: state.routing
 })
 
-const mapDispatchToProps= (dispatch)=> bindActionCreators({
-	login,
-	signup
-}, dispatch);
+const mapDispatchToProps= (dispatch)=>{
+	return{
+		login: bindActionCreators(userLogin, dispatch),
+		signup: bindActionCreators(userSignUp, dispatch)
+	}
+}
 
 export default connect(mapStateToProps,mapDispatchToProps)(userContainer);

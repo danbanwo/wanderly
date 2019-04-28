@@ -14,17 +14,17 @@ class UploadBio extends Component {
 	}
 
 	handleClick = (e) => {
+		console.log(this.state.categories)
 		let check = this.state.categories
 		if(check.indexOf(e.target.name) === -1) {
-			this.setState({categories: this.state.categories.concat(e.target.name)})
+			this.setState({...this.state, categories: this.state.categories.concat(e.target.name)})
 		} else {
 			check.splice(check.indexOf(e.target.name), 1)
 		}
-		console.log(this.state)
 	}
 
 	handleChange = (e) => {
-		this.setState({catch_phrase: e.target.value})
+		this.setState({...this.state, catch_phrase: e.target.value})
 	}
 
 	submitProfile = () => {
@@ -34,14 +34,10 @@ class UploadBio extends Component {
 		let catch_phrase = this.state.catch_phrase
 		let data = {...profile, catch_phrase, categories: arr.concat(this.state.categories), UserId: UserId}
 		let { submitProfile } = this.props.props
-		console.log('COMPILED DATA===>>>',data)
-		console.log('userid===>>>', UserId)
 		submitProfile(data)
 	}
 
 	render() {
-		console.log('In render', this.state)
-		console.log('UserId', this.props.props.user.id)
 		return (
 			<div>
 				<div className="bioContainer">

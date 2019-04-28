@@ -13,12 +13,12 @@ import userReducer from './user-reducer';
 
 const allReducers = combineReducers({
 //Upon import, reducers should go below:
-  destinations: destinationReducer,
-  map: mapReducer,
-  itinerary: itineraryReducer,
-  profile: profileReducer,
+  destinationReducer,
+  mapReducer,
+  itineraryReducer,
+  profileReducer,
   routing: routerReducer,
-  user: userReducer
+  userReducer
 });
 
 export default allReducers;

@@ -7,10 +7,7 @@ import '../../styles/user.css';
 class Login extends Component {
 	constructor(props){
 		super(props)
-		this.state = {
-      email: 'danbanwo@gmail.com',
-      password: '1234'
-    }
+		this.state = {email: '', password: '' }
 	}
 
 	handleSubmit = (e) => {
@@ -29,18 +26,14 @@ class Login extends Component {
 		const { email, password } = this.state;
 		return(
 			<div className="main-container login">
-
-					<div className='logo'>
-
-					</div>
-
+				<div className='logo'></div>
 				<br />
 				<div className=" box">
 					<div className="heading" >
 						 <h3 className="title">Sign In</h3>
 					</div>
 					<form className='maindiv' onSubmit={this.handleSubmit} >
-		 			 <fieldset>
+						<fieldset>
 							<div className="form-group ">
 								<input className="form-control txt" type='email' value={email} onChange={this.handleChange.bind(this,"email")} placeholder="Your email"/>
 							</div>
@@ -50,7 +43,7 @@ class Login extends Component {
 							</div>
 							<br />
 							<input className=" sub" type='submit' value='Log In'/>
-						 </fieldset>
+						</fieldset>
 					</form>
 			
 

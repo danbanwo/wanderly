@@ -1,10 +1,9 @@
 import React from 'react';
-import ModalInput from '../form/input';
 import PlacesAutocomplete, { geocodeByAddress, geocodeByPlaceId } from 'react-places-autocomplete';
 import '../../styles/destForm.css';
 import '../../styles/modal.css';
 
-class Form extends React.Component {
+class SpotForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,14 +29,12 @@ class Form extends React.Component {
 //Handles autocomplete component change
   handlePlaceChange = (address) => {
     this.setState({ place: address })
-    console.log(address)
   }
 
 
 //Handles autocomplete component change
   handleSpotChange = (address) => {
     this.setState({ spot: address })
-    console.log(address)
   }
 
 
@@ -45,8 +42,7 @@ class Form extends React.Component {
   handleDestSelect = (address, placeId) => {
     let place = this.state.place
     geocodeByAddress(place,  (err, { lat, lng }) => {
-      if (err) { console.log('Oh no!', err) }
-      console.log(`Yay! got latitude and longitude for ${place}`, { lat, lng })
+      if (err) { throw(err) }
       this.setState({lat, lng})
     })
   }
@@ -55,8 +51,7 @@ class Form extends React.Component {
   handleSpotSelect = (address, placeId) => {
     let spot = this.state.spot
     geocodeByAddress(spot,  (err, { lat, lng }) => {
-      if (err) { console.log('Oh no!', err) }
-      console.log(`Yay! got latitude and longitude for ${spot}`, { lat, lng })
+      if (err) { throw(err) }
       this.setState({lat, lng})
     })
   }
@@ -70,8 +65,6 @@ class Form extends React.Component {
     this.props.addSpot({
       ...this.state,
       DestinationId: destId,
-      // lat: 52.375218,
-      // lng:4.883977
     })
     this.props.closeButton()
     e.preventDefault()
@@ -81,7 +74,7 @@ class Form extends React.Component {
   handleDestinationSubmit = (e) => {
     this.props.addDestination({
       ...this.state,
-      ProfileId: this.props.profile.profileInfo.id,
+      ProfileId: this.props.profile.id,
       // lat: 6.465422,
       // lng: 3.406448
     })
@@ -90,26 +83,15 @@ class Form extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const destLocation = {
       root: 'destLocation',
       input: 'destLocation',
-      // autocompleteContainer: 'my-autocomplete-container'
     }
 
     const spots = {
       root: 'spots',
       input: 'spots'
     }
-    const testArray = [{
-      handleChange: this.handlePlaceChange,
-      handleSelect: this.handleDestSelect,
-      name: '',
-      place: true,
-      placeHolder: 'Add Adventure',
-      svgType: 'iconLocation',
-      value: this.state.place,
-    }]
 
     const { pathname } = this.props
     if(pathname === '/profile' || pathname === 'profile') {
@@ -117,12 +99,8 @@ class Form extends React.Component {
       <div className="addDestinationContainer">
         <h1 className="addDestination">Add a Destination</h1>
         <form className ="destinationForm"onSubmit={this.handleDestinationSubmit} >
-          {
-            testArray.map(arr => (
-              <ModalInput {...arr} />
-            ))
-          }
-          {/* <div className='destLocation'>
+
+          <div className='destLocation'>
             <div className="iconLocation"></div>
             <label>
               <PlacesAutocomplete
@@ -133,7 +111,7 @@ class Form extends React.Component {
                 classNames={destLocation}
               />
             </label>
-          </div><br /> */}
+          </div><br />
 
           <div className='destClock'>
             <div className="iconClock"></div>
@@ -210,4 +188,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default SpotForm;
