@@ -8,7 +8,7 @@ import { browserHistory } from 'react-router';
 import allReducers from '../reducers'
 
 const browser = routerMiddleware(browserHistory)
-const middleware = applyMiddleware(logger(), promise(), thunk, browser);
+const middleware = applyMiddleware(promise(), thunk, browser);
 
 const store = createStore(allReducers, middleware);
 
