@@ -22,7 +22,7 @@ module.exports = {
       }, {
         test: /\.(svg|png)(\?.*)?$/,
         loader: 'url-loader',
-        //exclude: path.join(__dirname, 'ui') // To avoid clash of svgs
+        exclude: path.join(__dirname, 'ui') // To avoid clash of svgs
       }
     ]
   },
